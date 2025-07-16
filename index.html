@@ -20,6 +20,8 @@
             color: var(--black);
             line-height: 1.6;
             background-color: #fac673; /* Naranja muy clarito */
+            font-size: 18px;  /* o un valor más grande, ej: 20px */
+
         }
 
         header {
@@ -31,16 +33,56 @@
         }
 
         .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Para que el contenedor del header ocupe todo el ancho */
+header > .container {
+    width: 100%;        /* ocupa todo el ancho */
+    max-width: none;    /* sin límite máximo */
+    margin: 0;          /* sin centrado automático */
+    padding-left: 15px; /* pequeño espacio interno a la izquierda */
+    padding-right: 15px;/* pequeño espacio interno a la derecha */
+}
+
+
 
         .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header-content > a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Menú centrado */
+nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
 
         .logo {
             height: 60px;
@@ -69,7 +111,7 @@
             padding: 10px 15px;
             border-radius: 4px;
             white-space: nowrap;
-            font-size: 15px;
+            font-size: 18px;
             background-color: rgba(255, 107, 0, 0.08);
         }
 
@@ -345,15 +387,179 @@
         grid-template-columns: 1fr;
     }
 }
+     .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 900px;
+  width: 90%;
+  padding: 20px 30px;
+  background-color: rgba(0, 0, 0, 0.35); /* fondo negro más transparente */
+  border-radius: 10px;
+  text-align: center;
+  color: white;
 
-    
+}
+
+.hero-slider {
+  position: relative;
+  width: 100vw;  /* Ancho completo de la ventana */
+  height: 600px; /* Más alto para que se vea bien */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.hero-slider .slide {
+  position: absolute;
+  width: 100vw; /* que cada slide ocupe todo el ancho */
+  height: 600px; /* mismo alto que el slider */
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  top: 0;
+  left: 0;
+}
+
+.hero-slider .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 900px;
+  width: 90%;
+  padding: 20px 30px;
+  background-color: rgba(0, 0, 0, 0.3); /* más transparente para no tapar tanto */
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.btn-group {
+  display: inline-flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #FF6B00;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d45a00;
+  cursor: pointer;
+}
+
+/* Estilo para ícono flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 80px;
+  height: 80px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-float img {
+  width: 45px;
+  height: 45px;
+}
+  .accordion {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  margin-bottom: 15px;
+  border: 1px solid var(--orange);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.accordion-button {
+  width: 100%;
+  text-align: left;
+  background-color: var(--orange);
+  color: white;
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+  background-color: #d45a00;
+}
+
+.accordion-content {
+  display: none;
+  background-color: #fff8f2;
+  padding: 20px;
+  font-size: 17px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.accordion-content ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.accordion-content.show {
+  display: block;
+}
+ .btn-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
  </style>
 </head>
 <body>
     <header>
         <div class="container header-content">
             <a href="#inicio" style="display:flex; align-items:center; text-decoration:none;">
-                <img src="https://i.postimg.cc/vm6dTZ6g/Logo-all-pork.jpg" alt="AllPork Logo" class="logo" />
+                <img src="https://i.postimg.cc/HLphL6vx/Chat-GPT-Image-6-jul-2025-07-56-34-p-m-1.png" alt="AllPork Logo" class="logo" />
                 <span style="margin-left: 10px; font-size: 24px; color: var(--orange); font-weight: bold;">Allpork S.R.L</span>
             </a>
             <nav>
@@ -371,10 +577,9 @@
     </header>
 
     <section id="inicio">
-  <div class="container">
     <div class="hero-slider">
       <div class="slide active" style="background-image: url('https://i.postimg.cc/hGVxqPw0/granja.jpg');"></div>
-      <div class="slide" style="background-image: url('https://i.postimg.cc/W19gs1cV/cerdo.jpg');"></div>
+      <div class="slide" style="background-image: url('https://i.postimg.cc/rFQS2cRK/0566e6c7-c083-4f32-b5f1-1e684ebc57d3.jpg');"></div>
       <div class="slide" style="background-image: url('https://i.postimg.cc/T1jMbPrN/alimentacion.jpg');"></div>
       <div class="hero-content">
         <h1>Líderes en soluciones para la industria porcina y avícola</h1>
@@ -447,159 +652,60 @@
         </div>
     </section>
 
-    <section id="equipamiento">
-    <style>
-        /* CSS específico para esta sección */
-        .equipment-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+     <section id="equipamiento">
+  <div class="container">
+    <h2>Nuestro equipamiento</h2>
+    <p class="equip-intro">Descubrí nuestras soluciones para cada etapa productiva:</p>
 
-        .equipment-card {
-            width: 300px;
-            background-color: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        @media (max-width: 980px) {
-            .equipment-card {
-                width: 45%;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .equipment-card {
-                width: 90%;
-            }
-        }
-        .whatsapp-float {
-             position: fixed;
-             bottom: 20px;
-             right: 20px;
-             z-index: 1000;
-             background-color: #25D366;
-             padding: 12px;
-             border-radius: 50%;
-             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-             transition: transform 0.3s ease;
-}
-
-        .whatsapp-float img {
-             width: 30px;
-             height: 30px;
-}
-
-       .whatsapp-float:hover {
-             transform: scale(1.1);
-}
-       .hero-slider {
-             position: relative;
-             height: 700px;
-             overflow: hidden;
-}
-
-       .hero-slider .slide {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-}
-
-      .hero-slider .slide.active {
-           opacity: 1;
-           z-index: 1;
-}
-
-      .hero-slider::before {
-           content: '';
-           position: absolute;
-           top: 0; left: 0; right: 0; bottom: 0;
-           background-color: rgba(0, 0, 0, 0.5);
-           z-index: 2;
-}
-
-      .hero-slider .hero-content {
-           position: relative;
-           z-index: 3;
-           max-width: 900px;
-           padding: 20px 30px;
-           text-align: center;
-           color: white;
-           top: 50%;
-           transform: translateY(-50%);
-}
-      .btn-hero {
-           background-color: rgba(255, 107, 0, 0.7); /* naranja translúcido */
-           color: white;
-           border: 2px solid white;
-}
-
-      .btn-hero:hover {
-    background-color: rgba(255, 107, 0, 1); /* naranja sólido al pasar el mouse */
-}
-
-    </style>
-
-    <div class="container">
-        <h2>Nuestro equipamiento</h2>
-        <p>Somos especialistas en la fabricación de productos de alta calidad y durabilidad para el sector agrícola. Nuestro equipamiento está diseñado meticulosamente para satisfacer las necesidades específicas de la industria porcina y avícola.</p>
-        <div class="equipment-grid">
-            <div class="equipment-card">
-                <img src="https://i.postimg.cc/15sQ8BHd/silos-2.jpg" alt="Silo de almacenamiento metálico para granjas porcinas" />
-                <div class="equipment-card-content">
-                    <h3>Silos</h3>
-                    <p>Diseñados para el almacenamiento y la protección de sus granos, nuestros silos están fabricados con materiales de alta calidad.</p>
-                </div>
-            </div>
-            <div class="equipment-card">
-                <img src="https://i.postimg.cc/RZNyd28m/Sistema-de-alimentacion.jpg" alt="Sistema de alimentación automático para cerdos" />
-                <div class="equipment-card-content">
-                    <h3>Línea de alimentación</h3>
-                    <p>Nuestra línea de alimentación disminuye el desperdicio de alimentos y optimiza la eficiencia en la alimentación de la producción.</p>
-                </div>
-            </div>
-            <div class="equipment-card">
-                <img src="https://i.postimg.cc/KjGsMWLd/Cortinas-all-pork.jpg" alt="Sistema de cortinas" />
-                <div class="equipment-card-content">
-                    <h3>Sistema de cortinas</h3>
-                    <p>Solución ideal para control ambiental en granjas, diseñado para mantener condiciones óptimas.</p>
-                </div>
-            </div>
-            <div class="equipment-card">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f7bec259-a27b-4cbc-bd21-ee5ab18fa093.png" alt="Equipo de climatización para granja porcina" />
-                <div class="equipment-card-content">
-                    <h3>Sistema de climatización</h3>
-                    <p>Proporcionamos una tecnología avanzada que garantiza un ambiente óptimo durante todo el año.</p>
-                </div>
-            </div>
-            <div class="equipment-card">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a00576e9-9aee-4aaf-84aa-fb8e503f882a.png" alt="Sistema automático de riego en granja" />
-                <div class="equipment-card-content">
-                    <h3>Sistema de riego</h3>
-                    <p>Diseñado para garantizar un suministro constante y eficiente de agua limpia.</p>
-                </div>
-            </div>
-            <div class="equipment-card">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3892affd-ec3c-4dc3-b2b6-69ebf9289351.png" alt="Ventiladores industriales en granja avícola" />
-                <div class="equipment-card-content">
-                    <h3>Sistema de ventilación</h3>
-                    <p>Solución perfecta para mantener un ambiente saludable y confortable en tus granjas.</p>
-                </div>
-            </div>
-        </div>
+    <!-- Contenedor para el botón con fondo negro transparente -->
+    <div class="btn-container">
+      <a href="ruta/a/tu/catalogo2025.pdf" class="btn btn-catalogo" target="_blank">Catálogo 2025</a>
     </div>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <a class="accordion-button" href="#gestacion">Gestación</a>
+      </div>
+      <div class="accordion-item">
+        <a class="accordion-button" href="#maternidad">Maternidad</a>
+      </div>
+      <div class="accordion-item">
+        <a class="accordion-button" href="#recria">Recría</a>
+      </div>
+      <div class="accordion-item">
+        <a class="accordion-button" href="#engorde">Engorde</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUEVAS SECCIONES INDIVIDUALES -->
+<section id="gestacion">
+  <div class="container">
+    <h2>Gestación</h2>
+    <p>En esta etapa, ofrecemos soluciones para el confort, alimentación y monitoreo de las cerdas gestantes. Contamos con jaulas, comederos automáticos y sistemas de control ambiental.</p>
+  </div>
+</section>
+
+<section id="maternidad">
+  <div class="container">
+    <h2>Maternidad</h2>
+    <p>Equipamiento diseñado para garantizar el bienestar de la cerda lactante y los lechones recién nacidos, como parideras, lámparas de calor y pisos plásticos sanitarios.</p>
+  </div>
+</section>
+
+<section id="recria">
+  <div class="container">
+    <h2>Recría</h2>
+    <p>Soluciones que favorecen el crecimiento de los lechones, con corrales de recría, sistemas de alimentación ad libitum y pisos confortables de fácil limpieza.</p>
+  </div>
+</section>
+
+<section id="engorde">
+  <div class="container">
+    <h2>Engorde</h2>
+    <p>Ofrecemos equipamiento robusto y eficiente para la etapa final de producción, con sistemas de alimentación, bebederos automáticos y control ambiental para un engorde óptimo.</p>
+  </div>
 </section>
 
 
@@ -653,7 +759,11 @@
         <div class="container">
             <h2>Contacto</h2>
             <p>Escribinos para más información, consultas o para solicitar una cotización personalizada.</p>
-            <form>
+            <form action="https://formsubmit.co/ventas.allpork@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://allpork.github.io/gracias.html">
+            <input type="hidden" name="_captcha" value="false">
+
+
                 <label for="nombre">Nombre completo</label>
                 <input type="text" id="nombre" name="nombre" required />
 
@@ -670,7 +780,7 @@
 
     <footer>
         <p>&copy; 2025 AllPork S.R.L. Todos los derechos reservados.</p>
-        <p>Teléfono: +54 9 11 6690-2000 | Email: info@allpork.com</p>
+        <p>Teléfono: +54 9 11 6690-2000 | Email: infoallpork@gmail.com / ventas.allpork@gmail.com </p>
         <p>Dirección: General Las Heras, Buenos Aires, Argentina</p>
     </footer>
 <a href="https://wa.me/5491166902000" class="whatsapp-float" target="_blank" title="Escribinos por WhatsApp">
@@ -687,6 +797,16 @@
   }
 
   setInterval(showNextSlide, 4000);
+</script>
+<script>
+  const buttons = document.querySelectorAll(".accordion-button");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
+      content.classList.toggle("show");
+    });
+  });
 </script>
 
 </body>
