@@ -652,62 +652,147 @@ nav ul {
         </div>
     </section>
 
-     <section id="equipamiento">
-  <div class="container">
-    <h2>Nuestro equipamiento</h2>
-    <p class="equip-intro">Descubrí nuestras soluciones para cada etapa productiva:</p>
+     <section id="equipamiento" style="background-color: #fac673; padding: 60px 0;">
+  <div class="container" style="max-width: 960px; margin: 0 auto;">
+    <h2 style="text-align: center; color: #000; margin-bottom: 10px; font-size: 2.5rem; font-weight: 700;">
+      Equipamiento
+    </h2>
+    <p style="text-align: center; font-size: 1.7rem; font-weight: 800; text-decoration: underline; margin-bottom: 40px;">
+      Etapas del ciclo productivo
+    </p>
 
-    <!-- Contenedor para el botón con fondo negro transparente -->
-    <div class="btn-container">
-      <a href="ruta/a/tu/catalogo2025.pdf" class="btn btn-catalogo" target="_blank">Catálogo 2025</a>
+    <div style="text-align: center; margin-bottom: 40px;">
+      <a href="https://drive.google.com/file/d/1IgKyXyuvJQRlJCPuluvMwLEddgAPnGop/view" target="_blank" style="background-color: #FF6B00; color: white; padding: 16px 40px; font-weight: 700; font-size: 1.3rem; border-radius: 8px; text-decoration: none; display: inline-block;">
+        Catálogo 2025
+      </a>
     </div>
 
-    <div class="accordion">
-      <div class="accordion-item">
-        <a class="accordion-button" href="#gestacion">Gestación</a>
+    <div class="carousel-container" style="position: relative; overflow: hidden; max-width: 740px; margin: 0 auto; padding: 0 10px;">
+      <div class="carousel-track" style="display: flex; transition: transform 0.5s ease;">
+
+        <div class="carousel-card" style="
+          flex: 0 0 100%;
+          max-width: 700px;
+          background: #fff3e0;
+          border-radius: 20px;
+          padding: 60px 50px;
+          box-shadow: 0 6px 20px rgba(255, 107, 0, 0.25);
+          text-align: left;
+          font-family: 'Montserrat', sans-serif;
+          user-select: none;
+          display: block;
+          box-sizing: border-box;
+        ">
+          <h3 style="font-size: 2.6rem; color: #FF6B00; margin-bottom: 24px; font-weight: 900; text-decoration: underline;">Gestación</h3>
+          <p style="font-size: 1.5rem; line-height: 1.7; color: #333; font-weight: 700;">
+            ✓ Soluciones integrales para espacios de gestación eficientes y funcionales.<br>
+            ✓ Equipamiento diseñado para maximizar el confort animal y la productividad.
+          </p>
+        </div>
+
+        <div class="carousel-card" style="
+          flex: 0 0 100%;
+          max-width: 700px;
+          background: #fff3e0;
+          border-radius: 20px;
+          padding: 60px 50px;
+          box-shadow: 0 6px 20px rgba(255, 107, 0, 0.25);
+          text-align: left;
+          font-family: 'Montserrat', sans-serif;
+          user-select: none;
+          display: none;
+          box-sizing: border-box;
+        ">
+          <h3 style="font-size: 2.6rem; color: #FF6B00; margin-bottom: 24px; font-weight: 900; text-decoration: underline;">Maternidad</h3>
+          <p style="font-size: 1.5rem; line-height: 1.7; color: #333; font-weight: 700;">
+            ✓ Equipamiento confiable para maternidades seguras y eficientes.<br>
+            ✓ Diseños adaptados a cada proyecto, con foco en funcionalidad y bienestar.
+          </p>
+        </div>
+
+        <div class="carousel-card" style="
+          flex: 0 0 100%;
+          max-width: 700px;
+          background: #fff3e0;
+          border-radius: 20px;
+          padding: 60px 50px;
+          box-shadow: 0 6px 20px rgba(255, 107, 0, 0.25);
+          text-align: left;
+          font-family: 'Montserrat', sans-serif;
+          user-select: none;
+          display: none;
+          box-sizing: border-box;
+        ">
+          <h3 style="font-size: 2.6rem; color: #FF6B00; margin-bottom: 24px; font-weight: 900; text-decoration: underline;">Destete</h3>
+          <p style="font-size: 1.5rem; line-height: 1.7; color: #333; font-weight: 700;">
+            ✓ Equipos pensados para una transición segura y ordenada.<br>
+            ✓ Optimizamos cada detalle para acompañar esta etapa clave del desarrollo.
+          </p>
+        </div>
+
+        <div class="carousel-card" style="
+          flex: 0 0 100%;
+          max-width: 700px;
+          background: #fff3e0;
+          border-radius: 20px;
+          padding: 60px 50px;
+          box-shadow: 0 6px 20px rgba(255, 107, 0, 0.25);
+          text-align: left;
+          font-family: 'Montserrat', sans-serif;
+          user-select: none;
+          display: none;
+          box-sizing: border-box;
+        ">
+          <h3 style="font-size: 2.6rem; color: #FF6B00; margin-bottom: 24px; font-weight: 900; text-decoration: underline;">Engorde</h3>
+          <p style="font-size: 1.5rem; line-height: 1.7; color: #333; font-weight: 700;">
+            ✓ Infraestructura duradera y práctica para sistemas de engorde.<br>
+            ✓ Eficiencia operativa y fácil mantenimiento, pensados para grandes resultados.
+          </p>
+        </div>
+
       </div>
-      <div class="accordion-item">
-        <a class="accordion-button" href="#maternidad">Maternidad</a>
-      </div>
-      <div class="accordion-item">
-        <a class="accordion-button" href="#recria">Recría</a>
-      </div>
-      <div class="accordion-item">
-        <a class="accordion-button" href="#engorde">Engorde</a>
-      </div>
+
+      <button id="prevBtn" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(255, 107, 0, 0.25); border: none; color: white; font-size: 3rem; border-radius: 50%; width: 48px; height: 48px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); user-select: none;">&#10094;</button>
+<button id="nextBtn" style="position: absolute; top: 50%; right: 48px; transform: translateY(-50%); background: rgba(255, 107, 0, 0.25); border: none; color: white; font-size: 3rem; border-radius: 50%; width: 48px; height: 48px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); user-select: none;">&#10095;</button>
+
     </div>
   </div>
+
+  <script>
+    const cards = document.querySelectorAll('.carousel-card');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function showCard(index) {
+      cards.forEach((card, i) => {
+        card.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      showCard(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showCard(currentIndex);
+    });
+
+    // Mostrar la primera tarjeta al cargar
+    showCard(currentIndex);
+  </script>
 </section>
 
-<!-- NUEVAS SECCIONES INDIVIDUALES -->
-<section id="gestacion">
-  <div class="container">
-    <h2>Gestación</h2>
-    <p>En esta etapa, ofrecemos soluciones para el confort, alimentación y monitoreo de las cerdas gestantes. Contamos con jaulas, comederos automáticos y sistemas de control ambiental.</p>
-  </div>
-</section>
 
-<section id="maternidad">
-  <div class="container">
-    <h2>Maternidad</h2>
-    <p>Equipamiento diseñado para garantizar el bienestar de la cerda lactante y los lechones recién nacidos, como parideras, lámparas de calor y pisos plásticos sanitarios.</p>
-  </div>
-</section>
 
-<section id="recria">
-  <div class="container">
-    <h2>Recría</h2>
-    <p>Soluciones que favorecen el crecimiento de los lechones, con corrales de recría, sistemas de alimentación ad libitum y pisos confortables de fácil limpieza.</p>
-  </div>
-</section>
 
-<section id="engorde">
-  <div class="container">
-    <h2>Engorde</h2>
-    <p>Ofrecemos equipamiento robusto y eficiente para la etapa final de producción, con sistemas de alimentación, bebederos automáticos y control ambiental para un engorde óptimo.</p>
-  </div>
-</section>
 
+
+
+
+                   
 
     <section id="asesoramiento" class="highlight">
         <div class="container">
