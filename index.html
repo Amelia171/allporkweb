@@ -552,6 +552,80 @@ nav ul {
   border-radius: 8px;
   margin-bottom: 30px;
 }
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px; /* texto un poco más pequeño y cómodo en móvil */
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-wrap: wrap; /* que el menú pueda bajar de línea si hace falta */
+    gap: 5px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .hero {
+    height: 300px; /* reducir altura hero para móviles */
+  }
+
+  .hero-content {
+    width: 95%;
+    padding: 15px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem; /* reducir tamaño título en hero */
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .equipment-card {
+    width: 100%; /* que las tarjetas de equipamiento ocupen todo el ancho en móvil */
+  }
+
+  .features, .equipment-grid {
+    grid-template-columns: 1fr !important; /* una columna para que sea vertical */
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  form {
+    padding: 0 10px;
+  }
+
+  /* Ajustar acordeón para que sea cómodo en móvil */
+  .accordion-button {
+    font-size: 18px;
+    padding: 12px 15px;
+  }
+
+  .accordion-content {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
 
  </style>
 </head>
