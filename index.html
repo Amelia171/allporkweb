@@ -405,7 +405,7 @@ nav ul {
 
 .hero-slider {
   position: relative;
-  width: 100vw;  /* Ancho completo de la ventana */
+  width: 100%;  /* Ancho completo de la ventana */
   height: 600px; /* Más alto para que se vea bien */
   overflow: hidden;
   margin: 0 auto;
@@ -679,10 +679,40 @@ nav ul {
       flex: 0 0 30%;
       font-size: 20px;
     }
+}
+  @media (max-width: 768px) {
+  .hero-slider {
+    height: 300px;
   }
-</style>
 
- </style>
+  .hero-slider .slide {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero-content {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 20px;
+    color: var(--white);
+    margin: 0;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+</style>
 </head>
 <body>
     <header>
@@ -973,23 +1003,21 @@ nav ul {
         <div class="container">
             <h2>Contacto</h2>
             <p>Escribinos para más información, consultas o para solicitar una cotización personalizada.</p>
-            <form action="https://formsubmit.co/ventas.allpork@gmail.com" method="POST">
-            <input type="hidden" name="_next" value="https://allpork.github.io/gracias.html">
-            <input type="hidden" name="_captcha" value="false">
-
-
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" required />
-
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required />
-
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+             <form action="https://formsubmit.co/ameliacarrascosa22@gmail.com" method="POST">
+             <input type="hidden" name="_redirect" value="gracias.html">
+    <input type="hidden" name="_captcha" value="false" />
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required />
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+    
+    <label for="message">Mensaje:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    
+    <button type="submit">Enviar</button>
+</form>
+       </div>
     </section>
 
     <footer>
@@ -1025,4 +1053,3 @@ nav ul {
 
 </body>
 </html>
-
