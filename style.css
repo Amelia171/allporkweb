@@ -489,4 +489,18 @@ header h1 {
   letter-spacing: 1px;
   font-weight: 600;
 }
+.hero h1 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 90%;
+  margin: 0 auto 16px;
+}
+
+.hero p {
+  font-size: 17px;
+  opacity: 0.9;
+  max-width: 90%;
+  margin: 0 auto 24px;
+}
 
