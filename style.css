@@ -447,4 +447,16 @@ header h1,
 header span {
   color: #ff6b00 !important;
 }
+/* HERO TEXTO */
+.hero h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  max-width: 90%;
+  margin: 16px auto 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
 
