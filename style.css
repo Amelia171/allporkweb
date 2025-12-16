@@ -440,4 +440,11 @@ header .container {
   }
 }
 
+/* COLOR TEXTO MARCA */
+.brand-name,
+.logo-text,
+header h1,
+header span {
+  color: #ff6b00 !important;
+}
 
