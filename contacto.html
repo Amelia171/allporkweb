@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-<header>
-  <div class="container">
-    <a href="index.html" class="logo-link">
-      <img src="https://i.postimg.cc/HLphL6vx/Chat-GPT-Image-6-jul-2025-07-56-34-p-m-1.png" 
-           alt="AllPork Logo" 
-           class="logo">
-    </a>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | AllPork</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
 <header>
-  <div class="container">
-    <a href="index.html" style="display:flex; align-items:center; text-decoration:none;">
-      <img  src="https://i.postimg.cc/HLphL6vx/Chat-GPT-Image-6-jul-2025-07-56-34-p-m-1.png" alt="AllPork Logo" class="logo">
-   </a>
+  <div class="container header-content">
+    <a href="index.html" class="logo-link">
+      <img src="https://i.postimg.cc/HLphL6vx/Chat-GPT-Image-6-jul-2025-07-56-34-p-m-1.png"
+           alt="AllPork Logo"
+           class="logo">
+    </a>
 
     <nav>
       <ul id="nav-menu">
@@ -25,7 +26,7 @@
         <li><a href="equipamiento.html">Equipamiento</a></li>
         <li><a href="asesoramiento.html">Asesoramiento</a></li>
         <li><a href="montaje.html">Montaje</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
       </ul>
 
       <div class="hamburger" id="hamburger">
@@ -42,22 +43,22 @@
     <h2>Contacto</h2>
 
     <p style="text-align:center; max-width:800px; margin:0 auto 40px;">
-      ¿Querés asesoramiento o cotizar equipamiento?  
+      ¿Querés asesoramiento o cotizar equipamiento?
       Completá el formulario y nuestro equipo se comunicará con vos a la brevedad.
     </p>
 
     <form>
-      <label for="nombre">Nombre y apellido</label>
-      <input type="text" id="nombre" name="nombre" required>
+      <label>Nombre y apellido</label>
+      <input type="text" required>
 
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required>
+      <label>Email</label>
+      <input type="email" required>
 
-      <label for="telefono">Teléfono</label>
-      <input type="tel" id="telefono" name="telefono">
+      <label>Teléfono</label>
+      <input type="tel">
 
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      <label>Mensaje</label>
+      <textarea rows="5" required></textarea>
 
       <button type="submit">Enviar consulta</button>
     </form>
@@ -70,8 +71,8 @@
   <p>General Las Heras, Buenos Aires</p>
 </footer>
 
-<a href="https://wa.me/5491166902000" class="whatsapp-float" target="_blank">
-
+<a href="https://wa.me/5491166902000" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
 <script>
