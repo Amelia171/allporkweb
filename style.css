@@ -37,16 +37,14 @@ header .container {
   padding: 10px 15px;
 }
 
-/* LOGO */
+/* Ajuste del logo para hacerlo más profesional */
 .logo {
-  height: 60px;
-  width: auto;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.logo:hover {
-  transform: scale(1.05);
+  height: 52px;              /* Tamaño más adecuado para el header */
+  width: 52px;               /* Mantiene la proporción del logo */
+  object-fit: contain;       /* Asegura que no se deforme */
+  border-radius: 50%;        /* Lo hace circular */
+  background-color: transparent; /* Elimina cualquier fondo blanco */
+  padding: 4px;              /* Da aire alrededor para mejor visualización */
 }
 
 /* NAVIGATION */
