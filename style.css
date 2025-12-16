@@ -43,7 +43,7 @@ header .container {
   width: 52px;               /* Mantiene la proporción del logo */
   object-fit: contain;       /* Asegura que no se deforme */
   border-radius: 50%;        /* Lo hace circular */
-  background-color: transparent; /* Elimina cualquier fondo blanco */
+  background-color: #fff;
   padding: 4px;              /* Da aire alrededor para mejor visualización */
 }
 
