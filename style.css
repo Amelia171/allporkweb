@@ -1,0 +1,381 @@
+:root {
+  --orange: #FF6B00;
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray: #F5F5F5;
+}
+
+/* BODY */
+body {
+  font-family: 'Montserrat', 'Arial Black', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+  background-color: var(--gray);
+  line-height: 1.6;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+header {
+  background-color: var(--black);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+/* LOGO */
+.logo {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* NAVIGATION */
+nav {
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: var(--orange);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+  background-color: rgba(255,107,0,0.1);
+}
+
+nav ul li a:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+/* HAMBURGUESA */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1000;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--orange);
+  border-radius: 2px;
+}
+
+/* HERO */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-slider .slide.active {
+  opacity: 1;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+/* BUTTONS */
+.btn-group {
+  display: inline-flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #d45a00;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+
+/* FEATURES GRID */
+.features {
+  display: grid;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+}
+
+.feature-box h3 {
+  color: var(--orange);
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.feature-box p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* EQUIPMENT GRID */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.equipment-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.equipment-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.equipment-card h3 {
+  color: var(--orange);
+  margin: 15px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.equipment-card p {
+  padding: 0 15px 15px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* CONTACT FORM */
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #d45a00;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 20px;
+}
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .features, .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--black);
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 200px;
+    padding: 10px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .features, .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-slider {
+    height: 300px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  form input, form textarea {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features, .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+}
