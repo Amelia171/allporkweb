@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Porque elegirnos | AllPork</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <a href="index.html" style="display:flex; align-items:center; text-decoration:none;">
+      <img src="https://i.postimg.cc/HLphL6vx/Chat-GPT-Image-6-jul-2025-07-56-34-p-m-1.png" alt="AllPork Logo" class="logo">
+    </a>
+
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="porque-elegirnos.html">Por qué elegirnos</a></li>
+        <li><a href="equipamiento.html">Equipamiento</a></li>
+        <li><a href="asesoramiento.html">Asesoramiento</a></li>
+        <li><a href="montaje.html">Montaje</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section id="por-que-elegirnos" class="highlight">
+        <div class="container">
+            <h2>¿Por qué elegirnos?</h2>
+            <p>En AllPork, entendemos que la eficiencia y la calidad son clave en la producción agropecuaria. Por eso, ofrecemos soluciones diseñadas para maximizar el rendimiento de tu granja con equipos duraderos y de alto desempeño.</p>
+            <div class="features">
+                <div class="feature-box">
+                    <h3>Calidad garantizada</h3>
+                    <p>Nuestros productos son elaborados con materiales de alta resistencia y tecnología de vanguardia, lo que garantiza durabilidad y excelencia en cada uso.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Mayor rentabilidad</h3>
+                    <p>Diseñamos equipos que reducen el desperdicio de alimento y optimizan el uso de recursos, ayudándote a minimizar costos y aumentar la productividad.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Asesoría personalizada</h3>
+                    <p>Cada granja posee características únicas. Por esta razón, nuestro equipo de expertos le brindará orientación en la selección del equipamiento más adecuado para sus necesidades específicas.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Experiencia y confianza</h3>
+                    <p>Disponemos de una trayectoria sólida en el sector porcino y avícola, respaldada por una cartera de clientes satisfechos.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Envío rápido y seguro</h3>
+                    <p>Aseguramos una logística eficiente para que reciba su equipamiento en el menor tiempo posible, sin complicaciones.</p>
+                </div>
+                <div class="feature-box">
+  <h3>Cercanía al cliente</h3>
+  <p>Construimos relaciones sólidas basadas en la confianza, el diálogo constante y el acompañamiento a largo plazo.</p>
+             </div>
+            </div>
+        </div>
+    </section>
+<footer>
+  <p>&copy; 2025 AllPork S.R.L. Todos los derechos reservados.</p>
+  <p>Tel: +54 9 11 6690-2000 | infoallpork@gmail.com</p>
+  <p>General Las Heras, Buenos Aires</p>
+</footer>
+
+<a href="https://wa.me/5491166902000" class="whatsapp-float" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
+<script>
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+</script>
+
