@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asesoramiento | AllPork</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container">
+    <a href="index.html" style="display:flex; align-items:center; text-decoration:none;">
+      <img src="img/logo.png" alt="AllPork Logo" class="logo">
+    </a>
+
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="porque-elegirnos.html">Por qué elegirnos</a></li>
+        <li><a href="equipamiento.html">Equipamiento</a></li>
+        <li><a href="asesoramiento.html">Asesoramiento</a></li>
+        <li><a href="montaje.html">Montaje</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== ASESORAMIENTO ===== -->
+<section id="asesoramiento">
+  <div class="container">
+    <h2>Asesoramiento técnico</h2>
+
+    <p style="text-align:center; max-width:900px; margin:0 auto 40px;">
+      En AllPork brindamos asesoramiento técnico integral para acompañar
+      a productores en cada etapa del proyecto, desde el diseño inicial
+      hasta la puesta en marcha de las instalaciones.
+    </p>
+
+    <div class="features">
+      <div class="feature-box">
+        <h3>Diagnóstico productivo</h3>
+        <p>
+          Analizamos las condiciones actuales de la granja para detectar
+          oportunidades de mejora en manejo, infraestructura y eficiencia.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Diseño de instalaciones</h3>
+        <p>
+          Asesoramos en el diseño y dimensionamiento de instalaciones,
+          adaptadas a la escala productiva y objetivos del productor.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Selección de equipamiento</h3>
+        <p>
+          Recomendamos el equipamiento más adecuado para cada sistema,
+          priorizando durabilidad, eficiencia y bienestar animal.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Optimización de procesos</h3>
+        <p>
+          Mejoramos los flujos de trabajo para reducir costos operativos
+          y aumentar la productividad del establecimiento.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Acompañamiento técnico</h3>
+        <p>
+          Brindamos soporte antes, durante y después de la instalación,
+          asegurando el correcto funcionamiento de los sistemas.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <h3>Soluciones a medida</h3>
+        <p>
+          Cada proyecto es único. Adaptamos nuestras recomendaciones
+          a las necesidades específicas de cada productor.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>&copy; 2025 AllPork S.R.L. Todos los derechos reservados.</p>
+  <p>Tel: +54 9 11 6690-2000 | infoallpork@gmail.com</p>
+  <p>General Las Heras, Buenos Aires</p>
+</footer>
+
+<!-- ===== WHATSAPP ===== -->
+<a href="https://wa.me/5491166902000" class="whatsapp-float" target="_blank">
+  <img src="https://i.postimg.cc/HLphL6vx/Chat-GPT-Image-6-jul-2025-07-56-34-p-m-1.png" alt="AllPork Logo" class="logo">
+</a>
+
+<!-- ===== JS MENÚ ===== -->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+</script>
+
+</body>
+</html>
+
