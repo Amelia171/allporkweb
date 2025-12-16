@@ -380,46 +380,6 @@ footer {
   }
 }
 /* =====================
-   AJUSTES MOBILE
-===================== */
-@media (max-width: 768px) {
-
-  /* HERO / IMAGEN PRINCIPAL */
-  .hero,
-  .banner,
-  .hero-section {
-    height: auto;
-    min-height: 60vh;
-    padding: 40px 20px;
-  }
-
-  /* TEXTO SOBRE IMAGEN */
-  .hero h1,
-  .hero h2,
-  .hero p {
-    text-align: center;
-    padding: 0 10px;
-  }
-
-  /* BOTONES */
-  .hero a,
-  .hero button,
-  .btn {
-    width: 100%;
-    max-width: 280px;
-    margin: 10px auto;
-    display: block;
-    font-size: 16px;
-    padding: 14px;
-  }
-
-  /* CONTENEDORES */
-  .container,
-  .content {
-    padding: 0 15px;
-  }
-}
-/* =====================
    MOBILE – INDEX
 ===================== */
 @media (max-width: 768px) {
