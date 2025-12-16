@@ -407,5 +407,37 @@ footer {
     max-width: 280px;
   }
 }
+/* BRAND NAME */
+.brand-name {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--orange);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/* AJUSTE HEADER */
+header {
+  height: 70px;
+}
+
+header .container {
+  height: 100%;
+}
+/* MENU MOBILE */
+@media (max-width: 768px) {
+  nav ul {
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav ul li a {
+    background-color: transparent;
+    padding: 14px 20px;
+  }
+
+  nav ul li a:hover {
+    background-color: rgba(255,107,0,0.15);
+  }
+}
 
 
