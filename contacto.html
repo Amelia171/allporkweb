@@ -47,21 +47,34 @@
       Completá el formulario y nuestro equipo se comunicará con vos a la brevedad.
     </p>
 
-    <form>
-      <label>Nombre y apellido</label>
-      <input type="text" required>
+    <form 
+  method="get"
+  target="_blank"
+  onsubmit="this.action='https://wa.me/5491166902000?text=' +
+  encodeURIComponent(
+    'Hola, quiero hacer una consulta desde la web AllPork.\n\n' +
+    'Nombre: ' + this.nombre.value + '\n' +
+    'Email: ' + this.email.value + '\n' +
+    'Teléfono: ' + this.telefono.value + '\n\n' +
+    'Mensaje:\n' + this.mensaje.value
+  );"
+>
 
-      <label>Email</label>
-      <input type="email" required>
+  <label>Nombre y apellido</label>
+  <input type="text" name="nombre" required>
 
-      <label>Teléfono</label>
-      <input type="tel">
+  <label>Email</label>
+  <input type="email" name="email" required>
 
-      <label>Mensaje</label>
-      <textarea rows="5" required></textarea>
+  <label>Teléfono</label>
+  <input type="tel" name="telefono">
 
-      <button type="submit">Enviar consulta</button>
-    </form>
+  <label>Mensaje</label>
+  <textarea name="mensaje" rows="5" required></textarea>
+
+  <button type="submit">Enviar consulta</button>
+</form>
+
   </div>
 </section>
 
