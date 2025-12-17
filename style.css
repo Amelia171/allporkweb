@@ -727,12 +727,14 @@ header h1 {
 }
 /* ===== IMAGEN HERO PORCICULTURA ===== */
 .hero-img {
-  width: 100%;         /* ocupa todo el ancho disponible */
-  max-height: 400px;   /* opcional, limita altura */
-  object-fit: cover;   /* ajusta sin deformar */
-  border-radius: 10px; /* bordes suaves */
-  margin: 20px 0;      /* espacio arriba y abajo */
+  width: 80%;           /* ocupa menos ancho */
+  max-width: 600px;     /* limita el tamaño máximo */
+  height: auto;         /* mantiene proporción */
+  display: block;       /* asegura que se comporte como bloque */
+  margin: 20px auto;    /* centrado horizontal y espacio arriba/abajo */
+  border-radius: 10px;  /* bordes suaves */
 }
+
 
 .equipamiento-destacado .system-card p {
   font-size: 1rem;
