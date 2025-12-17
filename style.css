@@ -660,3 +660,21 @@ header h1 {
     height: 180px;
   }
 }
+/* ===== LINKS DE EQUIPAMIENTO ===== */
+
+.system-link {
+  text-decoration: none;   /* saca el subrayado */
+  color: inherit;          /* mantiene el color original */
+  display: block;
+}
+
+.system-link:hover {
+  text-decoration: none;   /* evita subrayado en hover */
+  color: inherit;
+}
+
+/* Asegura que el texto se vea normal */
+.system-card h3,
+.system-card p {
+  color: #333;
+}
