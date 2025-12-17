@@ -616,3 +616,47 @@ header h1 {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
+/* ===== EQUIPAMIENTO ===== */
+
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.system-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden; /* CLAVE para que no se superpongan */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.system-card img {
+  width: 100%;
+  height: 200px;        /* controla el zoom */
+  object-fit: cover;   /* recorta sin deformar */
+  display: block;
+}
+
+/* Texto */
+.system-card h3 {
+  margin: 16px 16px 8px;
+}
+
+.system-card p {
+  margin: 0 16px 20px;
+  font-size: 0.95rem;
+}
+
+/* Hover SUAVE (no se agranda descontrolado) */
+.system-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .system-card img {
+    height: 180px;
+  }
+}
