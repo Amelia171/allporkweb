@@ -863,3 +863,125 @@ body.porcicultura-page {
   margin-bottom: 20px;
   color: #333;
 }
+/* ===================== BASE ALLPORK ===================== */
+.porcicultura-page {
+  background-color: #fbf3e8;
+  color: #282120;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: #282120;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin: 14px auto 42px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #3a3734;
+}
+
+/* ===================== HERO ===================== */
+.hero-porcicultura {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #fbf3e8 0%,
+    #fdf7f0 100%
+  );
+}
+
+.hero-porcicultura h1 {
+  font-size: 2.8rem;
+  margin-bottom: 22px;
+}
+
+.hero-img {
+  max-width: 900px;
+  width: 100%;
+  margin: 32px auto;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(40, 33, 32, 0.18);
+}
+
+/* ===================== CTA ===================== */
+.equipamiento-cta {
+  margin-top: 42px;
+}
+
+.equipamiento-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 14px 34px;
+  background-color: #f79027;
+  color: #282120;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #e07f1e;
+  transform: translateY(-2px);
+}
+
+/* ===================== SECCIONES ===================== */
+.equipamiento-sistemas,
+.equipamiento-destacado,
+.servicios-porcicultura {
+  padding: 90px 0;
+}
+
+.equipamiento-destacado {
+  background-color: #ffffff;
+}
+
+/* ===================== TITULOS ===================== */
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 64px;
+  height: 4px;
+  background-color: #f79027;
+  display: block;
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+/* ===================== GRID ===================== */
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 34px;
+  margin-top: 54px;
+}
+
+/* ===================== TARJETAS ===================== */
+.system-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #f1e6d9;
+  box-shadow: 0 12px 28px rgba(40,
