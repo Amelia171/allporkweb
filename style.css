@@ -522,5 +522,25 @@ footer {
     margin: 0 14px 18px;
   }
 }
+/* =====================
+   FIX CRÍTICO CARDS LINK
+===================== */
+
+.equipment-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.equipment-card:visited,
+.equipment-card:hover,
+.equipment-card:active {
+  color: inherit;
+  text-decoration: none;
+}
+.equipment-grid > * {
+  width: 100%;
+}
 
 
