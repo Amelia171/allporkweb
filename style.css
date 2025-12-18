@@ -1,385 +1,120 @@
+/* =========================
+   VARIABLES ALLPORK
+========================= */
 :root {
-  --primary: #f79027;
-  --dark: #1f1f1f;
-  --bg: #fbf3e8;
+  --orange: #f79027;
+  --black: #282120;
   --white: #ffffff;
-  --gray: #777;
+  --beige: #fbf3e8;
+  --gray: #f5f5f5;
 }
 
-/* RESET */
+/* =========================
+   BASE
+========================= */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* BASE */
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg);
-  color: var(--dark);
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--gray);
+  color: var(--black);
   line-height: 1.6;
+  font-size: 17px;
 }
 
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
-section {
-  padding: 80px 0;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-/* ================= HEADER ================= */
+/* =========================
+   HEADER
+========================= */
 header {
-  background-color: var(--dark);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  background-color: var(--black);
 }
 
-.header-content {
+header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 70px;
+  justify-content: space-between;
+  height: 72px;
 }
 
 .logo {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
+  object-fit: contain;
+  background: var(--white);
+  padding: 4px;
 }
 
 .brand-name {
-  margin-left: 10px;
-  color: var(--primary);
+  color: var(--orange);
   font-weight: 600;
-  font-size: 18px;
+  letter-spacing: 1px;
+  margin-left: 10px;
 }
 
+/* =========================
+   NAV
+========================= */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-  color: var(--primary);
   text-decoration: none;
+  color: var(--orange);
   font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--orange);
+  color: var(--white);
 }
 
 .hamburger {
   display: none;
   flex-direction: column;
+  gap: 5px;
   cursor: pointer;
 }
 
 .hamburger span {
-  height: 3px;
   width: 25px;
-  background: var(--primary);
-  margin-bottom: 4px;
-}
-
-/* ================= HERO + CARRUSEL ================= */
-.hero-slider {
-  position: relative;
-  height: 90vh;
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 600px;
-  padding-left: 40px;
-}
-
-.hero-content h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.btn-hero {
-  background-color: var(--primary);
-  color: var(--dark);
-  padding: 14px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  width: fit-content;
-}
-
-/* ================= POR QUÉ ALLPORK ================= */
-.why {
-  background-color: var(--white);
-}
-
-.why h2 {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.why-card {
-  background-color: var(--bg);
-  padding: 30px;
-  border-radius: 12px;
-}
-
-/* ================= SERVICIOS ================= */
-.services h2 {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.section-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 50px;
-  color: var(--gray);
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.feature-box {
-  background: var(--white);
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-/* ================= EQUIPAMIENTO (CLICK) ================= */
-.equip-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.equip-card {
-  background: var(--white);
-  padding: 30px;
-  border-radius: 14px;
-  text-decoration: none;
-  color: var(--dark);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.equip-card:hover {
-  transform: translateY(-6px);
-}
-
-.equip-card h3 {
-  color: var(--primary);
-  margin-bottom: 10px;
-}
-
-/* ================= CONTACTO ================= */
-.contact-form {
-  max-width: 600px;
-  margin: auto;
-  background: var(--white);
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  font-family: inherit;
-}
-
-.contact-form button {
-  background-color: var(--primary);
-  border: none;
-  padding: 14px;
-  width: 100%;
-  font-weight: 600;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background-color: var(--dark);
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-/* ================= WHATSAPP FLOAT ================= */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 200;
-}
-
-.whatsapp-float img {
-  width: 55px;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  nav ul {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: var(--dark);
-    flex-direction: column;
-    width: 100%;
-    display: none;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .hero-content {
-    padding: 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 32px;
-  }
+  height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
 }
 
 /* =========================
-   EQUIPAMIENTO - TARJETAS
+   HERO CARRUSEL
 ========================= */
-
-.equipamiento {
-  padding: 80px 0;
-  background: #f7f8fa;
-}
-
-.equipamiento .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.equipamiento h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-
-.equipamiento .section-intro {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 50px;
-  color: #555;
-}
-
-/* GRID */
-.equipamiento-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-/* CARD */
-.equipamiento-card {
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.equipamiento-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-}
-
-.equipamiento-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.equipamiento-card .card-content {
-  padding: 22px;
-}
-
-.equipamiento-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.equipamiento-card p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.5;
-}
-/* =========================
-   HERO / CARRUSEL
-========================= */
-
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   min-height: 520px;
   overflow: hidden;
 }
 
-.slide {
+.hero-slider .slide {
   position: absolute;
   inset: 0;
   background-size: cover;
@@ -388,18 +123,8 @@ footer {
   transition: opacity 1s ease-in-out;
 }
 
-.slide.active {
+.hero-slider .slide.active {
   opacity: 1;
-  z-index: 1;
-}
-
-/* CONTENIDO */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  padding: 0 20px;
-  color: #fff;
 }
 
 .hero-slider::after {
@@ -410,14 +135,231 @@ footer {
   z-index: 1;
 }
 
-/* MOBILE */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.6rem;
+  max-width: 900px;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-bottom: 28px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  background: var(--orange);
+  color: var(--black);
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e07f1e;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   SECCIONES
+========================= */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+section h2::after {
+  content: "";
+  width: 64px;
+  height: 4px;
+  background: var(--orange);
+  display: block;
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+  color: #555;
+}
+
+/* =========================
+   EQUIPAMIENTO (TARJETAS)
+========================= */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.equipment-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.equipment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.equipment-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.equipment-card h3 {
+  margin: 18px 20px 10px;
+  font-size: 1.2rem;
+  color: var(--orange);
+}
+
+.equipment-card p {
+  margin: 0 20px 24px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+form {
+  max-width: 680px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  background: var(--orange);
+  color: var(--black);
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #e07f1e;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 56px;
+  height: 56px;
+  z-index: 999;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    background: var(--black);
+    flex-direction: column;
+    width: 220px;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
   .hero-slider {
     height: 75vh;
-    min-height: 420px;
   }
 
   .hero-content h1 {
-    font-size: 28px;
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 60px 0;
   }
 }
+
