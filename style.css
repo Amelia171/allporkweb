@@ -220,6 +220,10 @@ section h2::after {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
+#equipamiento .equipment-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
 .equipment-card {
   display: flex;
