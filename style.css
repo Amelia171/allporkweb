@@ -898,7 +898,7 @@ footer {
   .home-trust-grid {
     grid-template-columns: 1fr;
   }
-}
+
 /* ===== TESTIMONIOS HOME ===== */
 
 .testimonios-home {
@@ -1320,7 +1320,6 @@ footer {
   .qs-text {
     max-width: 100%;
   }
-}
 /* ===== POR QUÉ ALLPORK – BLOQUE DESTACADO ===== */
 
 .why-allpork {
