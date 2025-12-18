@@ -989,14 +989,6 @@ footer {
   position: relative;
 }
 
-.testimonio-card p::before {
-  content: "“";
-  font-size: 3rem;
-  color: var(--orange);
-  position: absolute;
-  top: -18px;
-  left: -10px;
-}
 
 .testimonio-card span {
   display: block;
