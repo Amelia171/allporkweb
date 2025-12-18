@@ -298,3 +298,72 @@ footer {
   }
 }
 
+/* =========================
+   EQUIPAMIENTO - TARJETAS
+========================= */
+
+.equipamiento {
+  padding: 80px 0;
+  background: #f7f8fa;
+}
+
+.equipamiento .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.equipamiento h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.equipamiento .section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: #555;
+}
+
+/* GRID */
+.equipamiento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.equipamiento-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.equipamiento-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.equipamiento-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.equipamiento-card .card-content {
+  padding: 22px;
+}
+
+.equipamiento-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.equipamiento-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
