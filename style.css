@@ -783,3 +783,72 @@ body.porcicultura-page {
   max-width: 800px;
   margin: 0 auto 50px auto;
   font-size: 1.05rem
+/* ===== EQUIPAMIENTO PORCICULTURA ===== */
+
+.equipamiento-destacado {
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.equipamiento-destacado h2 {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.equipamiento-destacado .section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  color: #555;
+}
+
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.system-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.system-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.1);
+}
+
+.system-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.system-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 20px 20px 10px;
+}
+
+.system-card .card-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 20px 15px;
+  line-height: 1.5;
+}
+
+.card-tag {
+  display: inline-block;
+  margin: 0 20px 20px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ff7a00;
+  border: 1px solid #ff7a00;
+  border-radius: 20px;
+}
