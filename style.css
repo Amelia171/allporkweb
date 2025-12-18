@@ -51,10 +51,7 @@ header .container {
 .logo {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
   object-fit: contain;
-  background: var(--white);
-  padding: 4px;
 }
 
 .brand-name {
@@ -225,12 +222,17 @@ section h2::after {
 }
 
 .equipment-card {
+  display: flex;
+  flex-direction: column;
   background: var(--white);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   transition: 0.3s;
+  text-decoration: none;
+  max-width: 100%;
 }
+
 
 .equipment-card:hover {
   transform: translateY(-6px);
