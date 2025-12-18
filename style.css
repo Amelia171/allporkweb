@@ -846,482 +846,7 @@ footer {
   .trust-item strong {
     font-size: 2rem;
   }
-}
-/* =========================
-   HOME – BLOQUE CONFIANZA
-========================= */
-
-.home-trust {
-  background: var(--beige);
-  padding: 70px 0;
-}
-
-.home-trust-intro {
-  text-align: center;
-  font-size: 1.1rem;
-  max-width: 720px;
-  margin: 0 auto 40px;
-  color: #444;
-}
-
-.home-trust-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.home-trust-item {
-  background: #fff;
-  border-radius: 16px;
-  padding: 28px 22px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.home-trust-item strong {
-  display: block;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--orange);
-  margin-bottom: 8px;
-}
-
-.home-trust-item span {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-@media (max-width: 900px) {
-  .home-trust-grid {
-    grid-template-columns: 1fr;
-  }
-
-/* ===== TESTIMONIOS HOME ===== */
-
-.testimonios-home {
-  background: #f8f8f8;
-  padding: 80px 0;
-}
-
-.testimonios-home h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.testimonios-home .section-intro {
-  text-align: center;
-  color: #666;
-  margin-bottom: 50px;
-}
-
-.testimonios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-.testimonio-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.testimonio-card span {
-  display: block;
-  margin-top: 15px;
-  font-weight: 600;
-  color: var(--orange);
-}
-/* =========================
-   TESTIMONIOS HOME
-========================= */
-
-.testimonios-home {
-  background: #f7f7f7;
-  padding: 80px 0;
-}
-
-.testimonios-home h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.testimonios-home .section-intro {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 50px;
-  color: #555;
-  font-size: 1.05rem;
-}
-
-.testimonios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-/* =========================
-   TESTIMONIOS – ESTILO PRO
-========================= */
-
-.testimonio-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 32px 28px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  border-top: 4px solid var(--orange);
-  transition: all 0.35s ease;
-}
-
-.testimonio-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.14);
-}
-
-.testimonio-card p {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-.testimonio-card span {
-  font-size: 0.9rem;
-  color: #777;
-  font-weight: 500;
-}
-
-.testimonio-card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 30px 26px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonio-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-}
-
-.testimonio-card p {
-  font-style: italic;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 18px;
-  position: relative;
-}
-
-
-.testimonio-card span {
-  display: block;
-  font-size: 0.9rem;
-  color: #777;
-  font-weight: 500;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .testimonios-home {
-    padding: 60px 20px;
-  }
-/* =========================
-   POR QUÉ ALLPORK – TARJETAS
-========================= */
-
-.porque-allpork {
-  background: #f8f9fa;
-  padding: 80px 0;
-}
-
-.porque-allpork h2 {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.porque-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.porque-item {
-  background: #ffffff;
-  padding: 36px 30px;
-  border-radius: 16px;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Línea de marca */
-.porque-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--orange);
-}
-
-.porque-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.14);
-}
-
-.porque-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 14px;
-  color: #111;
-}
-
-.porque-item p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-}
 /* ===== POR QUÉ ALLPORK ===== */
-.why-allpork {
-  background-color: #111;
-  color: #fff;
-  padding: 80px 0;
-}
-
-.why-allpork h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-.why-allpork .section-intro {
-  text-align: center;
-  color: #ccc;
-  max-width: 700px;
-  margin: 0 auto 50px;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.why-card {
-  background: #1c1c1c;
-  border-radius: 14px;
-  padding: 30px;
-  border-left: 4px solid #f7941d;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.why-card h3 {
-  color: #f7941d;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.why-card p {
-  color: #ddd;
-  line-height: 1.6;
-}
-
-.why-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-}
-/* ===== POR QUÉ ALLPORK (HOME) ===== */
-.why-allpork {
-  background: linear-gradient(180deg, #111 0%, #0b0b0b 100%);
-  padding: 90px 0;
-}
-
-.why-allpork h2 {
-  text-align: center;
-  font-size: 2.3rem;
-  color: #ffffff;
-  margin-bottom: 12px;
-}
-
-.why-allpork .section-intro {
-  text-align: center;
-  color: #cfcfcf;
-  max-width: 720px;
-  margin: 0 auto 60px;
-  font-size: 1.05rem;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.why-card {
-  background-color: #1a1a1a;
-  border-radius: 16px;
-  padding: 35px 30px;
-  border-top: 4px solid #f7941d;
-  transition: all 0.35s ease;
-  position: relative;
-}
-
-.why-card h3 {
-  color: #f7941d;
-  font-size: 1.25rem;
-  margin-bottom: 12px;
-}
-
-.why-card p {
-  color: #e0e0e0;
-  line-height: 1.65;
-  font-size: 0.98rem;
-}
-
-.why-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
-  background-color: #1f1f1f;
-}
-/* ===== QUIÉNES SOMOS ===== */
-#quienes-somos {
-  background-color: #ffffff;
-}
-
-.qs-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 50px;
-  align-items: center;
-  margin: 50px 0 70px;
-}
-
-.qs-text p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 18px;
-  color: #333;
-}
-
-.qs-image img {
-  width: 100%;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
-}
-
-/* Valores */
-.quienes-somos-features {
-  margin-top: 40px;
-}
-
-.quienes-somos-features .feature-box {
-  background: #f7f7f7;
-  border-radius: 14px;
-  padding: 30px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.quienes-somos-features .feature-box h3 {
-  color: #f7941d;
-  margin-bottom: 8px;
-  font-size: 1.15rem;
-}
-
-.quienes-somos-features .feature-box p {
-  color: #555;
-  font-size: 0.95rem;
-}
-
-.quienes-somos-features .feature-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .qs-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .qs-image {
-    order: -1;
-  }
-
-  .qs-image img {
-    max-height: 260px;
-  }
-/* ===== QUIÉNES SOMOS – IMAGEN PRO ===== */
-
-.qs-layout {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 50px;
-  align-items: center;
-  margin: 50px 0 80px;
-}
-
-/* Texto */
-.qs-text {
-  max-width: 620px;
-}
-
-.qs-text p {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  margin-bottom: 18px;
-  color: #2e2e2e;
-}
-
-/* Imagen */
-.qs-image {
-  display: flex;
-  justify-content: center;
-}
-
-.qs-image img {
-  width: 100%;
-  max-width: 420px;          /* 🔥 tamaño controlado */
-  max-height: 420px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-}
-
-/* Valores */
-.quienes-somos-features {
-  margin-top: 30px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .qs-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .qs-image {
-    order: -1;
-  }
-
-  .qs-image img {
-    max-width: 100%;
-    max-height: 260px;
-  }
-
-  .qs-text {
-    max-width: 100%;
-  }
-/* ===== POR QUÉ ALLPORK – BLOQUE DESTACADO ===== */
-
 .why-allpork {
   background: linear-gradient(180deg, #0f0f0f 0%, #151515 100%);
   padding: 90px 0;
@@ -1329,82 +854,88 @@ footer {
 
 .why-allpork h2 {
   text-align: center;
-  font-size: 2.4rem;
-  color: #ffffff;
+  font-size: 2.3rem;
+  color: #fff;
   margin-bottom: 12px;
 }
 
 .why-allpork .section-intro {
   text-align: center;
   color: #d0d0d0;
-  max-width: 760px;
+  max-width: 720px;
   margin: 0 auto 60px;
-  font-size: 1.05rem;
 }
 
-/* GRID */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 32px;
 }
 
-/* TARJETAS */
 .why-card {
-  background-color: #1c1c1c;
-  border-radius: 18px;
-  padding: 38px 32px;
-  border-top: 4px solid #f7941d;
+  background: #1c1c1c;
+  border-radius: 16px;
+  padding: 36px 30px;
+  border-top: 4px solid var(--orange);
   transition: all 0.35s ease;
 }
 
 .why-card h3 {
-  color: #f7941d;
-  font-size: 1.3rem;
-  margin-bottom: 14px;
+  color: var(--orange);
+  font-size: 1.25rem;
+  margin-bottom: 12px;
 }
 
 .why-card p {
   color: #e6e6e6;
   line-height: 1.7;
-  font-size: 0.98rem;
 }
 
 .why-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.5);
-  background-color: #222;
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
 }
-/* =========================
-   QUIÉNES SOMOS – FIX FINAL
-========================= */
-
-#quienes-somos {
-  background-color: #ffffff;
-}
-
+/* ===== QUIÉNES SOMOS ===== */
 .qs-layout {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
   align-items: center;
-  margin: 50px 0 70px;
+  margin: 60px 0;
 }
 
 .qs-text p {
   font-size: 1.05rem;
   line-height: 1.7;
-  margin-bottom: 18px;
   color: #333;
+  margin-bottom: 18px;
 }
 
 .qs-image img {
   width: 100%;
+  max-width: 420px;
   max-height: 420px;
   object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .qs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .qs-image {
+    order: -1;
+    text-align: center;
+  }
+
+  .qs-image img {
+    max-height: 260px;
+  }
+}
+
 
 
 
