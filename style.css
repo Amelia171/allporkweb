@@ -296,4 +296,19 @@ footer {
     font-size: 2.1rem;
   }
 }
+/* ===== FIX HERO MOBILE ===== */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 85vh;
+    min-height: 420px;
+  }
+
+  .hero-slider .slide {
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 40px 20px;
+  }
+}
 
