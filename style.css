@@ -967,6 +967,36 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
+/* =========================
+   TESTIMONIOS – ESTILO PRO
+========================= */
+
+.testimonio-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border-top: 4px solid var(--orange);
+  transition: all 0.35s ease;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.14);
+}
+
+.testimonio-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.testimonio-card span {
+  font-size: 0.9rem;
+  color: #777;
+  font-weight: 500;
+}
 
 .testimonio-card {
   background: #fff;
