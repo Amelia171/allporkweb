@@ -1230,6 +1230,11 @@ footer {
     font-size: 1.9rem;
   }
 }
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
 
 
 
