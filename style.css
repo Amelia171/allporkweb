@@ -852,3 +852,14 @@ body.porcicultura-page {
   border: 1px solid #ff7a00;
   border-radius: 20px;
 }
+.equipamiento-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.equipamiento-cta p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #333;
+}
