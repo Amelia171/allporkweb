@@ -899,5 +899,44 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* ===== TESTIMONIOS HOME ===== */
+
+.testimonios-home {
+  background: #f8f8f8;
+  padding: 80px 0;
+}
+
+.testimonios-home h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.testimonios-home .section-intro {
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.testimonio-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.testimonio-card span {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: var(--orange);
+}
 
 
