@@ -1138,5 +1138,58 @@ footer {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
+/* ===== POR QUÉ ALLPORK (HOME) ===== */
+.why-allpork {
+  background: linear-gradient(180deg, #111 0%, #0b0b0b 100%);
+  padding: 90px 0;
+}
+
+.why-allpork h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.why-allpork .section-intro {
+  text-align: center;
+  color: #cfcfcf;
+  max-width: 720px;
+  margin: 0 auto 60px;
+  font-size: 1.05rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.why-card {
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  padding: 35px 30px;
+  border-top: 4px solid #f7941d;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.why-card h3 {
+  color: #f7941d;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  color: #e0e0e0;
+  line-height: 1.65;
+  font-size: 0.98rem;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  background-color: #1f1f1f;
+}
 
 
