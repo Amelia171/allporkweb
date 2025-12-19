@@ -1313,14 +1313,15 @@ section {
 /* ===============================
    AJUSTE TIPOGRAFÍA DESKTOP
    =============================== */
-
+/*
 @media (min-width: 1024px) {
 
   body {
     font-size: 17px;
     line-height: 1.6;
   }
-
+}
+*/
   h1 {
     font-size: 42px;
   }
@@ -1464,6 +1465,32 @@ section {
 
   .testimonio-card span {
     font-size: 0.9rem !important;
+  }
+}
+@media (min-width: 1024px) {
+
+  body {
+    font-size: 18.5px;
+    line-height: 1.7;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.1rem;
   }
 }
 
