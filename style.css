@@ -107,8 +107,14 @@ nav ul li a:hover {
 ========================= */
 .hero-slider {
   position: relative;
-  min-height: 80vh;
+  width: 100%;
+  height: 85vh;
   overflow: hidden;
+}
+.hero-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-slider::after {
@@ -501,4 +507,16 @@ footer {
   footer {
     font-size: 1.05rem;
   }
+}
+@media (min-width: 1200px) {
+
+  .why-grid,
+  .equipment-grid,
+  .systems-grid,
+  .trust-grid,
+  .quienes-somos-features,
+  .testimonios-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
 }
