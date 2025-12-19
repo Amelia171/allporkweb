@@ -510,13 +510,20 @@ footer {
 }
 @media (min-width: 1200px) {
 
+  /* Tarjetas generales */
   .why-grid,
   .equipment-grid,
   .systems-grid,
-  .trust-grid,
   .quienes-somos-features,
   .testimonios-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* Productores que confían */
+  .trust-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+  }
+
 }
+
