@@ -437,3 +437,67 @@ footer {
     font-size: 1.1rem;
   }
 }
+/* =========================
+   ESCALA TIPOGRÁFICA DESKTOP PRO
+========================= */
+@media (min-width: 1024px) {
+
+  body {
+    font-size: 18px; /* base real empresa */
+    line-height: 1.8;
+  }
+
+  /* HERO */
+  .hero-content h1 {
+    font-size: 3.8rem;
+    line-height: 1.15;
+  }
+
+  .hero-content p {
+    font-size: 1.55rem;
+  }
+
+  /* TÍTULOS DE SECCIÓN */
+  section h2 {
+    font-size: 3.2rem;
+  }
+
+  .section-intro {
+    font-size: 1.35rem;
+  }
+
+  /* TARJETAS */
+  .why-card h3,
+  .equipment-card h3,
+  .system-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .why-card p,
+  .equipment-card p,
+  .system-card p,
+  .feature-box p,
+  .testimonio-card {
+    font-size: 1.2rem;
+  }
+
+  /* QUIÉNES SOMOS */
+  .qs-text p {
+    font-size: 1.25rem;
+  }
+
+  /* CONFIANZA / NÚMEROS */
+  .trust-item strong {
+    font-size: 3.6rem;
+  }
+
+  /* FORM */
+  form input,
+  form textarea {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    font-size: 1.05rem;
+  }
+}
