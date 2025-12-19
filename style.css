@@ -1239,6 +1239,68 @@ section {
   overflow: visible;
 }
 
+.hero-porcicultura {
+  position: relative;
+  background-image: url("assets/img/equipamiento-porcicultura.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 75vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fbf3e8;
+  overflow: hidden;
+}
+
+/* Capa oscura con transparencia */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 33, 32, 0.65); /* #282120 con transparencia */
+  z-index: 1;
+}
+
+/* Contenido */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #fbf3e8;
+}
+
+/* Botón */
+.btn-hero {
+  display: inline-block;
+  background-color: #f79027;
+  color: #282120;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: #fbf3e8;
+  transform: translateY(-2px);
+}
 
 
 
