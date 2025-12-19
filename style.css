@@ -21,8 +21,8 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   background-color: var(--gray);
   color: var(--black);
-  line-height: 1.6;
-  font-size: 16px;
+  line-height: 1.7;
+  font-size: 17px;
 }
 
 img {
@@ -30,10 +30,17 @@ img {
   display: block;
 }
 
+section {
+  overflow: visible;
+}
+
+/* =========================
+   CONTENEDOR GLOBAL (CLAVE)
+========================= */
 .container {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 /* =========================
@@ -65,7 +72,7 @@ header .container {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 14px;
+  gap: 16px;
   margin: 0;
   padding: 0;
 }
@@ -99,7 +106,7 @@ nav ul li a:hover {
 }
 
 /* =========================
-   HERO / CARRUSEL (FIX REAL)
+   HERO / CARRUSEL (BLINDADO)
 ========================= */
 .hero-slider {
   position: relative;
@@ -109,7 +116,6 @@ nav ul li a:hover {
   overflow: hidden;
 }
 
-/* Slides */
 .hero-slider .slide {
   position: absolute;
   inset: 0;
@@ -123,7 +129,6 @@ nav ul li a:hover {
   opacity: 1;
 }
 
-/* Overlay */
 .hero-slider::after {
   content: "";
   position: absolute;
@@ -132,29 +137,30 @@ nav ul li a:hover {
   z-index: 1;
 }
 
-/* Contenido */
 .hero-content {
   position: relative;
   z-index: 2;
   height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
   color: var(--white);
-  padding: 0 20px;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 16px;
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 18px;
 }
 
 .hero-content p {
   font-size: 1.25rem;
-  max-width: 720px;
-  margin-bottom: 28px;
+  max-width: 760px;
+  margin: 0 auto 32px;
 }
 
 /* =========================
@@ -163,9 +169,9 @@ nav ul li a:hover {
 .btn {
   background: var(--orange);
   color: var(--black);
-  padding: 14px 32px;
-  border-radius: 30px;
-  font-weight: 600;
+  padding: 14px 34px;
+  border-radius: 40px;
+  font-weight: 700;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -184,7 +190,7 @@ section {
 
 section h2 {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-bottom: 14px;
 }
 
@@ -203,84 +209,90 @@ section h2::after {
   max-width: 760px;
   margin: 0 auto 60px;
   color: #555;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 /* =========================
-   WHY ALLPORK (COLOR FIX)
+   WHY ALLPORK
 ========================= */
 .why-allpork {
-  background: var(--black);
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 24px;
 }
 
 .why-card {
-  background: #1e1a18;
-  border-radius: 16px;
-  padding: 36px 30px;
+  background: #1f1a19;
+  border-radius: 18px;
+  padding: 36px 32px;
   border-top: 4px solid var(--orange);
 }
 
 .why-card h3 {
-  color: var(--orange);
   font-size: 1.4rem;
+  color: var(--orange);
   margin-bottom: 12px;
 }
 
 .why-card p {
-  color: #e6e6e6;
   font-size: 1.05rem;
+  color: #e6e6e6;
 }
 
 /* =========================
-   EQUIPAMIENTO / SISTEMAS
+   TARJETAS GENERALES
 ========================= */
 .equipment-grid,
-.systems-grid {
+.systems-grid,
+.testimonios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 24px;
 }
 
 .equipment-card,
-.system-card {
+.system-card,
+.testimonio-card,
+.feature-box,
+.trust-item {
   background: var(--white);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
 }
 
+/* =========================
+   EQUIPAMIENTO / SERVICIOS
+========================= */
 .equipment-card img,
 .system-card img {
+  width: 100%;
   height: 220px;
   object-fit: cover;
-  width: 100%;
 }
 
 .equipment-card h3,
 .system-card h3 {
-  margin: 18px 20px 8px;
-  color: var(--orange);
+  margin: 18px 22px 8px;
   font-size: 1.3rem;
+  color: var(--orange);
 }
 
 .equipment-card p,
 .system-card p {
-  margin: 0 20px 24px;
+  margin: 0 22px 26px;
+  font-size: 1.05rem;
   color: #444;
-  font-size: 1rem;
 }
 
 /* =========================
@@ -295,40 +307,63 @@ section h2::after {
 }
 
 .qs-text p {
-  font-size: 1.05rem;
-  color: #444;
+  font-size: 1.1rem;
   margin-bottom: 18px;
 }
 
 .qs-image img {
-  border-radius: 18px;
+  width: 100%;
   height: 360px;
   object-fit: cover;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  border-radius: 18px;
+}
+
+.quienes-somos-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 /* =========================
-   PRODUCTORES
+   PRODUCTORES / TRUST
 ========================= */
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 26px;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .trust-item {
-  background: #fff;
-  border-radius: 16px;
-  padding: 28px 20px;
+  padding: 30px 24px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .trust-item strong {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   color: var(--orange);
+}
+
+/* =========================
+   TESTIMONIOS
+========================= */
+.testimonios {
+  background: var(--beige);
+}
+
+/* =========================
+   CONTACTO
+========================= */
+form {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 44px;
+  border-radius: 18px;
 }
 
 /* =========================
@@ -338,12 +373,36 @@ footer {
   background: var(--black);
   color: var(--white);
   text-align: center;
-  padding: 30px 20px;
+  padding: 36px 20px;
+}
+
+/* =========================
+   WHATSAPP (FIX)
+========================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  z-index: 999;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
+@media (max-width: 1024px) {
+
+  .why-grid,
+  .equipment-grid,
+  .systems-grid,
+  .testimonios-grid,
+  .quienes-somos-features,
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 768px) {
 
   nav ul {
@@ -369,15 +428,23 @@ footer {
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
+  }
+
+  .hero-content p {
+    font-size: 1.05rem;
+  }
+
+  .why-grid,
+  .equipment-grid,
+  .systems-grid,
+  .testimonios-grid,
+  .quienes-somos-features,
+  .trust-grid {
+    grid-template-columns: 1fr;
   }
 
   .qs-layout {
     grid-template-columns: 1fr;
   }
-
-  .trust-grid {
-    grid-template-columns: 1fr;
-  }
 }
-
