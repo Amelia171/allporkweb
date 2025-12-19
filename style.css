@@ -519,10 +519,11 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Productores que confían */
+  /* Productores que confían – 2 y 2 */
   .trust-grid {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
   }
 
 }
