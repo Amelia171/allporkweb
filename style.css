@@ -509,30 +509,7 @@ footer {
     font-size: 1.05rem;
   }
 }
-@media (min-width: 1200px) {
 
-  /* Tarjetas generales */
-  .why-grid,
-  .equipment-grid,
-  .systems-grid,
-  .quienes-somos-features,
-  .testimonios-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Productores que confían – 2 y 2 */
-  .trust-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-}
-@media (min-width: 1024px) {
-  .trust-grid {
-    max-width: 900px; /* clave */
-  }
-}
 .trust-item {
   min-height: 220px;
 }
