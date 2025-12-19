@@ -452,3 +452,71 @@ footer {
     font-size: 1.15rem;
   }
 }
+/* =========================
+   TIPOGRAFÍA DESKTOP
+   ========================= */
+@media (min-width: 1024px) {
+
+  body {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .card p,
+  .feature-box p {
+    font-size: 17px;
+  }
+}
+/* =========================
+   CARRUSEL
+   ========================= */
+
+.carousel {
+  width: 100%;
+  max-width: 1200px;
+  height: 420px;              /* CLAVE */
+  margin: 60px auto;
+  position: relative;
+  overflow: hidden;           /* CLAVE */
+  border-radius: 16px;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* CLAVE */
+  display: block;
+}
+@media (max-width: 768px) {
+  .carousel {
+    height: 260px;
+  }
+}
