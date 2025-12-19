@@ -1003,7 +1003,7 @@ footer {
   max-width: 1200px;
   margin: 0 auto 80px;
   border-radius: 20px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 20px 45px rgba(0,0,0,0.25);
 }
 
@@ -1251,7 +1251,7 @@ section {
   justify-content: center;
 
   color: #fbf3e8;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Capa oscura con transparencia */
@@ -1355,6 +1355,28 @@ section {
   .card p,
   .equipamiento-card p {
     font-size: 16px;
+  }
+
+}
+@media (min-width: 1024px) {
+
+  body {
+    font-size: 18px;
+  }
+
+}
+@media (min-width: 1024px) {
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
   }
 
 }
