@@ -1345,6 +1345,19 @@ section {
   }
 
 }
+@media (min-width: 1024px) {
+
+  .card h3,
+  .equipamiento-card h3 {
+    font-size: 21px;
+  }
+
+  .card p,
+  .equipamiento-card p {
+    font-size: 16px;
+  }
+
+}
 
 
 
