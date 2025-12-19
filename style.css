@@ -1301,6 +1301,15 @@ section {
   background-color: #fbf3e8;
   transform: translateY(-2px);
 }
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
 
 
 
