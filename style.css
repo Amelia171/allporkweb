@@ -108,7 +108,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100vh;
   min-height: 520px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-slider .slide {
