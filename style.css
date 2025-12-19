@@ -527,4 +527,9 @@ footer {
   }
 
 }
+@media (min-width: 1024px) {
+  .trust-grid {
+    max-width: 900px; /* clave */
+  }
+}
 
