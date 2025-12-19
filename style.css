@@ -532,4 +532,7 @@ footer {
     max-width: 900px; /* clave */
   }
 }
+.trust-item {
+  min-height: 220px;
+}
 
