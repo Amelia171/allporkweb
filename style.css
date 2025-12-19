@@ -1403,6 +1403,69 @@ section {
     font-size: 1.1rem !important;
   }
 }
+/* =========================
+   FIX REAL TIPOGRAFÍA DESKTOP
+   (gana sobre todo lo anterior)
+========================= */
+@media (min-width: 1024px) {
+
+  body {
+    font-size: 19px !important;
+    line-height: 1.7;
+  }
+
+  /* Títulos generales */
+  h1 {
+    font-size: 3.2rem !important;
+  }
+
+  h2 {
+    font-size: 2.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Párrafos */
+  p {
+    font-size: 1.05rem !important;
+  }
+
+  /* Intro de secciones */
+  .section-intro {
+    font-size: 1.15rem !important;
+  }
+
+  /* HERO */
+  .hero-content h1 {
+    font-size: 3.4rem !important;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem !important;
+  }
+
+  /* TARJETAS EQUIPAMIENTO */
+  .equipment-card h3,
+  .system-card h3 {
+    font-size: 1.35rem !important;
+  }
+
+  .equipment-card p,
+  .system-card p {
+    font-size: 1rem !important;
+  }
+
+  /* TESTIMONIOS */
+  .testimonio-card p {
+    font-size: 1rem !important;
+  }
+
+  .testimonio-card span {
+    font-size: 0.9rem !important;
+  }
+}
 
 
 
