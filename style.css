@@ -1380,6 +1380,29 @@ section {
   }
 
 }
+/* ===== FORZAR TIPOGRAFÍA DESKTOP ===== */
+@media (min-width: 1200px) {
+
+  body {
+    font-size: 19px !important;
+  }
+
+  h1, .hero-title {
+    font-size: 3.2rem !important;
+  }
+
+  h2, .section-title {
+    font-size: 2.4rem !important;
+  }
+
+  h3 {
+    font-size: 1.6rem !important;
+  }
+
+  p {
+    font-size: 1.1rem !important;
+  }
+}
 
 
 
