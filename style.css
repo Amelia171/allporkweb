@@ -124,10 +124,6 @@ nav ul li a:hover {
   opacity: 1;
   z-index: 1;
 }
-.hero-slider .slide:first-child {
-  opacity: 1;
-  z-index: 1;
-}
 
 .hero-slider .slide img {
   width: 100%;
