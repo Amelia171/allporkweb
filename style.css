@@ -451,7 +451,7 @@ footer {
 @media (min-width: 1024px) {
 
   body {
-    font-size: 18px; /* base real empresa */
+    font-size: 18px;
     line-height: 1.8;
   }
 
@@ -499,6 +499,10 @@ footer {
     font-size: 3.6rem;
   }
 
+  .trust-item {
+    min-height: 220px;
+  }
+
   /* FORM */
   form input,
   form textarea {
@@ -508,8 +512,6 @@ footer {
   footer {
     font-size: 1.05rem;
   }
-
-.trust-item {
-  min-height: 220px;
 }
+
 
