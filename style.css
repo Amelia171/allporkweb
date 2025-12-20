@@ -546,5 +546,13 @@ footer {
   background-image: none !important;
   background-repeat: no-repeat !important;
 }
+/* ===== DEBUG: mostrar solo el primer slide ===== */
+.hero-slider .slide {
+  display: none !important;
+}
+
+.hero-slider .slide:first-child {
+  display: block !important;
+}
 
 
