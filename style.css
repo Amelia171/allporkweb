@@ -557,5 +557,28 @@ footer {
 .hero-slider * {
   outline: 5px solid red !important;
 }
+/* ===== FIX DEFINITIVO HERO ===== */
+.hero-slider {
+  position: relative;
+}
+
+.hero-slider .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-slider .slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* evita duplicación de contenido */
+.hero-slider .hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
 
 
