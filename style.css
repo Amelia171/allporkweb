@@ -113,21 +113,14 @@ nav ul li a:hover {
   overflow: hidden;
 }
 
-/* TODAS LAS SLIDES */
 .hero-slider .slide {
   position: absolute;
   inset: 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.8s ease;
+  display: none;
 }
 
-/* SOLO LA ACTIVA */
 .hero-slider .slide.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  display: block;
   z-index: 1;
 }
 
