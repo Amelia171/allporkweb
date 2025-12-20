@@ -554,5 +554,8 @@ footer {
 .hero-slider .slide:first-child {
   display: block !important;
 }
+.hero-slider * {
+  outline: 5px solid red !important;
+}
 
 
