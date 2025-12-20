@@ -540,5 +540,11 @@ footer {
   object-position: center;
   background-repeat: no-repeat;
 }
+/* ===== FIX MOSAICO HERO (BACKGROUND) ===== */
+.hero-slider,
+.hero-content {
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+}
 
 
