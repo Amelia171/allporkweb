@@ -412,5 +412,59 @@ footer {
     font-size: 1.2rem;
   }
 }
+/* =========================
+   PRODUCTORES / CONFIANZA (FINAL)
+========================= */
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trust-item {
+  background: var(--white);
+  border-radius: 22px;
+  padding: 34px 26px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+}
+
+.trust-item strong {
+  font-size: 2.8rem;
+  color: var(--orange);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.trust-item p {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #444;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .trust-item {
+    padding: 26px 18px;
+  }
+
+  .trust-item p {
+    font-size: 0.95rem;
+  }
+}
 
 
