@@ -25,7 +25,6 @@ body {
   font-size: 19px;
 }
 
-
 img {
   max-width: 100%;
   display: block;
@@ -39,7 +38,6 @@ img {
   margin: 0 auto;
   padding: 0 24px;
 }
-
 
 /* =========================
    HEADER
@@ -104,7 +102,7 @@ nav ul li a:hover {
 }
 
 /* =========================
-   HERO / CARRUSEL
+   HERO / SLIDER (LIMPIO)
 ========================= */
 .hero-slider {
   position: relative;
@@ -116,15 +114,15 @@ nav ul li a:hover {
 .hero-slider .slide {
   position: absolute;
   inset: 0;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
 .hero-slider .slide.active {
-  display: block;
+  opacity: 1;
   z-index: 1;
 }
 
-/* IMAGEN */
 .hero-slider .slide img {
   width: 100%;
   height: 100%;
@@ -132,7 +130,7 @@ nav ul li a:hover {
   object-position: center;
 }
 
-
+/* Overlay oscuro */
 .hero-slider::after {
   content: "";
   position: absolute;
@@ -141,10 +139,11 @@ nav ul li a:hover {
   z-index: 1;
 }
 
+/* Contenido hero */
 .hero-content {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 2;
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,7 +152,6 @@ nav ul li a:hover {
   color: var(--white);
   padding: 0 20px;
 }
-
 
 /* =========================
    BOTONES
@@ -334,7 +332,6 @@ section h2::after {
   margin: 0 auto;
 }
 
-
 .trust-item {
   background: var(--white);
   border-radius: 20px;
@@ -451,17 +448,16 @@ footer {
     font-size: 1.1rem;
   }
 }
+
 /* =========================
-   ESCALA TIPOGRÁFICA DESKTOP PRO
+   ESCALA TIPOGRÁFICA DESKTOP
 ========================= */
 @media (min-width: 1024px) {
 
   body {
     font-size: 18px;
-    line-height: 1.8;
   }
 
-  /* HERO */
   .hero-content h1 {
     font-size: 3.8rem;
     line-height: 1.15;
@@ -471,7 +467,6 @@ footer {
     font-size: 1.55rem;
   }
 
-  /* TÍTULOS DE SECCIÓN */
   section h2 {
     font-size: 3.2rem;
   }
@@ -480,7 +475,6 @@ footer {
     font-size: 1.35rem;
   }
 
-  /* TARJETAS */
   .why-card h3,
   .equipment-card h3,
   .system-card h3 {
@@ -495,12 +489,10 @@ footer {
     font-size: 1.2rem;
   }
 
-  /* QUIÉNES SOMOS */
   .qs-text p {
     font-size: 1.25rem;
   }
 
-  /* CONFIANZA / NÚMEROS */
   .trust-item strong {
     font-size: 3.6rem;
   }
@@ -509,7 +501,6 @@ footer {
     min-height: 220px;
   }
 
-  /* FORM */
   form input,
   form textarea {
     font-size: 1.1rem;
@@ -519,63 +510,3 @@ footer {
     font-size: 1.05rem;
   }
 }
-.hero-slider {
-  position: relative;
-  overflow: hidden;
-  display: block; /* fuerza salida de grid/flex heredado */
-}
-
-.hero-slider .slide {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
-.hero-slider .slide img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  background-repeat: no-repeat;
-}
-/* ===== FIX MOSAICO HERO (BACKGROUND) ===== */
-.hero-slider,
-.hero-content {
-  background-image: none !important;
-  background-repeat: no-repeat !important;
-}
-/* ===== DEBUG: mostrar solo el primer slide ===== */
-.hero-slider .slide {
-  display: none !important;
-}
-
-.hero-slider .slide:first-child {
-  display: block !important;
-}
-/* ===== FIX DEFINITIVO HERO ===== */
-.hero-slider {
-  position: relative;
-}
-
-.hero-slider .slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.hero-slider .slide.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* evita duplicación de contenido */
-.hero-slider .hero-content {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-
