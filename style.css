@@ -453,10 +453,11 @@ footer {
    ESCALA TIPOGRÁFICA DESKTOP
 ========================= */
 @media (min-width: 1024px) {
-
   body {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.85;
   }
+}
 
   .hero-content h1 {
     font-size: 3.8rem;
