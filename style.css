@@ -466,5 +466,43 @@ footer {
     font-size: 0.95rem;
   }
 }
+/* =========================
+   ESCALA TIPOGRÁFICA DESKTOP (FIX)
+========================= */
+@media (min-width: 1024px) {
+
+  body {
+    font-size: 21px;
+    line-height: 1.9;
+  }
+
+  p,
+  li {
+    font-size: 1.15rem;
+  }
+
+  section h2 {
+    font-size: 3.4rem;
+  }
+
+  .section-intro {
+    font-size: 1.45rem;
+  }
+
+  .why-card p,
+  .equipment-card p,
+  .system-card p,
+  .feature-box p,
+  .testimonio-card,
+  .trust-item p,
+  form input,
+  form textarea {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: 1.1rem;
+  }
+}
 
 
