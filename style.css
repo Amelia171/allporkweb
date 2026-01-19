@@ -491,7 +491,20 @@ footer {
 
 @media (min-width: 1200px) {
   body {
-    font-size: 21px;
+    font-size: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  p,
+  .section-intro,
+  .service-card p,
+  .why-card p,
+  .equipment-card p,
+  .system-card p,
+  .qs-text p,
+  .testimonio-card {
+    font-size: 1.4rem;
+    line-height: 1.75;
   }
 }
 
