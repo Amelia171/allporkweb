@@ -1648,7 +1648,76 @@ header .container {
   height: 60px;
   z-index: 999;
 }
+/* =========================
+   TARJETAS EQUIPAMIENTO / SISTEMAS PROFESIONAL
+========================= */
+.systems-grid,
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 36px;
+}
 
+.system-card,
+.equipment-card {
+  background: var(--white);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none; /* elimina subrayado azul de links */
+}
+
+.system-card img,
+.equipment-card img {
+  width: 100%;
+  height: 260px; /* uniforme */
+  object-fit: cover;
+}
+
+.system-card h3,
+.equipment-card h3 {
+  margin: 22px 24px 12px;
+  color: var(--orange);
+  font-size: 2rem; /* más grande */
+  font-weight: 700;
+  text-decoration: none; /* elimina subrayado azul */
+}
+
+.system-card p,
+.equipment-card p {
+  margin: 0 24px 28px;
+  font-size: 1.35rem; /* más legible */
+  color: #444;
+  line-height: 1.6;
+}
+
+.system-card:hover,
+.equipment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.18);
+}
+
+/* =========================
+   RESPONSIVE TARJETAS
+========================= */
+@media (max-width: 992px) {
+  .systems-grid,
+  .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .systems-grid,
+  .equipment-grid {
+    grid-template-columns: 1fr; /* 1 tarjeta por fila en celular */
+    gap: 20px;
+  }
+}
 
 
 
