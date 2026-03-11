@@ -129,14 +129,6 @@ nav ul li a:hover {
   object-fit: cover;
 }
 
-.hero-slider::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: 2;
-}
-
 .hero-content {
   position: absolute;
   inset: 0;
