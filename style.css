@@ -501,91 +501,10 @@ background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 }
-.equipamiento-sistemas{
-padding-top:80px;
-}
-.hero-content h1{
-font-size:4rem;
-font-weight:800;
-color:white;
-margin-bottom:20px;
-line-height:1.2;
-text-shadow:0 4px 20px rgba(0,0,0,0.4);
-}
-
-.hero-content p{
-font-size:1.2rem;
-color:white;
-max-width:700px;
-margin:auto;
-line-height:1.6;
-}
-
-.hero-trust{
-margin-top:20px;
-font-size:1rem;
-opacity:0.9;
-}
-.btn-hero{
-display:inline-block;
-margin-top:30px;
-padding:18px 34px;
-background:#f28c28;
-color:white;
-font-size:1.2rem;
+.hero-subtitle{
+font-size:2rem;
 font-weight:600;
-border-radius:40px;
-text-decoration:none;
-transition:all .3s ease;
-}
-
-.btn-hero:hover{
-background:#d97706;
-transform:translateY(-3px);
-}
-.system-card h3{
-font-size:1.4rem;
-margin-bottom:10px;
-}
-
-.system-card p{
-font-size:1.05rem;
-line-height:1.6;
-}
-.hero-overlay{
-background:rgba(0,0,0,0.55);
-}
-.hero-overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
-z-index:1;
-}
-.hero-content h1{
-font-size:4.2rem;
-font-weight:800;
-color:white;
-line-height:1.2;
+color:#f79027;
+letter-spacing:2px;
 margin-bottom:20px;
-text-shadow:0 6px 20px rgba(0,0,0,0.6);
-}
-.hero-content p{
-font-size:1.4rem;
-max-width:750px;
-margin:auto;
-line-height:1.7;
-color:white;
-}
-.btn-hero{
-padding:18px 36px;
-font-size:1.25rem;
-border-radius:40px;
-}
-.hero-trust{
-font-size:1.1rem;
-margin-top:25px;
-opacity:0.95;
 }
