@@ -507,7 +507,115 @@ footer {
     line-height: 1.75;
   }
 }
+/* =========================
+   TIPOGRAFÍA GENERAL
+========================= */
+body {
+  font-size: 20px; /* aumento general */
+  line-height: 1.8;
+}
 
+section h2 {
+  font-size: 3.6rem; /* un poco más grande para títulos */
+}
+
+.section-intro {
+  font-size: 1.5rem;
+}
+
+/* =========================
+   TARJETAS EQUIPAMIENTO / SISTEMAS
+========================= */
+.system-card h3,
+.equipment-card h3 {
+  font-size: 1.9rem; /* más grande */
+  color: var(--orange);
+  text-decoration: none; /* elimina subrayado */
+}
+
+.system-card p,
+.equipment-card p {
+  font-size: 1.25rem; /* texto más legible */
+  color: #444;
+}
+
+.system-card img,
+.equipment-card img {
+  height: 260px; /* uniforme y más grande */
+  object-fit: cover;
+}
+
+/* GRID TARJETAS - MEJORADO */
+.systems-grid,
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 36px;
+}
+
+/* Responsive: tablet y celular */
+@media (max-width: 992px) {
+  .systems-grid,
+  .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .systems-grid,
+  .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* BOTONES */
+.btn,
+.btn-hero {
+  font-size: 1.25rem;
+  padding: 16px 36px;
+}
+
+/* HERO */
+.hero-content h1 {
+  font-size: 3.6rem;
+}
+
+.hero-content p {
+  font-size: 1.6rem;
+}
+
+/* SERVICIOS */
+.service-card h3 {
+  font-size: 2rem;
+}
+
+.service-card p {
+  font-size: 1.3rem;
+}
+
+/* WHY ALLPORK */
+.why-card h3 {
+  font-size: 1.9rem;
+}
+
+.why-card p {
+  font-size: 1.25rem;
+}
+
+/* TESTIMONIOS */
+.testimonio-card {
+  font-size: 1.25rem;
+}
+
+/* CONTAINER PADDING CELULAR */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
 
 
