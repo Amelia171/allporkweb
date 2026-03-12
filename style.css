@@ -539,11 +539,12 @@ text-shadow:0 10px 40px rgba(0,0,0,.8);
 /* SUBTITULO PRODUCCION */
 
 .hero-subtitle{
-font-size:2.2rem;
+font-size:2.4rem;
 font-weight:700;
 color:var(--orange);
-letter-spacing:3px;
-margin-bottom:25px;
+letter-spacing:4px;
+margin-bottom:30px;
+text-transform:uppercase;
 }
 
 /* TEXTO */
