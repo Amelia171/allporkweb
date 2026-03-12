@@ -609,3 +609,20 @@ opacity:1;
 transform:translateY(0);
 }
 }
+.section-dark{
+background:var(--black);
+color:var(--white);
+}
+
+.section-dark h2{
+color:var(--white);
+}
+
+.section-dark .section-intro{
+color:#dddddd;
+}
+
+.section-dark .system-card{
+background:white;
+color:var(--black);
+}
