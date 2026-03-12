@@ -483,32 +483,7 @@ transform:scale(1.05);
 .equipment-card{
 border-radius:24px;
 }
-.hero-porcicultura{
-position:relative;
-min-height:60vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:140px 20px 100px 20px;
 
-background-image:url("assets/img/153b9023-b3ba-415b-966a-f1b461cf4277.jpg");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-}
-.hero-subtitle{
-font-size:2.2rem;
-font-weight:700;
-color:var(--orange);
-letter-spacing:3px;
-margin-bottom:25px;
-white-space:nowrap;
-}
-
-.btn-hero{
-margin-top:35px;
-}
 /* =========================
 HERO PORCICULTURA PRO
 ========================= */
@@ -601,11 +576,6 @@ transform:translateY(0);
 }
 }
 @media(max-width:768px){
-
-.hero-subtitle{
-font-size:1.4rem;
-white-space:normal;
-}
 
 }
 @media(max-width:768px){
