@@ -621,7 +621,18 @@ color:var(--white);
 .section-dark .section-intro{
 color:#dddddd;
 }
+.etapas-porcinas .systems-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+@media(max-width:768px){
 
+.etapas-porcinas .systems-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
 .section-dark .system-card{
 background:white;
 color:var(--black);
