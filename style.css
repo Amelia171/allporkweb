@@ -560,9 +560,10 @@ color:#f0f0f0;
 /* BOTON */
 
 .hero-porcicultura .btn-hero{
-font-size:1.3rem;
-padding:20px 45px;
+font-size:1.35rem;
+padding:22px 48px;
 border-radius:50px;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
 /* animacion suave */
 
@@ -590,4 +591,18 @@ line-height:1.4;
 padding:0 10px;
 }
 
+}
+.hero-content{
+animation:heroFade 1.2s ease;
+}
+
+@keyframes heroFade{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
