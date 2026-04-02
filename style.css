@@ -832,3 +832,10 @@ letter-spacing: 1px;
 header{
 box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
+header a,
+header a:visited,
+header a:active,
+header a:hover{
+color: var(--orange);
+text-decoration: none;
+}
