@@ -760,7 +760,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.45);
+background:rgba(0,0,0,0.55);
 }
 
 .hero-content{
@@ -846,4 +846,10 @@ font-size: 1.6rem;
 margin-left: 10px;
 letter-spacing: 1px;
 text-transform: uppercase;
+}
+.btn-group{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
 }
