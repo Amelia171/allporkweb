@@ -896,3 +896,40 @@ margin-bottom:10px;
 .testimonios-home{
 background:var(--beige);
 }
+/* =========================
+SERVICES PRO (TARJETAS)
+========================= */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.feature-box{
+background:#ffffff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
+transition:all .35s ease;
+text-align:left;
+border:1px solid rgba(0,0,0,0.05);
+}
+
+.feature-box:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 70px rgba(0,0,0,0.18);
+}
+
+.feature-box h3{
+color:var(--orange);
+font-size:1.6rem;
+margin-bottom:12px;
+}
+
+.feature-box p{
+color:#444;
+font-size:1.15rem;
+line-height:1.6;
+}
