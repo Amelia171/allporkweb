@@ -1091,3 +1091,57 @@ transition:all .35s ease;
 transform:translateY(-8px);
 box-shadow:0 25px 60px rgba(0,0,0,.2);
 }
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.reveal.show{
+opacity:1;
+transform:translateY(0);
+}
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(40,33,32,0.75);
+backdrop-filter:blur(10px);
+box-shadow:0 4px 20px rgba(0,0,0,0.4);
+}
+
+.feature-box::before,
+.why-card::before,
+.testimonio-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:linear-gradient(90deg,#f79027,#ffb347);
+}
+.btn{
+position:relative;
+overflow:hidden;
+}
+
+.btn::after{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.2);
+transition:0.4s;
+}
+
+.btn:hover::after{
+left:100%;
+}
+
+box-shadow: 
+0 10px 20px rgba(0,0,0,0.08),
+0 20px 40px rgba(0,0,0,0.12);
