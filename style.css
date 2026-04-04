@@ -1145,3 +1145,102 @@ left:100%;
 box-shadow: 
 0 10px 20px rgba(0,0,0,0.08),
 0 20px 40px rgba(0,0,0,0.12);
+/* =========================
+QUIENES SOMOS PRO
+========================= */
+
+.quienes-somos{
+  background:linear-gradient(to bottom,#f5f5f5,#ffffff);
+}
+
+/* HEADER */
+
+.qs-header{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-badge{
+  display:inline-block;
+  background:rgba(247,144,39,0.15);
+  color:var(--orange);
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:0.85rem;
+  margin-bottom:10px;
+}
+
+/* LAYOUT */
+
+.qs-layout{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:80px;
+  align-items:center;
+  margin-bottom:70px;
+}
+
+.qs-text p{
+  font-size:1.25rem;
+  color:#444;
+  margin-bottom:18px;
+}
+
+/* IMAGEN */
+
+.qs-image img{
+  border-radius:20px;
+  height:420px;
+  width:100%;
+  object-fit:cover;
+  box-shadow:0 25px 60px rgba(0,0,0,0.25);
+  transition:0.4s;
+}
+
+.qs-image img:hover{
+  transform:scale(1.03);
+}
+
+/* CARDS */
+
+.qs-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.qs-card{
+  background:white;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  transition:all .3s ease;
+  border-top:3px solid var(--orange);
+}
+
+.qs-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.18);
+}
+
+.qs-card h3{
+  color:var(--orange);
+  margin-bottom:10px;
+}
+
+.qs-card p{
+  color:#444;
+  font-size:1.1rem;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .qs-layout{
+    grid-template-columns:1fr;
+  }
+
+  .qs-image img{
+    height:300px;
+  }
+}
