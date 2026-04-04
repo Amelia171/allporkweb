@@ -1047,3 +1047,7 @@ margin-top:20px;
 .cta-final .btn:hover{
 background:#111;
 }
+.cta-final .btn{
+display:inline-block;
+margin:20px auto 0;
+}
