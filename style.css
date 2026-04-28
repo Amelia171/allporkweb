@@ -1501,3 +1501,22 @@ EQUIPAMIENTO NIVEL PRO 🔥
   color: inherit !important;
   display: block;
 }
+/* 🚫 ELIMINAR SUBRAYADO DEFINITIVO */
+
+a{
+  text-decoration: none !important;
+}
+
+/* refuerzo específico */
+
+.system-link,
+.system-link *{
+  text-decoration: none !important;
+}
+
+/* por si el navegador mete estilos raros */
+
+.system-card h3,
+.system-card p{
+  text-decoration: none !important;
+}
