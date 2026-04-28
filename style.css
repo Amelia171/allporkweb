@@ -1567,30 +1567,6 @@ EQUIPAMIENTO PRO NIVEL AGENCIA
   z-index:1;
 }
 
-/* TEXTO SOBRE IMAGEN */
-
-.system-card h3,
-.system-card p{
-  position:absolute;
-  left:25px;
-  z-index:2;
-  color:white;
-  transition:.3s;
-}
-
-.system-card h3{
-  bottom:55px;
-  font-size:1.8rem;
-  color:var(--orange);
-}
-
-.system-card p{
-  bottom:20px;
-  font-size:1.05rem;
-  color:#e0e0e0;
-  max-width:85%;
-}
-
 /* HOVER PRO */
 
 .system-card:hover{
@@ -1604,28 +1580,7 @@ EQUIPAMIENTO PRO NIVEL AGENCIA
 
 /* LINEA ANIMADA */
 
-.system-card::after{
-  content:"";
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:0%;
-  height:4px;
-  background:linear-gradient(90deg,#f79027,#ffb347);
-  transition:.4s;
-  z-index:3;
-}
 
-.system-card:hover::after{
-  width:100%;
-}
-.system-card::before{
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.75),
-    rgba(0,0,0,0.2)
-  );
-  backdrop-filter:blur(2px);
 }
 .system-card h3{
   transition:.4s;
