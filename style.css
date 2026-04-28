@@ -324,8 +324,11 @@ align-items:center;
 }
 
 .qs-text p{
-font-size:1.3rem;
-color:#444;
+  font-size:1.35rem;
+  line-height:1.8;
+  color:#444;
+  margin-bottom:20px;
+  max-width:600px;
 }
 
 .qs-image img{
@@ -1181,11 +1184,12 @@ QUIENES SOMOS PRO
 }
 
 .qs-text p{
-  font-size:1.25rem;
+  font-size:1.35rem;
+  line-height:1.8;
   color:#444;
-  margin-bottom:18px;
+  margin-bottom:20px;
+  max-width:600px;
 }
-
 /* IMAGEN */
 
 .qs-image img{
@@ -1272,9 +1276,11 @@ QUIENES SOMOS PRO
 }
 
 .qs-text p{
-  font-size:1.2rem;
-  color:#555;
-  margin-bottom:16px;
+  font-size:1.35rem;
+  line-height:1.8;
+  color:#444;
+  margin-bottom:20px;
+  max-width:600px;
 }
 
 .qs-image img{
@@ -1315,4 +1321,24 @@ QUIENES SOMOS PRO
 .qs-card p{
   color:#555;
   font-size:1rem;
+}
+.qs-header h2{
+  font-size:3.8rem;
+}
+.section-intro{
+  font-size:1.5rem;
+  max-width:700px;
+}
+.qs-card h3{
+  font-size:1.4rem;
+}
+
+.qs-card p{
+  font-size:1.1rem;
+}
+.qs-text{
+  padding-right:20px;
+}
+.qs-layout{
+  gap:100px;
 }
