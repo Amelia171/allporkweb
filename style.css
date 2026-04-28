@@ -1342,3 +1342,33 @@ QUIENES SOMOS PRO
 .qs-layout{
   gap:100px;
 }
+/* ===== EQUIPAMIENTO PRO (SIN SUBRAYADO) ===== */
+
+.equipment-card a{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.equipment-card h3{
+  color: var(--orange);
+  font-size: 1.6rem;
+  margin: 18px 20px 10px;
+  transition: 0.3s;
+}
+
+.equipment-card p{
+  margin: 0 20px 25px;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* hover más pro */
+.equipment-card:hover h3{
+  color: #e07f1e;
+}
+
+.equipment-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.2);
+}
