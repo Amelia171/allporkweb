@@ -1721,3 +1721,18 @@ EQUIPAMIENTO PRO NIVEL AGENCIA
 .system-card{
   border:1px solid rgba(0,0,0,0.06);
 } 
+.system-card h3,
+.system-card p{
+  position:absolute;
+  left:25px;
+  z-index:2;
+  color:white;
+}
+
+.system-card h3{
+  bottom:55px;
+}
+
+.system-card p{
+  bottom:20px;
+}
