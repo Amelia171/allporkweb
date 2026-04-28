@@ -1491,3 +1491,13 @@ EQUIPAMIENTO NIVEL PRO 🔥
   text-decoration: none !important;
   color: inherit !important;
 }
+/* 🚫 SACAR SUBRAYADO EN EQUIPAMIENTO */
+
+.system-link,
+.system-link:visited,
+.system-link:hover,
+.system-link:active{
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block;
+}
