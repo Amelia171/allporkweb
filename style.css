@@ -1554,23 +1554,6 @@ EQUIPAMIENTO PRO NIVEL AGENCIA
 
 /* LINEA ANIMADA */
 
-
-}
-.system-card h3{
-  transition:.4s;
-}
-
-.system-card p{
-  transition:.4s;
-}
-
-.system-card:hover h3{
-  transform:translateY(-6px);
-}
-
-.system-card:hover p{
-  transform:translateY(-4px);
-}
 .system-card h3{
   transition:.4s;
 }
