@@ -1482,3 +1482,12 @@ EQUIPAMIENTO NIVEL PRO 🔥
 .equipment-card:hover::after{
   width:100%;
 }
+/* 🚫 ELIMINAR SUBRAYADO SI O SI */
+
+.equipment-card a,
+.equipment-card a:visited,
+.equipment-card a:hover,
+.equipment-card a:active{
+  text-decoration: none !important;
+  color: inherit !important;
+}
