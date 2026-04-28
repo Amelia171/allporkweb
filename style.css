@@ -1532,18 +1532,6 @@ EQUIPAMIENTO PRO NIVEL AGENCIA
   margin-top:60px;
 }
 
-/* TARJETA */
-
-.system-card{
-  position:relative;
-  border-radius:24px;
-  overflow:hidden;
-  cursor:pointer;
-  background:#000;
-  box-shadow:0 15px 40px rgba(0,0,0,0.15);
-  transition:all .4s ease;
-}
-
 /* IMAGEN */
 
 .system-card img{
@@ -1551,20 +1539,6 @@ EQUIPAMIENTO PRO NIVEL AGENCIA
   height:320px;
   object-fit:cover;
   transition:transform .6s ease;
-}
-
-/* OVERLAY */
-
-.system-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.85),
-    rgba(0,0,0,0.2)
-  );
-  z-index:1;
 }
 
 /* HOVER PRO */
@@ -1612,24 +1586,7 @@ EQUIPAMIENTO PRO NIVEL AGENCIA
 .system-card:hover p{
   transform:translateY(-4px);
 }
-.system-card::after{
-  content:"Ver más →";
-  position:absolute;
-  top:20px;
-  right:20px;
-  background:rgba(255,255,255,0.1);
-  color:white;
-  padding:6px 12px;
-  border-radius:20px;
-  font-size:0.8rem;
-  opacity:0;
-  transition:.3s;
-  z-index:4;
-}
 
-.system-card:hover::after{
-  opacity:1;
-}
 /* ===== CARD EQUIPAMIENTO PRO (TEXTO ABAJO) ===== */
 
 .system-card{
