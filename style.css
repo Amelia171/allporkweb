@@ -1772,3 +1772,46 @@ EQUIPAMIENTO PRO NIVEL AGENCIA
 .system-card:hover::after{
   opacity:1;
 }
+/* ===== CARD EQUIPAMIENTO PRO (TEXTO ABAJO) ===== */
+
+.system-card{
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  transition: all .35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGEN ARRIBA */
+.system-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+/* CONTENIDO ABAJO */
+.system-card .card-body{
+  padding:18px 20px 22px;
+}
+
+/* TITULO */
+.system-card h3{
+  font-size:1.3rem;
+  color:var(--orange);
+  margin-bottom:8px;
+}
+
+/* DESCRIPCION */
+.system-card p{
+  font-size:1rem;
+  color:#555;
+  line-height:1.5;
+}
+
+/* HOVER PRO */
+.system-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.18);
+}
