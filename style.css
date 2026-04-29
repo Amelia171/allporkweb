@@ -470,3 +470,12 @@ section h2{
 .hero-content p{
   max-width:500px;
 }
+.hero-porcinos{
+  justify-content:center;     /* centra horizontal */
+  text-align:center;          /* centra texto */
+}
+
+.hero-porcinos .hero-content{
+  margin-left:0;              /* saca el corrimiento */
+  text-align:center;
+}
