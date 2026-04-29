@@ -244,7 +244,10 @@ section h2{
   background:var(--black);
   color:white;
 }
-
+section{
+  padding:100px 0;
+  background:white; /* 👈 ESTO ES LO CLAVE */
+}
 /* =========================
 GRIDS
 ========================= */
@@ -434,4 +437,20 @@ RESPONSIVE
     padding:70px 0;
   }
 
+}
+section{
+  position:relative;
+  z-index:1;
+}
+.hero{
+  z-index:0;
+}
+section h2{
+  text-align:center;
+}
+
+.section-intro{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto 60px;
 }
