@@ -487,59 +487,6 @@ transform:scale(1.05);
 .equipment-card{
 border-radius:24px;
 }
-
-/* Contenido encima */
-
-.hero-porcicultura .hero-content{
-position:relative;
-z-index:2;
-max-width:900px;
-margin:auto;
-}
-
-/* TITULO */
-
-.hero-porcicultura h1{
-font-size:5.2rem;
-font-weight:900;
-line-height:1.05;
-margin-bottom:25px;
-color:white;
-letter-spacing:2px;
-text-shadow:0 10px 40px rgba(0,0,0,.8);
-}
-
-/* SUBTITULO PRODUCCION */
-
-.hero-subtitle{
-font-size:2.4rem;
-font-weight:700;
-color:var(--orange);
-letter-spacing:4px;
-margin-bottom:30px;
-text-transform:uppercase;
-}
-
-/* TEXTO */
-
-.hero-porcicultura p{
-font-size:1.55rem;
-max-width:760px;
-margin:auto;
-margin-bottom:40px;
-color:#f0f0f0;
-}
-
-/* BOTON */
-
-.hero-porcicultura .btn-hero{
-font-size:1.35rem;
-padding:22px 48px;
-border-radius:50px;
-box-shadow:0 10px 25px rgba(0,0,0,.4);
-}
-/* animacion suave */
-
 .system-card{
 opacity:0;
 transform:translateY(40px);
@@ -627,19 +574,7 @@ transition:0.3s;
 .btn-catalogo:hover{
 background-color:#1da851;
 }
-.hero-avicultura{
-background-image:url("assets/img/hero-ponedoras.jpg");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-height:80vh;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-color:white;
-text-align:center;
-}
+
 .hero-overlay{
 position:absolute;
 top:0;
