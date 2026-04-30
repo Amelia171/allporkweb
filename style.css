@@ -1,19 +1,22 @@
 /* =========================
-🎨 DESIGN SYSTEM
+🎨 DESIGN SYSTEM PRO
 ========================= */
 :root{
   --orange:#f79027;
-  --orange-dark:#e07f1e;
-  --black:#282120;
+  --orange-light:#ff9f3c;
+  --black:#1c1716;
   --white:#ffffff;
-  --beige:#fbf3e8;
-  --gray:#f5f5f5;
+  --gray:#f4f4f4;
 
-  --radius:20px;
-  --shadow:0 15px 40px rgba(0,0,0,.12);
-  --shadow-strong:0 30px 70px rgba(0,0,0,.2);
+  --radius:22px;
 
-  --transition:.35s ease;
+  --shadow-soft:0 10px 30px rgba(0,0,0,.08);
+  --shadow-medium:0 20px 60px rgba(0,0,0,.12);
+  --shadow-strong:0 40px 100px rgba(0,0,0,.25);
+
+  --glass:rgba(255,255,255,0.08);
+
+  --transition:.4s cubic-bezier(.2,.8,.2,1);
 }
 
 /* =========================
@@ -26,7 +29,7 @@ RESET
 body{
   margin:0;
   font-family:'Inter',system-ui,sans-serif;
-  background:var(--gray);
+  background:linear-gradient(to bottom,#f5f5f5,#ffffff);
   color:var(--black);
   line-height:1.7;
 }
@@ -40,59 +43,58 @@ img{
 CONTAINER
 ========================= */
 .container{
-  max-width:1320px;
+  max-width:1280px;
   margin:auto;
   padding:0 24px;
 }
 
 /* =========================
-HEADER GLASS
+HEADER GLASS 🔥
 ========================= */
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(40,33,32,0.75);
-  backdrop-filter:blur(10px);
-  box-shadow:0 4px 20px rgba(0,0,0,.4);
+  backdrop-filter:blur(12px);
+  background:rgba(20,18,17,0.65);
+  border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 header .container{
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   height:85px;
 }
 
 .logo{
-  width:70px;
+  width:65px;
 }
 
 nav ul{
   display:flex;
-  gap:25px;
+  gap:22px;
   list-style:none;
 }
 
 nav a{
   color:var(--orange);
   text-decoration:none;
-  font-weight:700;
+  font-weight:600;
   padding:10px 14px;
-  border-radius:8px;
+  border-radius:10px;
   transition:var(--transition);
 }
 
 nav a:hover{
-  background:var(--orange);
-  color:white;
+  background:rgba(247,144,39,0.15);
 }
 
 /* =========================
-HERO PREMIUM
+HERO CINEMATIC
 ========================= */
 .hero{
-  height:92vh;
+  height:95vh;
   background:url("assets/img/hero-granja.jpg") center/cover no-repeat;
   display:flex;
   align-items:center;
@@ -105,9 +107,8 @@ HERO PREMIUM
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.65),
+  background:radial-gradient(circle at center,
+    rgba(0,0,0,0.3),
     rgba(0,0,0,0.85)
   );
 }
@@ -115,64 +116,69 @@ HERO PREMIUM
 .hero-content{
   position:relative;
   z-index:2;
-  max-width:800px;
-  animation:fadeUp 1s ease;
+  max-width:750px;
+  animation:fadeUp 1.2s ease;
+}
+
+/* GLASS BOX */
+.hero-box{
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  border-radius:var(--radius);
+  padding:40px;
+  border:1px solid rgba(255,255,255,0.15);
+  box-shadow:var(--shadow-medium);
 }
 
 .hero h1{
   font-size:3.6rem;
   color:white;
-  margin-bottom:20px;
+  margin-bottom:15px;
 }
 
 .hero p{
   color:#ddd;
-  font-size:1.3rem;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 /* =========================
-BOTONES PREMIUM
+BOTONES PRO
 ========================= */
 .btn{
   display:inline-block;
-  background:linear-gradient(135deg,#f79027,#ff9f3c);
-  color:#000;
   padding:16px 36px;
   border-radius:50px;
   font-weight:700;
   text-decoration:none;
+  background:linear-gradient(135deg,var(--orange),var(--orange-light));
+  color:#000;
   transition:var(--transition);
-  box-shadow:var(--shadow);
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
 }
 
 .btn:hover{
-  transform:translateY(-3px);
-  box-shadow:var(--shadow-strong);
+  transform:translateY(-4px) scale(1.02);
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
 }
 
 /* =========================
 SECCIONES
 ========================= */
 section{
-  padding:100px 0;
+  padding:110px 0;
 }
 
 section h2{
-  font-size:3rem;
   text-align:center;
+  font-size:3rem;
+  margin-bottom:20px;
 }
 
 .section-intro{
   text-align:center;
-  max-width:700px;
-  margin:20px auto 60px;
+  max-width:650px;
+  margin:0 auto 60px;
   color:#555;
-}
-
-.section-dark{
-  background:var(--black);
-  color:white;
 }
 
 /* =========================
@@ -181,52 +187,52 @@ GRID
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:35px;
+  gap:40px;
 }
 
 /* =========================
-CARDS BASE
+CARDS GLASS PRO 🔥
 ========================= */
 .card{
   background:white;
   border-radius:var(--radius);
   overflow:hidden;
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow-soft);
   transition:var(--transition);
+  position:relative;
 }
 
 .card:hover{
-  transform:translateY(-8px);
+  transform:translateY(-12px) scale(1.01);
   box-shadow:var(--shadow-strong);
 }
 
 .card img{
-  height:220px;
+  height:240px;
   object-fit:cover;
 }
 
 .card-body{
-  padding:20px;
+  padding:25px;
 }
 
 .card h3{
   color:var(--orange);
-  margin-bottom:10px;
 }
 
 /* =========================
-EQUIPAMIENTO PRO 🔥
+EQUIPAMIENTO ULTRA 🔥🔥
 ========================= */
 .equipment-card{
   position:relative;
+  height:340px;
   border-radius:var(--radius);
   overflow:hidden;
-  height:320px;
   display:flex;
   align-items:flex-end;
   justify-content:center;
   cursor:pointer;
-  box-shadow:var(--shadow);
+  transition:var(--transition);
 }
 
 .equipment-card img{
@@ -234,8 +240,7 @@ EQUIPAMIENTO PRO 🔥
   inset:0;
   height:100%;
   object-fit:cover;
-  z-index:0;
-  transition:transform .6s ease;
+  transition:transform .7s ease;
 }
 
 .equipment-card::before{
@@ -244,68 +249,69 @@ EQUIPAMIENTO PRO 🔥
   inset:0;
   background:linear-gradient(
     to top,
-    rgba(0,0,0,0.8),
-    transparent
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.2)
   );
-  z-index:1;
 }
 
+/* GLASS CONTENT */
 .equipment-card .card-content{
   position:relative;
   z-index:2;
+  margin-bottom:20px;
+  padding:20px 25px;
+  backdrop-filter:blur(6px);
+  background:rgba(255,255,255,0.08);
+  border-radius:14px;
   text-align:center;
-  padding:25px;
+  border:1px solid rgba(255,255,255,0.15);
 }
 
 .equipment-card h3{
   color:var(--orange);
-  font-size:1.6rem;
+  margin-bottom:6px;
 }
 
 .equipment-card p{
   color:#eee;
-  font-size:1rem;
+  font-size:0.95rem;
+}
+
+.equipment-card:hover{
+  transform:translateY(-10px) scale(1.02);
 }
 
 .equipment-card:hover img{
-  transform:scale(1.1);
+  transform:scale(1.12);
 }
 
 /* =========================
 FEATURES
 ========================= */
 .feature-box{
+  padding:35px;
   background:white;
-  padding:30px;
   border-radius:var(--radius);
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow-soft);
+  transition:var(--transition);
 }
 
 .feature-box:hover{
-  transform:translateY(-6px);
+  transform:translateY(-8px);
 }
 
 /* =========================
-TESTIMONIOS
+FOOTER
 ========================= */
-.testimonios{
-  background:var(--beige);
-}
-
-/* =========================
-FORM
-========================= */
-form{
-  max-width:700px;
-  margin:auto;
-  background:white;
+footer{
+  background:#141110;
+  color:#ccc;
+  text-align:center;
   padding:40px;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
 }
 
 /* =========================
-WHATSAPP
+WHATSAPP FLOAT
 ========================= */
 .whatsapp-float{
   position:fixed;
@@ -317,17 +323,7 @@ WHATSAPP
 }
 
 .whatsapp-float:hover{
-  transform:scale(1.1);
-}
-
-/* =========================
-FOOTER
-========================= */
-footer{
-  background:var(--black);
-  color:white;
-  text-align:center;
-  padding:30px;
+  transform:scale(1.15);
 }
 
 /* =========================
@@ -336,7 +332,7 @@ ANIMACIONES
 @keyframes fadeUp{
   from{
     opacity:0;
-    transform:translateY(30px);
+    transform:translateY(40px);
   }
   to{
     opacity:1;
@@ -344,13 +340,10 @@ ANIMACIONES
   }
 }
 
-/* =========================
-SCROLL ANIMATION
-========================= */
 .reveal{
   opacity:0;
-  transform:translateY(40px);
-  transition:all .8s ease;
+  transform:translateY(50px);
+  transition:all 1s ease;
 }
 
 .reveal.show{
@@ -364,7 +357,7 @@ RESPONSIVE
 @media(max-width:768px){
 
   .hero h1{
-    font-size:2.2rem;
+    font-size:2.3rem;
   }
 
   nav ul{
