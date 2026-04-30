@@ -432,3 +432,8 @@ TESTIMONIOS PRO (FIX 🔥)
   color:var(--orange);
   font-size:1rem;
 }
+/* CENTRAR BOTÓN HERO 🔥 */
+.hero-box .btn{
+  display:inline-block;
+  margin:20px auto 0;
+}
