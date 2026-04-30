@@ -1,135 +1,438 @@
- <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Asesoramiento | AllPork</title>
-  <link rel="icon" href="./favicon.png" type="image/png">
+  se me fue el fondo de esta seccion, y no quedo centrado /* =========================
+VARIABLES
+========================= */
+:root{
+  --orange:#f79027;
+  --black:#282120;
+  --white:#ffffff;
+  --beige:#fbf3e8;
+  --gray:#f5f5f5;
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <div class="container header-content">
-    <a href="index.html" class="logo-link">
-      <img
-        src="https://i.postimg.cc/HLphL6vx/Chat-GPT-Image-6-jul-2025-07-56-34-p-m-1.png"
-        alt="AllPork Logo"
-        class="logo"
-      />
-    </a>
+/* =========================
+RESET
+========================= */
+*,*::before,*::after{
+  box-sizing:border-box;
+}
 
-   <nav>
-  <ul id="nav-menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="quienes-somos.html">Quiénes somos</a></li>
-    <li><a href="porque-elegirnos.html">Por qué elegirnos</a></li>
-    <li><a href="equipamiento.html">Equipamiento</a></li>
-    <li><a href="asesoramiento.html">Asesoramiento</a></li>
-    <li><a href="montaje.html">Montaje</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--gray);
+  color:var(--black);
+  line-height:1.7;
+  font-size:20px;
+}
 
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
+img{
+  max-width:100%;
+  display:block;
+}
 
-  </div>
-</header>
+/* =========================
+CONTAINER
+========================= */
+.container{
+  max-width:1320px;
+  margin:auto;
+  padding:0 28px;
+}
 
+/* =========================
+HEADER
+========================= */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(40,33,32,0.75);
+  backdrop-filter:blur(10px);
+  box-shadow:0 4px 20px rgba(0,0,0,0.4);
+}
 
-<!-- ===== ASESORAMIENTO ===== -->
-<section id="asesoramiento">
-  <div class="container">
-    <h2>Asesoramiento técnico</h2>
+header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:90px;
+}
 
-    <p style="text-align:center; max-width:900px; margin:0 auto 40px;">
-      En AllPork brindamos asesoramiento técnico integral para acompañar
-      a productores en cada etapa del proyecto, desde el diseño inicial
-      hasta la puesta en marcha de las instalaciones.
-    </p>
+.logo{
+  width:72px;
+  height:72px;
+  object-fit:contain;
+}
 
-    <div class="features">
-      <div class="feature-box">
-        <h3>Diagnóstico productivo</h3>
-        <p>
-          Analizamos las condiciones actuales de la granja para detectar
-          oportunidades de mejora en manejo, infraestructura y eficiencia.
-        </p>
-      </div>
+.brand-name{
+  color:var(--orange);
+  font-weight:800;
+  font-size:1.6rem;
+  margin-left:10px;
+  text-transform:uppercase;
+}
 
-      <div class="feature-box">
-        <h3>Diseño de instalaciones</h3>
-        <p>
-          Asesoramos en el diseño y dimensionamiento de instalaciones,
-          adaptadas a la escala productiva y objetivos del productor.
-        </p>
-      </div>
+header a{
+  color:var(--orange);
+  text-decoration:none;
+}
 
-      <div class="feature-box">
-        <h3>Selección de equipamiento</h3>
-        <p>
-          Recomendamos el equipamiento más adecuado para cada sistema,
-          priorizando durabilidad, eficiencia y bienestar animal.
-        </p>
-      </div>
+/* =========================
+NAV
+========================= */
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:28px;
+  margin:0;
+  padding:0;
+}
 
-      <div class="feature-box">
-        <h3>Optimización de procesos</h3>
-        <p>
-          Mejoramos los flujos de trabajo para reducir costos operativos
-          y aumentar la productividad del establecimiento.
-        </p>
-      </div>
+nav ul li a{
+  color:var(--orange);
+  font-weight:700;
+  font-size:1.2rem;
+  padding:12px 18px;
+  border-radius:6px;
+  transition:.3s;
+}
 
-      <div class="feature-box">
-        <h3>Acompañamiento técnico</h3>
-        <p>
-          Brindamos soporte antes, durante y después de la instalación,
-          asegurando el correcto funcionamiento de los sistemas.
-        </p>
-      </div>
+nav ul li a:hover{
+  background:var(--orange);
+  color:white;
+}
 
-      <div class="feature-box">
-        <h3>Soluciones a medida</h3>
-        <p>
-          Cada proyecto es único. Adaptamos nuestras recomendaciones
-          a las necesidades específicas de cada productor.
-        </p>
-      </div>
-    </div>
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:6px;
+  cursor:pointer;
+}
 
-  </div>
-</section>
+.hamburger span{
+  width:30px;
+  height:3px;
+  background:var(--orange);
+}
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <p>&copy; 2025 AllPork S.R.L. Todos los derechos reservados.</p>
-  <p>Tel: +54 9 11 6690-2000 | infoallpork@gmail.com</p>
-  <p>General Las Heras, Buenos Aires</p>
-</footer>
-  <a href="https://wa.me/5491166902000" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-</a>
-<!-- ===== JS MENÚ ===== -->
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
+/* =========================
+HERO GENERAL
+========================= */
+.hero,
+.hero-pollos,
+.hero-porcinos,
+.hero-avicultura{
+  height:90vh;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  color:white;
+}
 
-  hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-  });
+.hero{
+  background-image:url('assets/img/hero-granja.jpg');
+  background-attachment:fixed;
+}
 
-  document.querySelectorAll("#nav-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("active");
-    });
-  });
-</script>
+.hero-avicultura{
+  background-image:url("assets/img/hero-ponedoras.jpg");
+}
 
-</body>
-</html>
+.hero-pollos{
+  background-image:url("../img/hero-pollos.jpg");
+}
+
+.hero::before,
+.hero-overlay{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.85)
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  padding:20px;
+  animation:heroFade 1.2s ease;
+}
+
+.hero-content h1{
+  font-size:3.8rem;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  font-size:1.35rem;
+  color:#eaeaea;
+  margin-bottom:35px;
+}
+
+.hero-subtitle{
+  color:var(--orange);
+  font-size:1.2rem;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.hero-badge{
+  display:inline-block;
+  padding:8px 18px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.1);
+  color:white;
+  margin-bottom:20px;
+}
+
+/* =========================
+BOTONES
+========================= */
+.btn,
+.btn-hero{
+  background:linear-gradient(135deg,#f79027,#ff9f3c);
+  color:black;
+  padding:18px 42px;
+  border-radius:50px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.3s;
+  box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.btn-group{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+/* =========================
+SECCIONES
+========================= */
+section{
+  padding:100px 0;
+}
+
+section h2{
+  font-size:3.4rem;
+  text-align:center;
+}
+
+.section-intro{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto 60px;
+  font-size:1.4rem;
+  color:#444;
+}
+
+.section-dark{
+  background:var(--black);
+  color:white;
+}
+
+/* =========================
+GRIDS
+========================= */
+.systems-grid,
+.equipment-grid,
+.services-grid,
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:36px;
+}
+
+/* =========================
+CARDS BASE
+========================= */
+.system-card,
+.equipment-card,
+.feature-box,
+.testimonio-card{
+  background:white;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.12);
+  transition:.35s;
+}
+
+.system-card:hover,
+.feature-box:hover,
+.testimonio-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.2);
+}
+
+/* =========================
+SYSTEM CARD
+========================= */
+.system-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.system-card .card-body{
+  padding:20px;
+}
+
+.system-card h3{
+  color:var(--orange);
+}
+
+.system-card p{
+  color:#555;
+}
+
+/* =========================
+EQUIPMENT PRO
+========================= */
+.equipment-card{
+  position:relative;
+  overflow:hidden;
+  background:black;
+  color:white;
+}
+
+.equipment-card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+}
+
+.equipment-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.85),transparent);
+}
+
+.equipment-card .card-content{
+  position:absolute;
+  bottom:0;
+  padding:25px;
+}
+
+/* =========================
+FEATURES
+========================= */
+.feature-box{
+  padding:35px;
+}
+
+.feature-box h3{
+  color:var(--orange);
+}
+
+/* =========================
+TESTIMONIOS
+========================= */
+.testimonios{
+  background:var(--beige);
+}
+
+/* =========================
+FORM
+========================= */
+form{
+  max-width:720px;
+  margin:auto;
+  background:white;
+  padding:48px;
+  border-radius:22px;
+}
+
+form input,
+form textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:20px;
+}
+
+/* =========================
+FOOTER
+========================= */
+footer{
+  background:var(--black);
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+/* =========================
+WHATSAPP
+========================= */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+}
+
+/* =========================
+ANIMACIONES
+========================= */
+@keyframes heroFade{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@media(max-width:992px){
+
+  nav ul{
+    display:none;
+    position:absolute;
+    top:90px;
+    right:0;
+    background:var(--black);
+    flex-direction:column;
+    width:240px;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  .hamburger{
+    display:flex;
+  }
+
+}
+
+@media(max-width:600px){
+
+  body{
+    font-size:17px;
+  }
+
+  .hero-content h1{
+    font-size:2.2rem;
+  }
+
+  .systems-grid{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:70px 0;
+  }
+
+}
 
