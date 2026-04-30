@@ -1,12 +1,19 @@
 /* =========================
-VARIABLES
+🎨 DESIGN SYSTEM
 ========================= */
 :root{
   --orange:#f79027;
+  --orange-dark:#e07f1e;
   --black:#282120;
   --white:#ffffff;
   --beige:#fbf3e8;
   --gray:#f5f5f5;
+
+  --radius:20px;
+  --shadow:0 15px 40px rgba(0,0,0,.12);
+  --shadow-strong:0 30px 70px rgba(0,0,0,.2);
+
+  --transition:.35s ease;
 }
 
 /* =========================
@@ -22,11 +29,10 @@ body{
   background:var(--gray);
   color:var(--black);
   line-height:1.7;
-  font-size:20px;
 }
 
 img{
-  max-width:100%;
+  width:100%;
   display:block;
 }
 
@@ -36,11 +42,11 @@ CONTAINER
 .container{
   max-width:1320px;
   margin:auto;
-  padding:0 28px;
+  padding:0 24px;
 }
 
 /* =========================
-HEADER
+HEADER GLASS
 ========================= */
 header{
   position:sticky;
@@ -48,102 +54,51 @@ header{
   z-index:1000;
   background:rgba(40,33,32,0.75);
   backdrop-filter:blur(10px);
-  box-shadow:0 4px 20px rgba(0,0,0,0.4);
+  box-shadow:0 4px 20px rgba(0,0,0,.4);
 }
 
 header .container{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  height:90px;
+  height:85px;
 }
 
 .logo{
-  width:72px;
-  height:72px;
-  object-fit:contain;
+  width:70px;
 }
 
-.brand-name{
-  color:var(--orange);
-  font-weight:800;
-  font-size:1.6rem;
-  margin-left:10px;
-  text-transform:uppercase;
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
 }
 
-header a{
+nav a{
   color:var(--orange);
   text-decoration:none;
-}
-
-/* =========================
-NAV
-========================= */
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:28px;
-  margin:0;
-  padding:0;
-}
-
-nav ul li a{
-  color:var(--orange);
   font-weight:700;
-  font-size:1.2rem;
-  padding:12px 18px;
-  border-radius:6px;
-  transition:.3s;
+  padding:10px 14px;
+  border-radius:8px;
+  transition:var(--transition);
 }
 
-nav ul li a:hover{
+nav a:hover{
   background:var(--orange);
   color:white;
 }
 
-.hamburger{
-  display:none;
-  flex-direction:column;
-  gap:6px;
-  cursor:pointer;
-}
-
-.hamburger span{
-  width:30px;
-  height:3px;
-  background:var(--orange);
-}
-
 /* =========================
-HERO GENERAL
+HERO PREMIUM
 ========================= */
-.hero,
-.hero-pollos,
-.hero-porcinos,
-.hero-avicultura{
-  height:90vh;
-  background-size:cover;
-  background-position:center;
+.hero{
+  height:92vh;
+  background:url("assets/img/hero-granja.jpg") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
   position:relative;
-  color:white;
-}
-
-.hero{
-  background-image:url('assets/img/hero-granja.jpg');
-  background-attachment:fixed;
-}
-
-.hero-avicultura{
-  background-image:url("assets/img/hero-ponedoras.jpg");
-}
-
-.hero-pollos{
-  background-image:url("../img/hero-pollos.jpg");
 }
 
 .hero::before{
@@ -151,11 +106,9 @@ HERO GENERAL
   position:absolute;
   inset:0;
   background:linear-gradient(
-    to right,
-    rgba(0,0,0,0.75) 0%,
-    rgba(0,0,0,0.55) 40%,
-    rgba(0,0,0,0.2) 70%,
-    transparent 100%
+    to bottom,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.85)
   );
 }
 
@@ -163,62 +116,39 @@ HERO GENERAL
   position:relative;
   z-index:2;
   max-width:800px;
-  padding:20px;
-  animation:heroFade 1.2s ease;
+  animation:fadeUp 1s ease;
 }
 
-.hero-content h1{
-  font-size:3.8rem;
-  font-weight:800;
-  margin-bottom:20px;
-}
-
-.hero-content p{
-  font-size:1.35rem;
-  color:#eaeaea;
-  margin-bottom:35px;
-}
-
-.hero-subtitle{
-  color:var(--orange);
-  font-size:1.2rem;
-  letter-spacing:2px;
-  margin-bottom:15px;
-}
-
-.hero-badge{
-  display:inline-block;
-  padding:8px 18px;
-  border-radius:30px;
-  background:rgba(255,255,255,0.1);
+.hero h1{
+  font-size:3.6rem;
   color:white;
   margin-bottom:20px;
 }
 
+.hero p{
+  color:#ddd;
+  font-size:1.3rem;
+  margin-bottom:30px;
+}
+
 /* =========================
-BOTONES
+BOTONES PREMIUM
 ========================= */
-.btn,
-.btn-hero{
+.btn{
+  display:inline-block;
   background:linear-gradient(135deg,#f79027,#ff9f3c);
-  color:black;
-  padding:18px 42px;
+  color:#000;
+  padding:16px 36px;
   border-radius:50px;
   font-weight:700;
   text-decoration:none;
-  transition:.3s;
-  box-shadow:0 8px 25px rgba(0,0,0,.35);
+  transition:var(--transition);
+  box-shadow:var(--shadow);
 }
 
 .btn:hover{
   transform:translateY(-3px);
-}
-
-.btn-group{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:10px;
+  box-shadow:var(--shadow-strong);
 }
 
 /* =========================
@@ -229,117 +159,130 @@ section{
 }
 
 section h2{
-  font-size:3.4rem;
+  font-size:3rem;
   text-align:center;
 }
 
 .section-intro{
   text-align:center;
-  max-width:900px;
-  margin:0 auto 60px;
-  font-size:1.4rem;
-  color:#444;
+  max-width:700px;
+  margin:20px auto 60px;
+  color:#555;
 }
 
 .section-dark{
   background:var(--black);
   color:white;
 }
-section{
-  padding:100px 0;
-  background:white; /* 👈 ESTO ES LO CLAVE */
-}
+
 /* =========================
-GRIDS
+GRID
 ========================= */
-.systems-grid,
-.equipment-grid,
-.services-grid,
-.features{
+.grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:36px;
+  gap:35px;
 }
 
 /* =========================
 CARDS BASE
 ========================= */
-.system-card,
-.equipment-card,
-.feature-box,
-.testimonio-card{
+.card{
   background:white;
-  border-radius:20px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.12);
-  transition:.35s;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:var(--transition);
 }
 
-.system-card:hover,
-.feature-box:hover,
-.testimonio-card:hover{
+.card:hover{
   transform:translateY(-8px);
-  box-shadow:0 25px 60px rgba(0,0,0,0.2);
+  box-shadow:var(--shadow-strong);
 }
 
-/* =========================
-SYSTEM CARD
-========================= */
-.system-card img{
-  width:100%;
+.card img{
   height:220px;
   object-fit:cover;
 }
 
-.system-card .card-body{
+.card-body{
   padding:20px;
 }
 
-.system-card h3{
+.card h3{
   color:var(--orange);
-}
-
-.system-card p{
-  color:#555;
+  margin-bottom:10px;
 }
 
 /* =========================
-EQUIPMENT PRO
+EQUIPAMIENTO PRO 🔥
 ========================= */
 .equipment-card{
   position:relative;
+  border-radius:var(--radius);
   overflow:hidden;
-  background:black;
-  color:white;
+  height:320px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:var(--shadow);
 }
 
 .equipment-card img{
-  width:100%;
-  height:320px;
+  position:absolute;
+  inset:0;
+  height:100%;
   object-fit:cover;
+  z-index:0;
+  transition:transform .6s ease;
 }
 
 .equipment-card::before{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(to top,rgba(0,0,0,.85),transparent);
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    transparent
+  );
+  z-index:1;
 }
 
 .equipment-card .card-content{
-  position:absolute;
-  bottom:0;
+  position:relative;
+  z-index:2;
+  text-align:center;
   padding:25px;
+}
+
+.equipment-card h3{
+  color:var(--orange);
+  font-size:1.6rem;
+}
+
+.equipment-card p{
+  color:#eee;
+  font-size:1rem;
+}
+
+.equipment-card:hover img{
+  transform:scale(1.1);
 }
 
 /* =========================
 FEATURES
 ========================= */
 .feature-box{
-  padding:35px;
+  background:white;
+  padding:30px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
 }
 
-.feature-box h3{
-  color:var(--orange);
+.feature-box:hover{
+  transform:translateY(-6px);
 }
 
 /* =========================
@@ -353,18 +296,28 @@ TESTIMONIOS
 FORM
 ========================= */
 form{
-  max-width:720px;
+  max-width:700px;
   margin:auto;
   background:white;
-  padding:48px;
-  border-radius:22px;
+  padding:40px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
 }
 
-form input,
-form textarea{
-  width:100%;
-  padding:14px;
-  margin-bottom:20px;
+/* =========================
+WHATSAPP
+========================= */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:65px;
+  z-index:999;
+  transition:.3s;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.1);
 }
 
 /* =========================
@@ -378,114 +331,44 @@ footer{
 }
 
 /* =========================
-WHATSAPP
+ANIMACIONES
 ========================= */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:60px;
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 /* =========================
-ANIMACIONES
+SCROLL ANIMATION
 ========================= */
-@keyframes heroFade{
-  from{opacity:0; transform:translateY(30px);}
-  to{opacity:1; transform:translateY(0);}
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* =========================
 RESPONSIVE
 ========================= */
-@media(max-width:992px){
+@media(max-width:768px){
 
-  nav ul{
-    display:none;
-    position:absolute;
-    top:90px;
-    right:0;
-    background:var(--black);
-    flex-direction:column;
-    width:240px;
-  }
-
-  nav ul.active{
-    display:flex;
-  }
-
-  .hamburger{
-    display:flex;
-  }
-
-}
-
-@media(max-width:600px){
-
-  body{
-    font-size:17px;
-  }
-
-  .hero-content h1{
+  .hero h1{
     font-size:2.2rem;
   }
 
-  .systems-grid{
-    grid-template-columns:1fr;
+  nav ul{
+    display:none;
   }
 
-  section{
-    padding:70px 0;
-  }
-
-}
-section{
-  position:relative;
-  z-index:1;
-}
-.hero{
-  z-index:0;
-}
-section h2{
-  text-align:center;
-}
-
-.section-intro{
-  text-align:center;
-  max-width:900px;
-  margin:0 auto 60px;
-}
-.hero{
-  justify-content:flex-start; /* 👈 clave */
-}
-
-.hero-content{
-  text-align:left;
-  margin-left:60px;
-}
-.hero-content h1{
-  max-width:600px;
-}
-
-.hero-content p{
-  max-width:500px;
-}
-.hero-porcinos{
-  justify-content:center;     /* centra horizontal */
-  text-align:center;          /* centra texto */
-}
-
-.hero-porcinos .hero-content{
-  margin-left:0;              /* saca el corrimiento */
-  text-align:center;
-}
-.hero-porcinos::before{
-  background:linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.5)
-  );
-}
-.hero-porcinos::before{
-  background:rgba(0,0,0,0.35);
 }
