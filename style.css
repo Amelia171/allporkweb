@@ -293,7 +293,8 @@ STATS STRIP (flotante sobre el hero)
 /* =========================
 BOTONES PRO
 ========================= */
-.btn{
+.btn,
+.btn-catalogo{
   display:inline-block;
   padding:16px 36px;
   border-radius:50px;
@@ -306,7 +307,8 @@ BOTONES PRO
   white-space:nowrap;
 }
 
-.btn:hover{
+.btn:hover,
+.btn-catalogo:hover{
   transform:translateY(-4px) scale(1.02);
   box-shadow:0 20px 60px rgba(0,0,0,.4);
 }
@@ -854,6 +856,154 @@ CARDS GLASS PRO 🔥
   }
 }
 
+/* =========================================================
+   PÁGINAS DE DETALLE (porcicultura / huevos / carne de pollo)
+========================================================= */
+
+/* MINI HERO CON FOTO */
+.detail-hero{
+  position:relative;
+  min-height:52vh;
+  display:flex;
+  align-items:flex-end;
+  background-size:cover;
+  background-position:center;
+}
+
+.detail-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(15,12,11,.95) 0%,
+    rgba(15,12,11,.55) 45%,
+    rgba(15,12,11,.25) 100%
+  );
+}
+
+.detail-hero .container{
+  position:relative;
+  z-index:2;
+  padding-bottom:56px;
+}
+
+.breadcrumb{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:18px;
+  color:#ddd;
+  font-size:.9rem;
+  text-decoration:none;
+  font-weight:600;
+  transition:var(--transition);
+}
+
+.breadcrumb:hover{
+  color:var(--orange-light);
+}
+
+.detail-hero-category{
+  display:inline-block;
+  margin-bottom:14px;
+  color:var(--orange-light);
+  font-size:.75rem;
+  font-weight:800;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.detail-hero h1{
+  margin:0 0 14px;
+  color:white;
+  font-size:clamp(2rem,4.5vw,3.2rem);
+  line-height:1.1;
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+
+.detail-hero p{
+  max-width:620px;
+  margin:0;
+  color:#ddd;
+  font-size:1.05rem;
+  line-height:1.65;
+}
+
+/* SECCIÓN DE ÍTEMS DE EQUIPAMIENTO */
+.equip-items{
+  padding:100px 0;
+  background:#fff;
+}
+
+.equip-items-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}
+
+.equip-item{
+  background:white;
+  border-radius:var(--radius);
+  padding:32px 28px;
+  box-shadow:var(--shadow-soft);
+  transition:var(--transition);
+  border-top:4px solid var(--orange);
+}
+
+.equip-item:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-medium);
+}
+
+.equip-item-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;
+  height:48px;
+  margin-bottom:18px;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--orange),var(--orange-light));
+}
+
+.equip-item-icon svg{
+  width:24px;
+  height:24px;
+  stroke:#1c1716;
+}
+
+.equip-item h3{
+  margin:0 0 8px;
+  color:var(--black);
+  font-size:1.15rem;
+  font-weight:700;
+}
+
+.equip-item p{
+  margin:0;
+  color:#666;
+  font-size:.95rem;
+  line-height:1.6;
+}
+
+/* RESPONSIVE DETALLE */
+@media(max-width:700px){
+
+  .detail-hero{
+    min-height:44vh;
+  }
+
+  .detail-hero .container{
+    padding-bottom:38px;
+  }
+
+  .equip-items{
+    padding:70px 0;
+  }
+}
+
 /* =========================
 TESTIMONIOS
 ========================= */
@@ -864,6 +1014,150 @@ TESTIMONIOS
   box-shadow:0 15px 40px rgba(0,0,0,.12);
   transition:all .35s ease;
   position:relative;
+}
+
+/* =========================================================
+   PORCICULTURA — PÁGINA DE DETALLE (catálogo real)
+========================================================= */
+
+/* HERO CON FOTO DE FONDO */
+.hero-porcicultura{
+  position:relative;
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  background:url('assets/img/porcicultura.jpg') center/cover no-repeat;
+  padding:150px 0 80px;
+  text-align:center;
+}
+
+.hero-porcicultura .hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(15,12,11,.92) 0%,
+    rgba(15,12,11,.55) 55%,
+    rgba(15,12,11,.30) 100%
+  );
+}
+
+.hero-porcicultura .hero-content{
+  position:relative;
+  z-index:2;
+  max-width:760px;
+  width:100%;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+}
+
+.hero-porcicultura h1{
+  margin:0;
+  color:white;
+  font-size:clamp(2rem,5vw,3.4rem);
+  line-height:1.15;
+  font-weight:800;
+}
+
+.hero-subtitle{
+  margin:0;
+  color:var(--orange-light);
+  font-size:.9rem;
+  font-weight:800;
+  letter-spacing:1.5px;
+  line-height:1.7;
+}
+
+.hero-porcicultura p{
+  margin:0;
+  color:#ddd;
+  font-size:1.05rem;
+  max-width:520px;
+}
+
+/* ETAPAS PRODUCTIVAS — reutiliza .services-grid / .service-card del Inicio */
+.etapas-porcinas{
+  background:#fff;
+}
+
+/* UTILIDAD: SECCIÓN OSCURA (reutilizable en cualquier página) */
+.section-dark{
+  background:var(--dark);
+}
+
+.section-dark h2{
+  color:white;
+}
+
+.section-dark .section-intro{
+  color:#bbb;
+}
+
+/* TARJETAS CON IMAGEN (sistemas / destacados / servicios) */
+.media-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}
+
+.media-card{
+  background:white;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow-soft);
+  transition:var(--transition);
+}
+
+.media-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-medium);
+}
+
+.media-card img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+}
+
+.media-card h3{
+  margin:20px 24px 8px;
+  color:var(--black);
+  font-size:1.1rem;
+  font-weight:700;
+}
+
+.media-card p{
+  margin:0 24px 22px;
+  color:#666;
+  font-size:.92rem;
+  line-height:1.6;
+}
+
+/* BOTÓN CATÁLOGO CENTRADO */
+.catalogo-boton{
+  text-align:center;
+  margin-top:50px;
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+
+  .hero-porcicultura{
+    min-height:60vh;
+    padding:130px 0 60px;
+  }
+
+  .media-card h3{
+    margin:18px 20px 8px;
+  }
+
+  .media-card p{
+    margin:0 20px 20px;
+  }
 }
 
 .testimonio-card:hover{
