@@ -711,3 +711,12 @@ RESPONSIVE
     margin-bottom:36px;
   }
 }
+/* Corrección de alineación para celulares */
+@media(max-width: 768px) {
+  .stats-strip {
+    width: 92%;           /* Un poco más ancho para aprovechar el espacio */
+    margin: -30px auto 0 auto; /* El 'auto' es clave para centrarlo */
+    padding: 20px 10px;
+    gap: 10px;            /* Reduce el espacio entre ítems para que no desborde */
+  }
+}
