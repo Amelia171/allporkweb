@@ -1376,7 +1376,7 @@ RESPONSIVE — NAV
   min-height:70vh;
   display:flex;
   align-items:center;
-  background:url(assets/img/hero-ponedoras.jpg) center/cover no-repeat;
+  background:url('assets/img/hero-ponedoras.jpg') center/cover no-repeat;
   padding:150px 0 80px;
   text-align:center;
 }
