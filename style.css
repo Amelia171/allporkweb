@@ -389,69 +389,423 @@ CARDS GLASS PRO 🔥
 }
 
 /* =========================
-EQUIPAMIENTO ULTRA 🔥🔥
+   EQUIPAMIENTO — PREMIUM
 ========================= */
-.equipment-card{
+
+.equipamiento{
   position:relative;
-  height:340px;
-  border-radius:var(--radius);
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(247,144,39,.06),
+      transparent 35%
+    ),
+    linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      #f7f7f7 100%
+    );
   overflow:hidden;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  cursor:pointer;
-  transition:var(--transition);
 }
 
-.equipment-card img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform .7s ease;
-}
+/* DETALLE DECORATIVO */
 
-.equipment-card::before{
+.equipamiento::before{
   content:"";
   position:absolute;
-  inset:0;
+  width:420px;
+  height:420px;
+  top:-220px;
+  right:-180px;
+  background:rgba(247,144,39,.07);
+  border-radius:50%;
+  filter:blur(2px);
+  pointer-events:none;
+}
+
+/* CONTENEDOR */
+
+.equipamiento .container{
+  position:relative;
+  z-index:2;
+}
+
+/* TÍTULO */
+
+.equipamiento h2{
+  position:relative;
+  margin-bottom:14px;
+  font-weight:800;
+  color:var(--black);
+}
+
+/* LÍNEA NARANJA DEBAJO DEL TÍTULO */
+
+.equipamiento h2::after{
+  content:"";
+  display:block;
+  width:55px;
+  height:4px;
+  margin:16px auto 0;
+  border-radius:10px;
   background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.85),
-    rgba(0,0,0,0.2)
+    90deg,
+    var(--orange),
+    var(--orange-light)
   );
 }
 
-.equipment-card .card-content{
+/* INTRO */
+
+.equipamiento .section-intro{
+  max-width:680px;
+  margin-bottom:55px;
+  color:#666;
+  font-size:1.05rem;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.systems-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  align-items:stretch;
+}
+
+/* =========================
+   LINK
+========================= */
+
+.system-link{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  height:100%;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.system-card{
   position:relative;
-  z-index:2;
-  margin-bottom:20px;
-  padding:20px 25px;
-  backdrop-filter:blur(6px);
-  background:rgba(255,255,255,0.08);
-  border-radius:14px;
-  text-align:center;
-  border:1px solid rgba(255,255,255,0.15);
+  height:430px;
+
+  overflow:hidden;
+
+  border-radius:var(--radius);
+
+  background:#181412;
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.10);
+
+  border:1px solid rgba(0,0,0,.06);
+
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    box-shadow .45s cubic-bezier(.2,.8,.2,1);
+
+  isolation:isolate;
 }
 
-.equipment-card h3{
-  color:var(--orange);
-  margin-bottom:6px;
+/* =========================
+   IMAGEN
+========================= */
+
+.system-card img{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:
+    transform .8s cubic-bezier(.2,.8,.2,1),
+    filter .6s ease;
+
+  z-index:0;
 }
 
-.equipment-card p{
-  color:#eee;
-  font-size:0.95rem;
+/* =========================
+   DEGRADADO
+========================= */
+
+.system-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(15,12,11,.97) 0%,
+      rgba(15,12,11,.82) 25%,
+      rgba(15,12,11,.35) 55%,
+      rgba(15,12,11,.05) 100%
+    );
+
+  transition:
+    background .5s ease;
+}
+
+/* =========================
+   BRILLO SUPERIOR
+========================= */
+
+.system-card::after{
+  content:"";
+  position:absolute;
+
+  top:0;
+  left:0;
+  right:0;
+
+  height:2px;
+
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--orange),
+    transparent
+  );
+
+  opacity:.65;
+
+  z-index:4;
+
+  transition:
+    opacity .4s ease;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.system-card h3,
+.system-card p{
+  position:absolute;
+  left:28px;
+  right:28px;
+
+  z-index:3;
+}
+
+/* TÍTULO */
+
+.system-card h3{
+  bottom:100px;
+
   margin:0;
+
+  color:#fff;
+
+  font-size:1.65rem;
+  line-height:1.2;
+  font-weight:800;
+
+  text-shadow:
+    0 3px 12px rgba(0,0,0,.35);
+
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    color .35s ease;
 }
 
-.equipment-card:hover{
-  transform:translateY(-10px) scale(1.02);
+/* DESCRIPCIÓN */
+
+.system-card p{
+  bottom:30px;
+
+  margin:0;
+
+  color:rgba(255,255,255,.82);
+
+  font-size:.96rem;
+  line-height:1.55;
+
+  max-width:90%;
+
+  transition:
+    transform .45s cubic-bezier(.2,.8,.2,1),
+    color .35s ease;
 }
 
-.equipment-card:hover img{
-  transform:scale(1.12);
+/* =========================
+   PEQUEÑO DETALLE SOBRE EL TEXTO
+========================= */
+
+.system-card h3::before{
+  content:"";
+  display:block;
+
+  width:38px;
+  height:3px;
+
+  margin-bottom:12px;
+
+  border-radius:10px;
+
+  background:linear-gradient(
+    90deg,
+    var(--orange),
+    var(--orange-light)
+  );
+
+  transition:
+    width .45s cubic-bezier(.2,.8,.2,1);
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.system-link:hover .system-card{
+  transform:translateY(-12px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.20),
+    0 8px 25px rgba(247,144,39,.10);
+}
+
+.system-link:hover .system-card img{
+  transform:scale(1.09);
+
+  filter:saturate(1.08);
+}
+
+.system-link:hover .system-card::before{
+  background:
+    linear-gradient(
+      to top,
+      rgba(15,12,11,.98) 0%,
+      rgba(15,12,11,.78) 30%,
+      rgba(15,12,11,.28) 65%,
+      rgba(15,12,11,.02) 100%
+    );
+}
+
+.system-link:hover .system-card::after{
+  opacity:1;
+}
+
+.system-link:hover .system-card h3{
+  color:var(--orange-light);
+  transform:translateY(-4px);
+}
+
+.system-link:hover .system-card p{
+  color:#fff;
+  transform:translateY(-4px);
+}
+
+.system-link:hover .system-card h3::before{
+  width:65px;
+}
+
+/* =========================
+   ACTIVE / CLICK
+========================= */
+
+.system-link:active .system-card{
+  transform:translateY(-5px) scale(.99);
+}
+
+/* =========================
+   ACCESIBILIDAD
+========================= */
+
+.system-link:focus-visible{
+  outline:3px solid var(--orange);
+  outline-offset:5px;
+  border-radius:var(--radius);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1000px){
+
+  .systems-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .system-card{
+    height:400px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+  .equipamiento{
+    padding:75px 0;
+  }
+
+  .equipamiento .section-intro{
+    margin-bottom:38px;
+    padding:0 8px;
+    font-size:.98rem;
+  }
+
+  .systems-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .system-card{
+    height:390px;
+    border-radius:20px;
+  }
+
+  .system-card h3{
+    left:23px;
+    right:23px;
+    bottom:96px;
+    font-size:1.45rem;
+  }
+
+  .system-card p{
+    left:23px;
+    right:23px;
+    bottom:27px;
+    font-size:.92rem;
+  }
+
+}
+
+/* =========================
+   MOBILE PEQUEÑO
+========================= */
+
+@media(max-width:420px){
+
+  .system-card{
+    height:360px;
+  }
+
+  .system-card h3{
+    font-size:1.3rem;
+    bottom:92px;
+  }
+
+  .system-card p{
+    font-size:.88rem;
+    line-height:1.5;
+  }
+
 }
 
 /* =========================
