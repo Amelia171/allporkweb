@@ -1,4 +1,3 @@
-
 /* =========================
 🎨 DESIGN SYSTEM PRO
 ========================= */
@@ -585,9 +584,10 @@ CARDS GLASS PRO 🔥
     opacity .4s ease;
 }
 
-/* =========================
-   CONTENIDO
-========================= */
+/* =========================================================
+   CONTENIDO DE TARJETA
+   AJUSTADO PARA EVITAR TEXTO AMONTONADO
+========================================================= */
 
 .system-card h3,
 .system-card p{
@@ -663,358 +663,9 @@ CARDS GLASS PRO 🔥
     width .45s cubic-bezier(.2,.8,.2,1);
 }
 
-/* =========================
-   HOVER
-========================= */
-
-.system-link:hover .system-card{
-  transform:translateY(-12px);
-
-  box-shadow:
-    0 25px 60px rgba(0,0,0,.20),
-    0 8px 25px rgba(247,144,39,.10);
-}
-
-.system-link:hover .system-card img{
-  transform:scale(1.09);
-
-  filter:saturate(1.08);
-}
-
-.system-link:hover .system-card::before{
-  background:
-    linear-gradient(
-      to top,
-      rgba(15,12,11,.98) 0%,
-      rgba(15,12,11,.78) 30%,
-      rgba(15,12,11,.28) 65%,
-      rgba(15,12,11,.02) 100%
-    );
-}
-
-.system-link:hover .system-card::after{
-  opacity:1;
-}
-
-.system-link:hover .system-card h3{
-  color:var(--orange-light);
-  transform:translateY(-4px);
-}
-
-.system-link:hover .system-card p{
-  color:#fff;
-  transform:translateY(-4px);
-}
-
-.system-link:hover .system-card h3::before{
-  width:65px;
-}
-
-/* =========================
-   ACTIVE / CLICK
-========================= */
-
-.system-link:active .system-card{
-  transform:translateY(-5px) scale(.99);
-}
-
-/* =========================
-   ACCESIBILIDAD
-========================= */
-
-.system-link:focus-visible{
-  outline:3px solid var(--orange);
-  outline-offset:5px;
-  border-radius:var(--radius);
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media(max-width:1000px){
-
-  .systems-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .system-card{
-    height:400px;
-  }
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:700px){
-
-  .equipamiento{
-    padding:75px 0;
-  }
-
-  .equipamiento .section-intro{
-    margin-bottom:38px;
-    padding:0 8px;
-    font-size:.98rem;
-  }
-
-  .systems-grid{
-    grid-template-columns:1fr;
-    gap:22px;
-  }
-
-  .system-card{
-    height:390px;
-    border-radius:20px;
-  }
-
-  .system-card h3{
-    left:23px;
-    right:23px;
-    bottom:96px;
-    font-size:1.45rem;
-  }
-
-  .system-card p{
-    left:23px;
-    right:23px;
-    bottom:27px;
-    font-size:.92rem;
-  }
-
-}
-
-/* =========================
-   MOBILE PEQUEÑO
-========================= */
-
-@media(max-width:420px){
-
-  .system-card{
-    height:360px;
-  }
-
-  .system-card h3{
-    font-size:1.3rem;
-    bottom:92px;
-  }
-
-  .system-card p{
-    font-size:.88rem;
-    line-height:1.5;
-  }
-
-}
-
-/* =========================
-TESTIMONIOS
-========================= */
-.testimonio-card{
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  box-shadow:0 15px 40px rgba(0,0,0,.12);
-  transition:all .35s ease;
-  position:relative;
-}
-
-.testimonio-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 30px 70px rgba(0,0,0,.2);
-}
-
-.testimonio-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:4px;
-  background:linear-gradient(90deg,#f79027,#ffb347);
-  border-radius:20px 20px 0 0;
-}
-
-.testimonio-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:16px;
-}
-
-.avatar{
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  background:linear-gradient(135deg,var(--orange),var(--orange-light));
-  color:#1c1716;
-  font-weight:700;
-  font-size:.9rem;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.stars{
-  color:var(--orange);
-  letter-spacing:2px;
-}
-
-.testimonio-card p{
-  font-size:1.02rem;
-  color:#444;
-  line-height:1.6;
-  margin-bottom:15px;
-}
-
-.testimonio-card span{
-  color:var(--orange);
-  font-size:.9rem;
-  font-weight:600;
-}
-
-/* =========================
-CTA FINAL
-========================= */
-.cta-final{
-  background:var(--dark);
-  text-align:center;
-}
-
-.cta-final h2{
-  color:var(--white);
-}
-
-.cta-final .section-intro{
-  color:#bbb;
-}
-
-/* =========================
-FOOTER
-========================= */
-footer{
-  background:#141110;
-  color:#ccc;
-  text-align:center;
-  padding:40px 24px;
-}
-
-footer p{
-  margin:6px 0;
-  font-size:.95rem;
-}
-
-/* =========================
-WHATSAPP FLOAT
-========================= */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:60px;
-  height:60px;
-  z-index:999;
-  transition:.3s;
-}
-
-.whatsapp-float img{
-  width:100%;
-  height:100%;
-}
-
-.whatsapp-float:hover{
-  transform:scale(1.15);
-}
-
-/* =========================
-ANIMACIONES
-========================= */
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(40px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-.reveal{
-  opacity:0;
-  transform:translateY(50px);
-  transition:all 1s ease;
-}
-
-.reveal.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce){
-  .reveal{
-    opacity:1;
-    transform:none;
-    transition:none;
-  }
-  .hero-content{
-    animation:none;
-  }
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-@media(max-width:900px){
-
-  nav ul{
-    position:fixed;
-    top:85px;
-    left:0;
-    right:0;
-    flex-direction:column;
-    gap:4px;
-    background:rgba(20,18,17,0.98);
-    padding:18px 24px 28px;
-    transform:translateY(-12px);
-    opacity:0;
-    visibility:hidden;
-    pointer-events:none;
-    transition:var(--transition);
-    border-bottom:1px solid rgba(255,255,255,0.08);
-  }
-
-  nav ul.active{
-    transform:translateY(0);
-    opacity:1;
-    visibility:visible;
-    pointer-events:auto;
-  }
-
-  nav a{
-    display:block;
-    padding:14px 10px;
-  }
-
-  .hamburger{
-    display:flex;
-  }
-}
-
-@media(max-width:768px){
-
-  section{
-    padding:70px 0;
-  }
-
-  .section-intro{
-    margin-bottom:36px;
-  }
-}
 /* =========================================================
    EQUIPAMIENTO — DISEÑO PREMIUM ALLPORK
-   ========================================================= */
+========================================================= */
 
 /* =========================
    CONTENEDOR PRINCIPAL
@@ -1212,9 +863,10 @@ RESPONSIVE
 }
 
 
-/* =========================
+/* =========================================================
    CONTENIDO
-========================= */
+   CORREGIDO PARA QUE NO SE AMONTONE
+========================================================= */
 
 .system-content{
   position:absolute;
@@ -1225,7 +877,7 @@ RESPONSIVE
 
   z-index:2;
 
-  padding:38px 30px 30px;
+  padding:30px 28px 26px;
 
   color:white;
 
@@ -1240,17 +892,17 @@ RESPONSIVE
 .system-category{
   display:block;
 
-  margin-bottom:10px;
+  margin-bottom:9px;
 
   color:var(--orange-light);
 
-  font-size:.68rem;
+  font-size:.66rem;
 
   font-weight:800;
 
-  letter-spacing:1.3px;
+  letter-spacing:1.2px;
 
-  line-height:1.2;
+  line-height:1.3;
 
   text-transform:uppercase;
 }
@@ -1261,19 +913,19 @@ RESPONSIVE
 ========================= */
 
 .system-card h2{
-  margin:0 0 10px;
+  margin:0 0 12px;
 
   text-align:left;
 
   color:white;
 
   font-size:clamp(
-    1.45rem,
-    2.3vw,
-    1.9rem
+    1.35rem,
+    2vw,
+    1.75rem
   );
 
-  line-height:1.12;
+  line-height:1.15;
 
   font-weight:800;
 
@@ -1288,13 +940,13 @@ RESPONSIVE
 .system-card p{
   max-width:390px;
 
-  margin:0 0 18px;
+  margin:0 0 16px;
 
   color:rgba(255,255,255,.82);
 
-  font-size:.88rem;
+  font-size:.86rem;
 
-  line-height:1.5;
+  line-height:1.55;
 }
 
 
@@ -1307,11 +959,11 @@ RESPONSIVE
 
   align-items:center;
 
-  gap:8px;
+  gap:7px;
 
   color:white;
 
-  font-size:.72rem;
+  font-size:.68rem;
 
   font-weight:800;
 
@@ -1333,8 +985,11 @@ RESPONSIVE
 
   line-height:1;
 
-  transition:transform .3s ease;
+  transition:
+    transform .3s ease;
 }
+
+
 /* =========================================================
    HOVER
 ========================================================= */
@@ -1640,4 +1295,210 @@ RESPONSIVE
     font-size:1.55rem;
   }
 
+}
+
+/* =========================
+TESTIMONIOS
+========================= */
+.testimonio-card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,.12);
+  transition:all .35s ease;
+  position:relative;
+}
+
+.testimonio-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 30px 70px rgba(0,0,0,.2);
+}
+
+.testimonio-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(90deg,#f79027,#ffb347);
+  border-radius:20px 20px 0 0;
+}
+
+.testimonio-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:16px;
+}
+
+.avatar{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--orange),var(--orange-light));
+  color:#1c1716;
+  font-weight:700;
+  font-size:.9rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.stars{
+  color:var(--orange);
+  letter-spacing:2px;
+}
+
+.testimonio-card p{
+  font-size:1.02rem;
+  color:#444;
+  line-height:1.6;
+  margin-bottom:15px;
+}
+
+.testimonio-card span{
+  color:var(--orange);
+  font-size:.9rem;
+  font-weight:600;
+}
+
+/* =========================
+CTA FINAL
+========================= */
+.cta-final{
+  background:var(--dark);
+  text-align:center;
+}
+
+.cta-final h2{
+  color:var(--white);
+}
+
+.cta-final .section-intro{
+  color:#bbb;
+}
+
+/* =========================
+FOOTER
+========================= */
+footer{
+  background:#141110;
+  color:#ccc;
+  text-align:center;
+  padding:40px 24px;
+}
+
+footer p{
+  margin:6px 0;
+  font-size:.95rem;
+}
+
+/* =========================
+WHATSAPP FLOAT
+========================= */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  z-index:999;
+  transition:.3s;
+}
+
+.whatsapp-float img{
+  width:100%;
+  height:100%;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.15);
+}
+
+/* =========================
+ANIMACIONES
+========================= */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(50px);
+  transition:all 1s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{
+    opacity:1;
+    transform:none;
+    transition:none;
+  }
+
+  .hero-content{
+    animation:none;
+  }
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+@media(max-width:900px){
+
+  nav ul{
+    position:fixed;
+    top:85px;
+    left:0;
+    right:0;
+    flex-direction:column;
+    gap:4px;
+    background:rgba(20,18,17,0.98);
+    padding:18px 24px 28px;
+    transform:translateY(-12px);
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:var(--transition);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+
+  nav ul.active{
+    transform:translateY(0);
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+  }
+
+  nav a{
+    display:block;
+    padding:14px 10px;
+  }
+
+  .hamburger{
+    display:flex;
+  }
+}
+
+@media(max-width:768px){
+
+  section{
+    padding:70px 0;
+  }
+
+  .section-intro{
+    margin-bottom:36px;
+  }
 }
