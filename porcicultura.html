@@ -1,255 +1,284 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Porcicultura | AllPork</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Equipamiento para Porcicultura | AllPork</title>
+
+  <meta
+    name="description"
+    content="Equipamiento para porcicultura: gestación, maternidad, recría y engorde. Sistemas de alimentación, climatización, ventilación y catálogo completo de productos."
+  />
+
+  <link rel="icon" href="./favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 </head>
 
 <body class="porcicultura-page">
 
 <header>
   <div class="container">
-    <a href="index.html" style="display:flex; align-items:center; text-decoration:none;">
+    <a href="index.html" class="brand-link">
       <img src="https://i.postimg.cc/HLphL6vx/Chat-GPT-Image-6-jul-2025-07-56-34-p-m-1.png" alt="AllPork Logo" class="logo">
+      <span class="brand-name">AllPork</span>
     </a>
 
     <nav>
       <ul id="nav-menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="quienes-somos.html">Quiénes somos</a></li>
-        <li><a href="equipamiento.html">Equipamiento</a></li>
+        <li><a href="equipamiento.html" class="active">Equipamiento</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
 
-      <div class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
-      </div>
+      </button>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero-porcicultura">
-  <div class="hero-overlay"></div>
+<main>
 
-  <div class="hero-content">
-    <h1>Equipamiento para Porcicultura</h1>
-<h2 class="hero-subtitle">
-GESTACIÓN • MATERNIDAD<br>
-RECRÍA • ENGORDE
-</h2>
-    <p>
-      Diseñamos e instalamos equipamiento porcino para granjas modernas. 
-    </p>
+  <!-- HERO -->
+  <section class="hero-porcicultura">
+    <div class="hero-overlay"></div>
 
-    <a href="https://wa.me/5491166902000" class="btn btn-hero">
-      Consultanos y potenciá tu granja 
-    </a>
+    <div class="hero-content">
+      <a href="equipamiento.html" class="breadcrumb">← Volver a Equipamiento</a>
 
-  
-  </div>
-</section>
-  
-<!-- ETAPAS PRODUCTIVAS -->
-<section class="etapas-porcinas">
-  <div class="container">
+      <h1>Equipamiento para Porcicultura</h1>
 
-    <h2>Etapas de producción porcina</h2>
+      <h2 class="hero-subtitle">
+        GESTACIÓN • MATERNIDAD<br>
+        RECRÍA • ENGORDE
+      </h2>
 
-    <p class="section-intro">
-      Equipamiento diseñado para cada fase del sistema productivo.
-    </p>
+      <p>
+        Diseñamos e instalamos equipamiento porcino para granjas modernas.
+      </p>
 
-    <div class="systems-grid">
+      <a href="https://wa.me/5491166902000" class="btn btn-hero" target="_blank" rel="noopener">
+        Consultanos y potenciá tu granja
+      </a>
+    </div>
+  </section>
 
-      <div class="system-card">
-        <h3>Gestación</h3>
-        <p>
-        Sistemas que garantizan bienestar de la cerda y eficiencia reproductiva.
-        </p>
-      </div>
+  <!-- ETAPAS PRODUCTIVAS -->
+  <section class="etapas-porcinas">
+    <div class="container">
 
-      <div class="system-card">
-        <h3>Maternidad</h3>
-        <p>
-        Equipamiento diseñado para mejorar supervivencia y manejo de lechones.
-        </p>
-      </div>
+      <h2>Etapas de producción porcina</h2>
 
-      <div class="system-card">
-        <h3>Recría</h3>
-        <p>
-        Ambientes controlados que favorecen crecimiento uniforme y sanidad.
-        </p>
-      </div>
+      <p class="section-intro">
+        Equipamiento diseñado para cada fase del sistema productivo.
+      </p>
 
-      <div class="system-card">
-        <h3>Engorde</h3>
-        <p>
-        Infraestructura optimizada para conversión alimenticia y productividad.
-        </p>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <h3>Gestación</h3>
+          <p>Sistemas que garantizan bienestar de la cerda y eficiencia reproductiva.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Maternidad</h3>
+          <p>Equipamiento diseñado para mejorar supervivencia y manejo de lechones.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Recría</h3>
+          <p>Ambientes controlados que favorecen crecimiento uniforme y sanidad.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Engorde</h3>
+          <p>Infraestructura optimizada para conversión alimenticia y productividad.</p>
+        </div>
+
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
-<!-- SISTEMAS -->
-<section class="equipamiento-sistemas section-dark">
-  <div class="container">
-    <h2>Sistemas de producción porcina</h2>
+  <!-- SISTEMAS -->
+  <section class="equipamiento-sistemas section-dark">
+    <div class="container">
+      <h2>Sistemas de producción porcina</h2>
 
-    <p class="section-intro">
-      Equipamiento diseñado para optimizar la eficiencia productiva,
-el bienestar animal y el manejo en granjas porcinas modernas.
-    </p>
+      <p class="section-intro">
+        Equipamiento diseñado para optimizar la eficiencia productiva,
+        el bienestar animal y el manejo en granjas porcinas modernas.
+      </p>
 
-    <div class="systems-grid">
+      <div class="media-grid">
 
-      <div class="system-card">
-        <img src="assets/img/alimentación.jpg" alt="Sistema de alimentación porcina">
-        <h3>Sistema de alimentación</h3>
-        <p>
-        Equipos diseñados para optimizar la distribución de alimento,
-mejorar la conversión alimenticia y reducir desperdicios
-en las distintas etapas de producción.
-        </p>
+        <div class="media-card">
+          <img src="assets/img/alimentación.jpg" alt="Sistema de alimentación porcina">
+          <h3>Sistema de alimentación</h3>
+          <p>
+            Equipos diseñados para optimizar la distribución de alimento,
+            mejorar la conversión alimenticia y reducir desperdicios
+            en las distintas etapas de producción.
+          </p>
+        </div>
+
+        <div class="media-card">
+          <img src="assets/img/3f24fb59-57b0-4f4f-a813-e576552a7073.jpg" alt="Sistema de climatización porcina">
+          <h3>Sistema de climatización</h3>
+          <p>
+            Soluciones que permiten mantener condiciones térmicas adecuadas
+            dentro de las instalaciones, favoreciendo el bienestar animal
+            y el rendimiento productivo.
+          </p>
+        </div>
+
+        <div class="media-card">
+          <img src="assets/img/fb9a80ef-bd7b-4502-a741-3a54264c4360.jpg" alt="Sistema de ventilación porcina">
+          <h3>Sistema de ventilación</h3>
+          <p>
+            Sistemas que garantizan renovación de aire, control de humedad
+            y reducción de gases, contribuyendo a un ambiente sanitario
+            óptimo dentro de la granja.
+          </p>
+        </div>
+
       </div>
-
-      <div class="system-card">
-        <img src="assets/img/3f24fb59-57b0-4f4f-a813-e576552a7073.jpg" alt="Sistema de climatización porcina">
-        <h3>Sistema de climatización</h3>
-        <p>
-        Soluciones que permiten mantener condiciones térmicas adecuadas
-dentro de las instalaciones, favoreciendo el bienestar animal
-y el rendimiento productivo.
-        </p>
-      </div>
-
-      <div class="system-card">
-        <img src="assets/img/fb9a80ef-bd7b-4502-a741-3a54264c4360.jpg" alt="Sistema de ventilación porcina">
-        <h3>Sistema de ventilación</h3>
-        <p>
-        Sistemas que garantizan renovación de aire, control de humedad
-y reducción de gases, contribuyendo a un ambiente sanitario
-óptimo dentro de la granja.
-        </p>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="equipamiento-destacado">
-  <div class="container">
-    <h2>Equipamiento destacado – Porcicultura</h2>
-    <p class="section-intro">Algunos de los productos más utilizados en granjas porcinas.</p>
-    <div class="systems-grid">
+  <!-- EQUIPAMIENTO DESTACADO -->
+  <section class="equipamiento-destacado">
+    <div class="container">
+      <h2>Equipamiento destacado – Porcicultura</h2>
+      <p class="section-intro">Algunos de los productos más utilizados en granjas porcinas.</p>
 
-      <div class="system-card">
-        <img src="assets/img/comederos-6-bocas.jpg" alt="Comedero húmedo/seco 6 bocas">
-        <h3>Comedero húmedo/seco 6 bocas</h3>
-        <p>Optimiza el consumo y reduce el desperdicio de alimento.</p>
+      <div class="media-grid">
+
+        <div class="media-card">
+          <img src="assets/img/comederos-6-bocas.jpg" alt="Comedero húmedo/seco 6 bocas">
+          <h3>Comedero húmedo/seco 6 bocas</h3>
+          <p>Optimiza el consumo y reduce el desperdicio de alimento.</p>
+        </div>
+
+        <div class="media-card">
+          <img src="assets/img/divisorio-para-sala-de-destete.jpg" alt="Divisorio para sala de destete">
+          <h3>Divisorio para destete</h3>
+          <p>Organización eficiente de corrales según tamaño y edad.</p>
+        </div>
+
+        <div class="media-card">
+          <img src="assets/img/pisos-para-lechon.jpg" alt="Pisos de lechón y madre">
+          <h3>Pisos para lechón y madre</h3>
+          <p>Mayor higiene, seguridad y confort para todas las etapas.</p>
+        </div>
+
+        <div class="media-card">
+          <img src="assets/img/jaula-regulable.jpg" alt="Jaula regulable">
+          <h3>Jaula regulable</h3>
+          <p>Ajustable según el tamaño de la cerda, ideal para maternidad.</p>
+        </div>
+
+        <div class="media-card">
+          <img src="assets/img/lampara-infrarroja.jpg" alt="Lámpara infrarroja para lechones">
+          <h3>Lámpara infrarroja 150W / 250W</h3>
+          <p>
+            Fuente de calor para lechones en maternidad.
+            Mejora el confort térmico durante los primeros días de vida.
+          </p>
+        </div>
+
+        <div class="media-card">
+          <img src="assets/img/batea-para-juala-regulable.jpg" alt="Batea para jaula regulable">
+          <h3>Batea para jaula regulable</h3>
+          <p>
+            Batea de polietileno de alta densidad con protección UV.
+            Herrajes de acero inoxidable y sistema volcable que facilita
+            la limpieza y mejora la higiene dentro de la maternidad.
+          </p>
+        </div>
+
       </div>
 
-      <div class="system-card">
-        <img src="assets/img/divisorio-para-sala-de-destete.jpg" alt="Divisorio para sala de destete">
-        <h3>Divisorio para destete</h3>
-        <p>Organización eficiente de corrales según tamaño y edad.</p>
+      <div class="catalogo-boton">
+        <a
+          href="https://wa.me/5491166902000?text=Hola,%20quisiera%20consultar%20sobre%20equipamiento%20para%20porcicultura"
+          class="btn-catalogo"
+          target="_blank"
+          rel="noopener"
+        >
+          Consultanos por WhatsApp
+        </a>
       </div>
-
-      <div class="system-card">
-        <img src="assets/img/pisos-para-lechon.jpg" alt="Pisos de lechón y madre">
-        <h3>Pisos para lechón y madre</h3>
-        <p>Mayor higiene, seguridad y confort para todas las etapas.</p>
-      </div>
-
-      <div class="system-card">
-        <img src="assets/img/jaula-regulable.jpg" alt="Jaula regulable">
-        <h3>Jaula regulable</h3>
-        <p>Ajustable según el tamaño de la cerda, ideal para maternidad.</p>
-      </div>
-
-      <div class="system-card">
-        <img src="assets/img/lampara-infrarroja.jpg" alt=""Lámpara infrarroja para lechones">
-        <h3>Lámpara infrarroja 150W / 250W</h3>
-        <p>Fuente de calor para lechones en maternidad. 
-Mejora el confort térmico durante los primeros días de vida.</p>
-      </div>
-
-      <div class="system-card">
-        <img src="assets/img/batea-para-juala-regulable.jpg" alt="Batea para jaula regulable">
-        <h3>Batea para jaula regulable</h3>
-        <p>Batea de polietileno de alta densidad con protección UV. 
-Herrajes de acero inoxidable y sistema volcable que facilita 
-la limpieza y mejora la higiene dentro de la maternidad.</p>
-      </div>
-
     </div>
-  </div>
- <div class="catalogo-boton">
-  <a href="https://wa.me/5491166902000?text=Hola,%20quisiera%20consultar%20sobre%20equipamiento%20para%20porcicultura" 
-     class="btn-catalogo" 
-     target="_blank">
-     Consultanos por WhatsApp
-  </a>
-</div>
-</section>
+  </section>
 
-<!-- SERVICIOS -->
-<section class="servicios-porcicultura">
-  <div class="container">
+  <!-- SERVICIOS -->
+  <section class="servicios-porcicultura">
+    <div class="container">
 
-    <h2>Servicios</h2>
+      <h2>Servicios</h2>
 
-<p class="section-intro">
-Acompañamos tu proyecto desde el diseño hasta la puesta en marcha.
-</p>
+      <p class="section-intro">
+        Acompañamos tu proyecto desde el diseño hasta la puesta en marcha.
+      </p>
 
-<div class="systems-grid">
+      <div class="media-grid">
 
-<div class="service-card">
-<img src="assets/img/diseno-granja.jpg" alt="Diseño y planificación de granjas porcinas">
+        <div class="media-card">
+          <img src="assets/img/diseno-granja.jpg" alt="Diseño y planificación de granjas porcinas">
+          <h3>Diseño y asesoramiento técnico</h3>
+          <p>
+            Asesoramiento en el diseño y planificación de granjas porcinas,
+            optimizando espacios, manejo y eficiencia productiva.
+          </p>
+        </div>
 
-<h3>Diseño y asesoramiento técnico</h3>
+        <div class="media-card">
+          <img src="assets/img/montaje-porcino.jpg" alt="Instalación de equipamiento">
+          <h3>Instalación de equipamiento</h3>
+          <p>
+            Instalación profesional y eficiente de equipamiento porcino
+            adaptada a cada sistema productivo.
+          </p>
+        </div>
 
-<p>
-Asesoramiento en el diseño y planificación de granjas porcinas,
-optimizando espacios, manejo y eficiencia productiva.
-</p>
-</div>
+        <div class="media-card">
+          <img src="assets/img/obra-civil.jpg" alt="Obra civil para granjas">
+          <h3>Obra civil</h3>
+          <p>
+            Coordinación y ejecución de obras para granjas porcinas,
+            garantizando funcionalidad y eficiencia productiva.
+          </p>
+        </div>
 
-<div class="service-card">
-<img src="assets/img/montaje-porcino.jpg" alt="Instalación de equipamiento">
+      </div>
+    </div>
+  </section>
 
-<h3>Instalación de equipamiento</h3>
+</main>
 
-<p>
-Instalación profesional y eficiente de equipamiento porcino
-adaptada a cada sistema productivo.
-</p>
-</div>
-
-<div class="service-card">
-<img src="assets/img/obra-civil.jpg" alt="Obra civil para granjas">
-
-<h3>Obra civil</h3>
-
-<p>
-Coordinación y ejecución de obras para granjas porcinas,
-garantizando funcionalidad y eficiencia productiva.
-</p>
-</div>
-
-</div>
-</section>
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 AllPork S.R.L. Todos los derechos reservados.</p>
+  <p>📞 +54 9 11 6690-2000</p>
+  <p>✉️ infoallpork@gmail.com · ventas.allpork@gmail.com</p>
+  <p>📍 General Las Heras, Buenos Aires, Argentina</p>
+</footer>
 
 <!-- WHATSAPP -->
 <a href="https://wa.me/5491166902000"
    class="whatsapp-float"
    target="_blank"
+   rel="noopener"
    title="Escribinos por WhatsApp">
 
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
@@ -257,18 +286,22 @@ garantizando funcionalidad y eficiencia productiva.
 </a>
 
 <script>
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
 
-hamburger.addEventListener("click", () => {
-navMenu.classList.toggle("active");
-});
+  hamburger.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen);
+  });
 
-document.querySelectorAll("#nav-menu a").forEach(link => {
-link.addEventListener("click", () => {
-navMenu.classList.remove("active");
-});
-});
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+    });
+  });
 </script>
 
 </body>
