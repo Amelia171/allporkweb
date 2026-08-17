@@ -170,7 +170,7 @@ HERO CINEMATIC
   justify-content:center;
   text-align:center;
   position:relative;
-  padding:140px 0 90px;
+  padding:140px 0 130px;
 }
 
 .hero::before{
@@ -236,6 +236,58 @@ HERO CINEMATIC
 .hero-extra{
   color:#bbb;
   font-size:.9rem;
+}
+
+/* =========================
+STATS STRIP (flotante sobre el hero)
+========================= */
+.stats-strip{
+  position:relative;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(20px,5vw,64px);
+  max-width:820px;
+  margin:0 auto;
+  margin-top:-56px;
+  padding:36px clamp(24px,5vw,56px);
+  background:rgba(28,23,22,0.75);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-medium);
+}
+
+.stat-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:4px;
+}
+
+.stat-number{
+  font-size:clamp(2.2rem,5vw,3rem);
+  font-weight:800;
+  line-height:1;
+  background:linear-gradient(135deg,var(--orange),var(--orange-light));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.stat-label{
+  font-size:.9rem;
+  color:#ddd;
+  max-width:180px;
+  font-weight:500;
+}
+
+.stat-divider{
+  width:1px;
+  align-self:stretch;
+  background:rgba(255,255,255,0.18);
 }
 
 /* =========================
@@ -387,310 +439,19 @@ CARDS GLASS PRO 🔥
   transform:translateY(-8px);
 }
 
-/* =========================
-   EQUIPAMIENTO — PREMIUM
-========================= */
-
-.equipamiento{
-  position:relative;
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(247,144,39,.06),
-      transparent 35%
-    ),
-    linear-gradient(
-      to bottom,
-      #ffffff 0%,
-      #f7f7f7 100%
-    );
-  overflow:hidden;
-}
-
-/* DETALLE DECORATIVO */
-
-.equipamiento::before{
-  content:"";
-  position:absolute;
-  width:420px;
-  height:420px;
-  top:-220px;
-  right:-180px;
-  background:rgba(247,144,39,.07);
-  border-radius:50%;
-  filter:blur(2px);
-  pointer-events:none;
-}
-
-/* CONTENEDOR */
-
-.equipamiento .container{
-  position:relative;
-  z-index:2;
-}
-
-/* TÍTULO */
-
-.equipamiento h2{
-  position:relative;
-  margin-bottom:14px;
-  font-weight:800;
-  color:var(--black);
-}
-
-/* LÍNEA NARANJA DEBAJO DEL TÍTULO */
-
-.equipamiento h2::after{
-  content:"";
-  display:block;
-  width:55px;
-  height:4px;
-  margin:16px auto 0;
-  border-radius:10px;
-  background:linear-gradient(
-    90deg,
-    var(--orange),
-    var(--orange-light)
-  );
-}
-
-/* INTRO */
-
-.equipamiento .section-intro{
-  max-width:680px;
-  margin-bottom:55px;
-  color:#666;
-  font-size:1.05rem;
-}
-
-/* =========================
-   GRID
-========================= */
-
-.systems-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-  align-items:stretch;
-}
-
-/* =========================
-   LINK
-========================= */
-
-.system-link{
-  display:block;
-  text-decoration:none;
-  color:inherit;
-  height:100%;
-}
-
-/* =========================
-   CARD
-========================= */
-
-.system-card{
-  position:relative;
-  height:430px;
-
-  overflow:hidden;
-
-  border-radius:var(--radius);
-
-  background:#181412;
-
-  box-shadow:
-    0 15px 35px rgba(0,0,0,.10);
-
-  border:1px solid rgba(0,0,0,.06);
-
-  transition:
-    transform .45s cubic-bezier(.2,.8,.2,1),
-    box-shadow .45s cubic-bezier(.2,.8,.2,1);
-
-  isolation:isolate;
-}
-
-/* =========================
-   IMAGEN
-========================= */
-
-.system-card img{
-  position:absolute;
-  inset:0;
-
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  transition:
-    transform .8s cubic-bezier(.2,.8,.2,1),
-    filter .6s ease;
-
-  z-index:0;
-}
-
-/* =========================
-   DEGRADADO
-========================= */
-
-.system-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  z-index:1;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(15,12,11,.97) 0%,
-      rgba(15,12,11,.82) 25%,
-      rgba(15,12,11,.35) 55%,
-      rgba(15,12,11,.05) 100%
-    );
-
-  transition:
-    background .5s ease;
-}
-
-/* =========================
-   BRILLO SUPERIOR
-========================= */
-
-.system-card::after{
-  content:"";
-  position:absolute;
-
-  top:0;
-  left:0;
-  right:0;
-
-  height:2px;
-
-  background:linear-gradient(
-    90deg,
-    transparent,
-    var(--orange),
-    transparent
-  );
-
-  opacity:.65;
-
-  z-index:4;
-
-  transition:
-    opacity .4s ease;
-}
-
 /* =========================================================
-   CONTENIDO DE TARJETA
-   AJUSTADO PARA EVITAR TEXTO AMONTONADO
+   EQUIPAMIENTO — PÁGINA (equipamiento.html)
 ========================================================= */
-
-.system-card h3,
-.system-card p{
-  position:absolute;
-  left:28px;
-  right:28px;
-
-  z-index:3;
-}
-
-/* TÍTULO */
-
-.system-card h3{
-  bottom:100px;
-
-  margin:0;
-
-  color:#fff;
-
-  font-size:1.65rem;
-  line-height:1.2;
-  font-weight:800;
-
-  text-shadow:
-    0 3px 12px rgba(0,0,0,.35);
-
-  transition:
-    transform .45s cubic-bezier(.2,.8,.2,1),
-    color .35s ease;
-}
-
-/* DESCRIPCIÓN */
-
-.system-card p{
-  bottom:30px;
-
-  margin:0;
-
-  color:rgba(255,255,255,.82);
-
-  font-size:.96rem;
-  line-height:1.55;
-
-  max-width:90%;
-
-  transition:
-    transform .45s cubic-bezier(.2,.8,.2,1),
-    color .35s ease;
-}
-
-/* =========================
-   PEQUEÑO DETALLE SOBRE EL TEXTO
-========================= */
-
-.system-card h3::before{
-  content:"";
-  display:block;
-
-  width:38px;
-  height:3px;
-
-  margin-bottom:12px;
-
-  border-radius:10px;
-
-  background:linear-gradient(
-    90deg,
-    var(--orange),
-    var(--orange-light)
-  );
-
-  transition:
-    width .45s cubic-bezier(.2,.8,.2,1);
-}
-
-/* =========================================================
-   EQUIPAMIENTO — DISEÑO PREMIUM ALLPORK
-========================================================= */
-
-/* =========================
-   CONTENEDOR PRINCIPAL
-========================= */
 
 .equipamiento-page{
   position:relative;
   padding:110px 0 100px;
   background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(247,144,39,.08),
-      transparent 45%
-    ),
-    linear-gradient(
-      to bottom,
-      #f7f7f7,
-      #ffffff
-    );
+    radial-gradient(circle at 50% 0%, rgba(247,144,39,.08), transparent 45%),
+    linear-gradient(to bottom, #f7f7f7, #ffffff);
 }
 
-/* =========================
-   ENCABEZADO
-========================= */
-
+/* ENCABEZADO */
 .equipment-heading{
   max-width:820px;
   margin:0 auto 65px;
@@ -701,327 +462,183 @@ CARDS GLASS PRO 🔥
   display:inline-flex;
   align-items:center;
   justify-content:center;
-
   padding:7px 16px;
-
   margin-bottom:18px;
-
   border-radius:50px;
-
   background:rgba(247,144,39,.10);
-
   border:1px solid rgba(247,144,39,.25);
-
   color:var(--orange);
-
   font-size:.75rem;
   font-weight:800;
-
   letter-spacing:1.5px;
 }
 
 .equipment-heading h1{
   margin:0 0 20px;
-
-  font-size:clamp(
-    2.2rem,
-    5vw,
-    3.6rem
-  );
-
+  font-size:clamp(2.2rem,5vw,3.6rem);
   line-height:1.1;
-
   font-weight:800;
-
   color:var(--black);
-
   letter-spacing:-.03em;
 }
 
 .equipment-heading p{
   max-width:680px;
-
   margin:0 auto;
-
   color:#5b5b5b;
-
   font-size:1.08rem;
-
   line-height:1.75;
 }
 
-
-/* =========================================================
-   GRID DE SISTEMAS
-========================================================= */
-
+/* GRID DE SISTEMAS */
 .systems-grid{
   display:grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
+  grid-template-columns:repeat(3, minmax(0, 1fr));
   gap:28px;
-
   max-width:1200px;
-
   margin:0 auto;
 }
 
-
-/* =========================
-   LINK
-========================= */
-
+/* LINK WRAPPER */
 .system-link{
   display:block;
-
   text-decoration:none;
-
   color:inherit;
-
   min-width:0;
-
   border-radius:var(--radius);
-
   outline:none;
 }
 
-
-/* =========================================================
-   TARJETA
-========================================================= */
-
+/* TARJETA */
 .system-card{
   position:relative;
-
   height:500px;
-
   overflow:hidden;
-
   border-radius:var(--radius);
-
   background:#1c1716;
-
-  box-shadow:
-    0 18px 50px rgba(0,0,0,.14);
-
+  box-shadow:0 18px 50px rgba(0,0,0,.14);
   isolation:isolate;
-
   transition:
     transform .5s cubic-bezier(.2,.8,.2,1),
     box-shadow .5s cubic-bezier(.2,.8,.2,1);
 }
 
-
-/* =========================
-   IMAGEN
-========================= */
-
 .system-card img{
   position:absolute;
-
   inset:0;
-
   width:100%;
   height:100%;
-
   object-fit:cover;
-
   object-position:center;
-
   z-index:0;
-
   transition:
     transform .8s cubic-bezier(.2,.8,.2,1),
     filter .5s ease;
 }
 
-
-/* =========================
-   DEGRADADO
-========================= */
-
+/* DEGRADADO (único, sobre la imagen) */
 .system-overlay{
   position:absolute;
-
   inset:0;
-
   z-index:1;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.08) 0%,
-      rgba(0,0,0,.12) 30%,
-      rgba(0,0,0,.55) 60%,
-      rgba(0,0,0,.94) 100%
-    );
-
-  transition:
-    background .5s ease;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,.08) 0%,
+    rgba(0,0,0,.12) 30%,
+    rgba(0,0,0,.55) 60%,
+    rgba(0,0,0,.94) 100%
+  );
+  transition:background .5s ease;
 }
 
-
-/* =========================================================
-   CONTENIDO
-   CORREGIDO PARA QUE NO SE AMONTONE
-========================================================= */
-
+/* CONTENIDO DE LA TARJETA */
 .system-content{
   position:absolute;
-
   left:0;
   right:0;
   bottom:0;
-
   z-index:2;
-
   padding:30px 28px 26px;
-
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
   color:white;
-
   text-align:left;
 }
-
-
-/* =========================
-   CATEGORÍA
-========================= */
 
 .system-category{
   display:block;
-
-  margin-bottom:9px;
-
+  margin:0 0 9px;
   color:var(--orange-light);
-
   font-size:.66rem;
-
   font-weight:800;
-
-  letter-spacing:1.2px;
-
   line-height:1.3;
-
+  letter-spacing:1.2px;
   text-transform:uppercase;
 }
 
-
-/* =========================
-   TÍTULO
-========================= */
-
-.system-card h2{
+.system-content h2{
   margin:0 0 12px;
-
   text-align:left;
-
   color:white;
-
-  font-size:clamp(
-    1.35rem,
-    2vw,
-    1.75rem
-  );
-
+  font-size:clamp(1.35rem,2vw,1.75rem);
   line-height:1.15;
-
   font-weight:800;
-
   letter-spacing:-.02em;
+  text-shadow:0 3px 12px rgba(0,0,0,.35);
 }
 
-
-/* =========================
-   DESCRIPCIÓN
-========================= */
-
-.system-card p{
+.system-content p{
   max-width:390px;
-
   margin:0 0 16px;
-
   color:rgba(255,255,255,.82);
-
   font-size:.86rem;
-
   line-height:1.55;
 }
 
-
-/* =========================
-   CTA
-========================= */
-
 .system-cta{
   display:inline-flex;
-
   align-items:center;
-
   gap:7px;
-
   color:white;
-
   font-size:.68rem;
-
   font-weight:800;
-
   line-height:1.2;
-
   letter-spacing:.5px;
-
   text-transform:uppercase;
-
-  transition:
-    color .3s ease,
-    gap .3s ease;
+  transition:color .3s ease, gap .3s ease;
 }
 
 .system-cta span{
   color:var(--orange);
-
   font-size:1rem;
-
   line-height:1;
-
-  transition:
-    transform .3s ease;
+  transition:transform .3s ease;
 }
 
-
-/* =========================================================
-   HOVER
-========================================================= */
-
+/* HOVER */
 .system-link:hover .system-card{
-  transform:
-    translateY(-12px);
-
-  box-shadow:
-    0 35px 80px rgba(0,0,0,.24);
+  transform:translateY(-12px);
+  box-shadow:0 35px 80px rgba(0,0,0,.24);
 }
 
 .system-link:hover .system-card img{
   transform:scale(1.08);
-
   filter:saturate(1.08);
 }
 
 .system-link:hover .system-overlay{
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.05) 0%,
-      rgba(0,0,0,.10) 25%,
-      rgba(0,0,0,.48) 55%,
-      rgba(0,0,0,.96) 100%
-    );
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,.05) 0%,
+    rgba(0,0,0,.10) 25%,
+    rgba(0,0,0,.48) 55%,
+    rgba(0,0,0,.96) 100%
+  );
 }
 
 .system-link:hover .system-cta{
   color:var(--orange-light);
-
   gap:14px;
 }
 
@@ -1029,135 +646,87 @@ CARDS GLASS PRO 🔥
   transform:translateX(4px);
 }
 
-
-/* =========================
-   FOCUS — ACCESIBILIDAD
-========================= */
-
+/* FOCUS — ACCESIBILIDAD */
 .system-link:focus-visible{
   outline:3px solid var(--orange);
-
   outline-offset:5px;
-
   border-radius:var(--radius);
 }
-
 
 /* =========================================================
    CTA FINAL EQUIPAMIENTO
 ========================================================= */
-
 .equipment-cta{
   padding:100px 0;
-
   background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(247,144,39,.18),
-      transparent 55%
-    ),
+    radial-gradient(circle at 50% 0%, rgba(247,144,39,.18), transparent 55%),
     var(--dark);
-
   position:relative;
-
   overflow:hidden;
 }
 
 .equipment-cta::before{
   content:"";
-
   position:absolute;
-
   width:500px;
   height:500px;
-
   left:50%;
   top:50%;
-
-  transform:
-    translate(-50%,-50%);
-
+  transform:translate(-50%,-50%);
   border-radius:50%;
-
   border:1px solid rgba(247,144,39,.08);
-
   pointer-events:none;
 }
 
 .equipment-cta-box{
   position:relative;
-
   z-index:2;
-
   max-width:760px;
-
   margin:0 auto;
-
   text-align:center;
 }
 
 .equipment-cta-box > span{
   display:block;
-
   margin-bottom:14px;
-
   color:var(--orange);
-
   font-size:.75rem;
-
   font-weight:800;
-
   letter-spacing:1.5px;
 }
 
 .equipment-cta-box h2{
   margin:0 0 18px;
-
   color:white;
-
-  font-size:clamp(
-    2rem,
-    4vw,
-    3rem
-  );
-
+  font-size:clamp(2rem,4vw,3rem);
   line-height:1.15;
-
   font-weight:800;
 }
 
 .equipment-cta-box p{
   max-width:620px;
-
   margin:0 auto 30px;
-
   color:#bdbdbd;
-
   font-size:1.05rem;
-
   line-height:1.7;
 }
 
 .equipment-cta-box .btn{
   display:inline-flex;
-
   align-items:center;
   justify-content:center;
-
   min-height:54px;
 }
 
-
 /* =========================================================
-   TABLET
+   RESPONSIVE — EQUIPAMIENTO
 ========================================================= */
 
+/* TABLET */
 @media(max-width:1000px){
 
   .systems-grid{
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-
+    grid-template-columns:repeat(2, minmax(0, 1fr));
     gap:24px;
   }
 
@@ -1166,16 +735,19 @@ CARDS GLASS PRO 🔥
   }
 
   .system-content{
-    padding:30px 26px 26px;
+    padding:26px 24px 23px;
   }
 
+  .system-content h2{
+    font-size:1.45rem;
+  }
+
+  .system-content p{
+    font-size:.8rem;
+  }
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
+/* MOBILE */
 @media(max-width:700px){
 
   .equipamiento-page{
@@ -1188,95 +760,76 @@ CARDS GLASS PRO 🔥
 
   .equipment-eyebrow{
     font-size:.68rem;
-
     padding:7px 13px;
-
     letter-spacing:1.1px;
   }
 
   .equipment-heading h1{
     font-size:2.15rem;
-
     line-height:1.12;
   }
 
   .equipment-heading p{
     font-size:.98rem;
-
     line-height:1.65;
   }
 
-
   .systems-grid{
     grid-template-columns:1fr;
-
     gap:20px;
   }
 
-
   .system-card{
     height:430px;
-
     border-radius:20px;
   }
 
-
   .system-content{
-    padding:28px 23px 24px;
+    padding:27px 23px 24px;
   }
-
 
   .system-category{
-    font-size:.66rem;
-
+    font-size:.65rem;
     letter-spacing:1.2px;
+    margin-bottom:9px;
   }
 
-
-  .system-card h2{
-    font-size:1.75rem;
-
+  .system-content h2{
+    font-size:1.65rem;
+    line-height:1.15;
     margin-bottom:10px;
   }
 
-
-  .system-card p{
-    font-size:.92rem;
-
-    margin-bottom:18px;
+  .system-content p{
+    font-size:.9rem;
+    line-height:1.5;
+    margin-bottom:16px;
   }
 
+  .system-cta{
+    font-size:.68rem;
+  }
 
   .equipment-cta{
     padding:75px 0;
   }
 
-
   .equipment-cta-box h2{
     font-size:2rem;
   }
 
-
   .equipment-cta-box p{
     font-size:.96rem;
-
     margin-bottom:26px;
   }
 
-
   .equipment-cta-box .btn{
     width:100%;
-
     max-width:330px;
   }
-
 }
 
-
-/* =========================================================
-   MOBILE PEQUEÑO
-========================================================= */
-
+/* MOBILE PEQUEÑO */
 @media(max-width:400px){
 
   .equipment-heading h1{
@@ -1291,10 +844,14 @@ CARDS GLASS PRO 🔥
     padding:24px 20px 21px;
   }
 
-  .system-card h2{
-    font-size:1.55rem;
+  .system-content h2{
+    font-size:1.5rem;
   }
 
+  .system-content p{
+    font-size:.84rem;
+    line-height:1.5;
+  }
 }
 
 /* =========================
@@ -1447,14 +1004,13 @@ ANIMACIONES
     transform:none;
     transition:none;
   }
-
   .hero-content{
     animation:none;
   }
 }
 
 /* =========================
-RESPONSIVE
+RESPONSIVE — NAV
 ========================= */
 @media(max-width:900px){
 
@@ -1501,242 +1057,17 @@ RESPONSIVE
   .section-intro{
     margin-bottom:36px;
   }
-}
-/* =========================================================
-   CORRECCIÓN FINAL — TEXTO DE TARJETAS
-   NO BORRAR LAS REGLAS ANTERIORES
-========================================================= */
 
-.system-content{
-  position:absolute !important;
-
-  left:0 !important;
-  right:0 !important;
-  bottom:0 !important;
-
-  z-index:5 !important;
-
-  padding:28px 26px 25px !important;
-
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:flex-start !important;
-
-  color:white !important;
-  text-align:left !important;
-}
-
-
-/* =========================
-   CATEGORÍA
-========================= */
-
-.system-content .system-category{
-  position:static !important;
-
-  display:block !important;
-
-  width:100% !important;
-
-  margin:0 0 9px !important;
-  padding:0 !important;
-
-  color:var(--orange-light) !important;
-
-  font-size:.64rem !important;
-  font-weight:800 !important;
-
-  line-height:1.3 !important;
-  letter-spacing:1.2px !important;
-
-  text-transform:uppercase !important;
-}
-
-
-/* =========================
-   TÍTULO
-========================= */
-
-.system-content h2{
-  position:static !important;
-
-  display:block !important;
-
-  width:100% !important;
-
-  margin:0 0 10px !important;
-  padding:0 !important;
-
-  color:#fff !important;
-
-  text-align:left !important;
-
-  font-size:1.55rem !important;
-  font-weight:800 !important;
-
-  line-height:1.15 !important;
-  letter-spacing:-.02em !important;
-
-  text-shadow:
-    0 3px 12px rgba(0,0,0,.35) !important;
-}
-
-
-/* =========================
-   DESCRIPCIÓN
-========================= */
-
-.system-content p{
-  position:static !important;
-
-  display:block !important;
-
-  width:100% !important;
-  max-width:100% !important;
-
-  margin:0 0 14px !important;
-  padding:0 !important;
-
-  color:rgba(255,255,255,.82) !important;
-
-  font-size:.82rem !important;
-
-  line-height:1.5 !important;
-}
-
-
-/* =========================
-   CTA
-========================= */
-
-.system-content .system-cta{
-  position:static !important;
-
-  display:inline-flex !important;
-
-  align-items:center !important;
-
-  width:auto !important;
-
-  margin:0 !important;
-  padding:0 !important;
-
-  color:white !important;
-
-  font-size:.65rem !important;
-
-  font-weight:800 !important;
-
-  line-height:1.2 !important;
-
-  letter-spacing:.5px !important;
-
-  text-transform:uppercase !important;
-
-  gap:7px !important;
-}
-
-
-/* =========================
-   FLECHA
-========================= */
-
-.system-content .system-cta span{
-  position:static !important;
-
-  display:inline-block !important;
-
-  width:auto !important;
-
-  margin:0 !important;
-  padding:0 !important;
-
-  color:var(--orange) !important;
-
-  font-size:1rem !important;
-
-  line-height:1 !important;
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media(max-width:1000px){
-
-  .system-content{
-    padding:26px 24px 23px !important;
+  .stats-strip{
+    flex-direction:column;
+    gap:24px;
+    margin-top:-40px;
+    padding:28px 24px;
   }
 
-  .system-content h2{
-    font-size:1.45rem !important;
+  .stat-divider{
+    width:60%;
+    height:1px;
+    align-self:center;
   }
-
-  .system-content p{
-    font-size:.8rem !important;
-  }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:700px){
-
-  .system-content{
-    padding:27px 23px 24px !important;
-  }
-
-  .system-content .system-category{
-    font-size:.65rem !important;
-
-    margin-bottom:9px !important;
-  }
-
-  .system-content h2{
-    font-size:1.65rem !important;
-
-    line-height:1.15 !important;
-
-    margin-bottom:10px !important;
-  }
-
-  .system-content p{
-    font-size:.9rem !important;
-
-    line-height:1.5 !important;
-
-    margin-bottom:16px !important;
-  }
-
-  .system-content .system-cta{
-    font-size:.68rem !important;
-  }
-
-}
-
-
-/* =========================================================
-   CELULARES PEQUEÑOS
-========================================================= */
-
-@media(max-width:400px){
-
-  .system-content{
-    padding:24px 20px 21px !important;
-  }
-
-  .system-content h2{
-    font-size:1.5rem !important;
-  }
-
-  .system-content p{
-    font-size:.84rem !important;
-
-    line-height:1.5 !important;
-  }
-
 }
