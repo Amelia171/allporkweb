@@ -239,7 +239,7 @@ HERO CINEMATIC
 }
 
 /* =========================
-   STATS STRIP - BLINDADO MOBILE
+   STATS STRIP - RE-CALIBRADO
 ========================= */
 .stats-strip {
   position: relative;
@@ -249,12 +249,10 @@ HERO CINEMATIC
   justify-content: center;
   gap: clamp(15px, 3vw, 64px);
   
-  /* Ancho y centrado absoluto para evitar que se corra a la derecha */
-  width: 92%;
+  /* Ancho y centrado forzado */
+  width: 90% !important;
   max-width: 820px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  margin-top: -40px;
+  margin: -40px auto 0 auto !important; 
   
   padding: 30px 16px;
   background: rgba(28, 23, 22, 0.85);
@@ -262,7 +260,9 @@ HERO CINEMATIC
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius);
   box-shadow: var(--shadow-medium);
+  box-sizing: border-box;
 }
+
 
 /* Ajuste específico para celulares pequeños y medianos */
 @media(max-width: 768px) {
@@ -727,12 +727,12 @@ RESPONSIVE
     margin-bottom:36px;
   }
 }
-/* Corrección de alineación para celulares */
 @media(max-width: 768px) {
   .stats-strip {
-    width: 92%;           /* Un poco más ancho para aprovechar el espacio */
-    margin: -30px auto 0 auto; /* El 'auto' es clave para centrarlo */
-    padding: 20px 10px;
-    gap: 10px;            /* Reduce el espacio entre ítems para que no desborde */
+    width: 90% !important;
+    margin: -30px auto 0 auto !important;
+    padding: 18px 10px !important;
+    gap: 8px !important;
   }
 }
+
