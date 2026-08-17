@@ -11,14 +11,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
   <div class="container header-content">
-    <a href="index.html" style="display:flex; align-items:center; text-decoration:none;">
+    <a href="index.html" class="brand-link">
       <img src="https://i.postimg.cc/HLphL6vx/Chat-GPT-Image-6-jul-2025-07-56-34-p-m-1.png" alt="AllPork Logo" class="logo" />
       <span class="brand-name">AllPork</span>
     </a>
@@ -31,11 +31,11 @@
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
 
-      <div class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </nav>
   </div>
 </header>
@@ -65,7 +65,7 @@
       </span>
     </div>
 
- </div>
+  </div>
 </section>
 
 <section class="servicios-resumen reveal">
@@ -97,8 +97,9 @@
 
   </div>
 </section>
+
 <!-- ===== BLOQUE CONFIANZA ===== -->
- <section class="testimonios-home reveal">
+<section class="testimonios-home reveal">
   <div class="container">
     <h2>Productores que confían en AllPork</h2>
     <p class="section-intro">
@@ -108,48 +109,44 @@
     <div class="testimonios-grid">
 
       <div class="testimonio-card">
-  <div class="testimonio-top">
-    <div class="avatar">BA</div>
-    <div class="stars">★★★★★</div>
-  </div>
+        <div class="testimonio-top">
+          <div class="avatar">BA</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p>“El acompañamiento técnico fue clave desde el armado del galpón hasta la puesta en marcha. Se nota la experiencia.”</p>
+        <span>Productor porcino · Buenos Aires</span>
+      </div>
 
-  <p>“El acompañamiento técnico fue clave desde el armado del galpón hasta la puesta en marcha. Se nota la experiencia.”</p>
-  <span>Productor porcino · Buenos Aires</span>
-</div>
+      <div class="testimonio-card">
+        <div class="testimonio-top">
+          <div class="avatar">SF</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p>“Mejoramos el manejo y la eficiencia del sistema. Cumplieron en tiempos y calidad.”</p>
+        <span>Productor avícola · Santa Fe</span>
+      </div>
 
-<div class="testimonio-card">
-  <div class="testimonio-top">
-    <div class="avatar">SF</div>
-    <div class="stars">★★★★★</div>
-  </div>
+      <div class="testimonio-card">
+        <div class="testimonio-top">
+          <div class="avatar">CB</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p>“No es solo equipamiento, es asesoramiento real. Están presentes en todo el proceso.”</p>
+        <span>Productor porcino · Córdoba</span>
+      </div>
 
-  <p>“Mejoramos el manejo y la eficiencia del sistema. Cumplieron en tiempos y calidad.”</p>
-  <span>Productor avícola · Santa Fe</span>
-</div>
+      <div class="testimonio-card">
+        <div class="testimonio-top">
+          <div class="avatar">ER</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <p>“Elegí AllPork porque no solo me proveyeron el equipamiento, también se encargaron del montaje y me acompañaron hasta que el sistema estuvo funcionando.”</p>
+        <span>Productor avícola · Entre Ríos</span>
+      </div>
 
-<div class="testimonio-card">
-  <div class="testimonio-top">
-    <div class="avatar">CB</div>
-    <div class="stars">★★★★★</div>
-  </div>
-
-  <p>“No es solo equipamiento, es asesoramiento real. Están presentes en todo el proceso.”</p>
-  <span>Productor porcino · Córdoba</span>
-</div>
-
-    <div class="testimonio-card">
-  <div class="testimonio-top">
-    <div class="avatar">ER</div>
-    <div class="stars">★★★★★</div>
-  </div>
-
-  <p>“Elegí AllPork porque no solo me proveyeron el equipamiento, también se encargaron del montaje y me acompañaron hasta que el sistema estuvo funcionando.”</p>
-  <span>Productor avícola · Entre Ríos</span>
-</div>
     </div>
   </div>
 </section>
-
 <!-- ===== FIN BLOQUE CONFIANZA ===== -->
 
 <section class="why-allpork reveal">
@@ -191,6 +188,7 @@
 
   </div>
 </section>
+
 <section class="cta-final reveal">
   <div class="container">
 
@@ -205,6 +203,7 @@
 
   </div>
 </section>
+
 <footer>
   <p>&copy; 2026 AllPork S.R.L. Todos los derechos reservados.</p>
   <p>📞 +54 9 11 6690-2000</p>
@@ -221,28 +220,31 @@
   const navMenu = document.getElementById("nav-menu");
 
   hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+    const isOpen = navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen);
   });
 
   document.querySelectorAll("#nav-menu a").forEach(link => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("active");
+      hamburger.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
     });
   });
-  
 </script>
 <script>
-const elements = document.querySelectorAll(".reveal");
+  const elements = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
 
-elements.forEach(el => observer.observe(el));
+  elements.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
