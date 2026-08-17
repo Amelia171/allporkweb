@@ -239,6 +239,58 @@ HERO CINEMATIC
 }
 
 /* =========================
+STATS STRIP (flotante sobre el hero)
+========================= */
+.stats-strip{
+  position:relative;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(20px,5vw,64px);
+  max-width:820px;
+  margin:0 auto;
+  margin-top:-56px;
+  padding:36px clamp(24px,5vw,56px);
+  background:rgba(28,23,22,0.75);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-medium);
+}
+
+.stat-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:4px;
+}
+
+.stat-number{
+  font-size:clamp(2.2rem,5vw,3rem);
+  font-weight:800;
+  line-height:1;
+  background:linear-gradient(135deg,var(--orange),var(--orange-light));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.stat-label{
+  font-size:.9rem;
+  color:#ddd;
+  max-width:180px;
+  font-weight:500;
+}
+
+.stat-divider{
+  width:1px;
+  align-self:stretch;
+  background:rgba(255,255,255,0.18);
+}
+
+/* =========================
 BOTONES PRO
 ========================= */
 .btn{
