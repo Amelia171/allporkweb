@@ -1710,3 +1710,161 @@ RESPONSIVE — NAV
     padding:32px 24px;
   }
 }
+/* =========================================================
+   QUIÉNES SOMOS
+========================================================= */
+
+.quienes-somos-page{
+  padding:150px 0 100px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(247,144,39,.08), transparent 45%),
+    linear-gradient(to bottom, #f7f7f7, #ffffff);
+}
+
+/* placa flotante sobre la franja de stats: acá no flota sobre un hero, la centramos en el flujo normal */
+.quienes-somos-page .stats-strip{
+  margin-top:50px;
+  margin-bottom:80px;
+}
+
+/* TEXTO + IMAGEN */
+.qs-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+  margin-bottom:90px;
+}
+
+.qs-text p{
+  margin:0 0 20px;
+  color:#444;
+  font-size:1.05rem;
+  line-height:1.7;
+}
+
+.qs-text p:last-child{
+  margin-bottom:0;
+}
+
+.qs-image{
+  position:relative;
+}
+
+.qs-image img{
+  width:100%;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-medium);
+}
+
+.qs-badge{
+  position:absolute;
+  bottom:-22px;
+  left:-22px;
+  background:var(--dark);
+  color:white;
+  padding:18px 26px;
+  border-radius:18px;
+  box-shadow:var(--shadow-strong);
+  text-align:center;
+}
+
+.qs-badge strong{
+  display:block;
+  font-size:1.8rem;
+  font-weight:800;
+  line-height:1;
+  background:linear-gradient(135deg,var(--orange),var(--orange-light));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.qs-badge span{
+  font-size:.72rem;
+  color:#bbb;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+/* VALORES — tarjetas con ícono */
+.qs-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:26px;
+}
+
+.qs-card{
+  background:white;
+  border-radius:var(--radius);
+  padding:32px 26px;
+  box-shadow:var(--shadow-soft);
+  transition:var(--transition);
+}
+
+.qs-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-medium);
+}
+
+.qs-card-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:46px;
+  height:46px;
+  margin-bottom:16px;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--orange),var(--orange-light));
+}
+
+.qs-card-icon svg{
+  width:22px;
+  height:22px;
+  stroke:#1c1716;
+}
+
+.qs-card h3{
+  margin:0 0 8px;
+  color:var(--black);
+  font-size:1.1rem;
+  font-weight:700;
+}
+
+.qs-card p{
+  margin:0;
+  color:#666;
+  font-size:.92rem;
+  line-height:1.6;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .qs-layout{
+    grid-template-columns:1fr;
+    gap:60px;
+  }
+
+  .qs-badge{
+    left:16px;
+    bottom:-18px;
+    padding:14px 20px;
+  }
+}
+
+@media(max-width:700px){
+
+  .quienes-somos-page{
+    padding:120px 0 70px;
+  }
+
+  .qs-layout{
+    margin-bottom:60px;
+  }
+
+  .quienes-somos-page .stats-strip{
+    margin-bottom:60px;
+  }
+}
