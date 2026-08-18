@@ -1,91 +1,163 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto | AllPork</title>
-  
-  <link rel="icon" href="./favicon.png" type="image/png">
-    
-  <link rel="stylesheet" href="style.css">
-</head>
 
+  <meta
+    name="description"
+    content="Contactate con AllPork para cotizar equipamiento porcino y avícola. Escribinos por WhatsApp o completá el formulario y te respondemos a la brevedad."
+  />
+
+  <link rel="icon" href="./favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+</head>
 <body>
 
 <header>
-  <div class="container header-content">
-    <a href="index.html" class="logo-link">
+  <div class="container">
+    <a href="index.html" class="brand-link">
       <img src="https://i.postimg.cc/HLphL6vx/Chat-GPT-Image-6-jul-2025-07-56-34-p-m-1.png"
            alt="AllPork Logo"
            class="logo">
+      <span class="brand-name">AllPork</span>
     </a>
 
     <nav>
-  <ul id="nav-menu">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="quienes-somos.html">Quiénes somos</a></li>
-    <li><a href="equipamiento.html">Equipamiento</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
+      <ul id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="equipamiento.html">Equipamiento</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
 
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
-
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
   </div>
 </header>
 
-<section id="contacto">
-  <div class="container">
-    <h2>Contacto</h2>
+<main>
 
-    <p style="text-align:center; max-width:800px; margin:0 auto 40px;">
-      ¿Querés asesoramiento o cotizar equipamiento?
-      Completá el formulario y nuestro equipo se comunicará con vos a la brevedad.
-    </p>
+  <section class="contacto-page">
+    <div class="container">
 
-    <form 
-  method="get"
-  target="_blank"
-  onsubmit="this.action='https://wa.me/5491166902000?text=' +
-  encodeURIComponent(
-    'Hola, quiero hacer una consulta desde la web AllPork.\n\n' +
-    'Nombre: ' + this.nombre.value + '\n' +
-    'Email: ' + this.email.value + '\n' +
-    'Teléfono: ' + this.telefono.value + '\n\n' +
-    'Mensaje:\n' + this.mensaje.value
-  );"
->
+      <div class="equipment-heading">
+        <span class="equipment-eyebrow">HABLEMOS</span>
+        <h1>Contactanos</h1>
+        <p>
+          ¿Querés asesoramiento o cotizar equipamiento? Completá el formulario
+          o escribinos directo por WhatsApp y nuestro equipo te responde a la brevedad.
+        </p>
+      </div>
 
-  <label>Nombre y apellido</label>
-  <input type="text" name="nombre" required>
+      <div class="contact-grid">
 
-  <label>Email</label>
-  <input type="email" name="email" required>
+        <!-- INFO DE CONTACTO -->
+        <div class="contact-info-card">
+          <h3>Datos de contacto</h3>
+          <p>Atención personalizada para cada proyecto, en todo el país.</p>
 
-  <label>Teléfono</label>
-  <input type="tel" name="telefono">
+          <div class="contact-info-list">
 
-  <label>Mensaje</label>
-  <textarea name="mensaje" rows="5" required></textarea>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <strong>Teléfono / WhatsApp</strong>
+                <a href="https://wa.me/5491166902000" target="_blank" rel="noopener">+54 9 11 6690-2000</a>
+              </div>
+            </div>
 
-  <button type="submit">Enviar consulta</button>
-</form>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6 12 13 2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:infoallpork@gmail.com">infoallpork@gmail.com</a><br>
+                <a href="mailto:ventas.allpork@gmail.com">ventas.allpork@gmail.com</a>
+              </div>
+            </div>
 
-  </div>
-</section>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Ubicación</strong>
+                <span>General Las Heras, Buenos Aires, Argentina</span>
+              </div>
+            </div>
+
+          </div>
+
+          <a href="https://wa.me/5491166902000" class="btn" target="_blank" rel="noopener">
+            Escribinos por WhatsApp
+          </a>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="contact-form-card">
+          <h3>Enviá tu consulta</h3>
+          <p>Te contactamos por WhatsApp apenas recibamos tu mensaje.</p>
+
+          <form id="contactForm">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre y apellido</label>
+                <input type="text" id="nombre" name="nombre" required>
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Enviar consulta</button>
+
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
 
 <footer>
-  <p>&copy; 2025 AllPork S.R.L. Todos los derechos reservados.</p>
-  <p>Tel: +54 9 11 6690-2000 | infoallpork@gmail.com</p>
-  <p>General Las Heras, Buenos Aires</p>
+  <p>&copy; 2026 AllPork S.R.L. Todos los derechos reservados.</p>
+  <p>📞 +54 9 11 6690-2000</p>
+  <p>✉️ infoallpork@gmail.com · ventas.allpork@gmail.com</p>
+  <p>📍 General Las Heras, Buenos Aires, Argentina</p>
 </footer>
 
-<a href="https://wa.me/5491166902000" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+<a href="https://wa.me/5491166902000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
@@ -94,7 +166,43 @@
   const navMenu = document.getElementById("nav-menu");
 
   hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
+    const isOpen = navMenu.classList.toggle("active");
+    hamburger.classList.toggle("active", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen);
+  });
+
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>
+
+<script>
+  // Arma el mensaje y abre WhatsApp con el texto ya cargado.
+  // (antes se perdía el mensaje porque el form con method="get"
+  // pisaba el "?text=" con sus propios campos al enviarse)
+  const contactForm = document.getElementById("contactForm");
+
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const nombre = contactForm.nombre.value;
+    const email = contactForm.email.value;
+    const telefono = contactForm.telefono.value;
+    const mensaje = contactForm.mensaje.value;
+
+    const texto =
+      "Hola, quiero hacer una consulta desde la web AllPork.\n\n" +
+      "Nombre: " + nombre + "\n" +
+      "Email: " + email + "\n" +
+      "Teléfono: " + telefono + "\n\n" +
+      "Mensaje:\n" + mensaje;
+
+    const url = "https://wa.me/5491166902000?text=" + encodeURIComponent(texto);
+    window.open(url, "_blank", "noopener");
   });
 </script>
 
