@@ -1450,3 +1450,68 @@ RESPONSIVE — NAV
   }
 
 }
+/* =========================================================
+   PRODUCCIÓN DE CARNE DE POLLO
+========================================================= */
+
+.hero-carne{
+  position:relative;
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  background:url('assets/img/produccion-carne.jpg') center/cover no-repeat;
+  padding:150px 0 80px;
+  text-align:center;
+}
+
+.hero-carne .hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(15,12,11,.92) 0%,
+    rgba(15,12,11,.55) 55%,
+    rgba(15,12,11,.30) 100%
+  );
+}
+
+.hero-carne .hero-content{
+  position:relative;
+  z-index:2;
+  max-width:760px;
+  width:100%;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+}
+
+.hero-carne h1{
+  margin:0;
+  color:white;
+  font-size:clamp(2rem,5vw,3.4rem);
+  line-height:1.15;
+  font-weight:800;
+}
+
+.hero-carne p{
+  margin:0;
+  color:#ddd;
+  font-size:1.05rem;
+  max-width:560px;
+}
+
+.etapas-carne{
+  background:#fff;
+}
+
+@media(max-width:700px){
+
+  .hero-carne{
+    min-height:60vh;
+    padding:130px 0 60px;
+  }
+
+}
