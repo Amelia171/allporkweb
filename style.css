@@ -1515,3 +1515,198 @@ RESPONSIVE — NAV
   }
 
 }
+/* =========================================================
+   CONTACTO
+========================================================= */
+
+.contacto-page{
+  padding:150px 0 100px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(247,144,39,.08), transparent 45%),
+    linear-gradient(to bottom, #f7f7f7, #ffffff);
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.3fr;
+  gap:36px;
+  align-items:start;
+  margin-top:50px;
+}
+
+/* TARJETA DE INFORMACIÓN */
+.contact-info-card{
+  background:var(--dark);
+  border-radius:var(--radius);
+  padding:40px 34px;
+  color:white;
+}
+
+.contact-info-card h3{
+  margin:0 0 8px;
+  font-size:1.3rem;
+  font-weight:800;
+}
+
+.contact-info-card > p{
+  margin:0 0 30px;
+  color:#bbb;
+  font-size:.95rem;
+  line-height:1.6;
+}
+
+.contact-info-list{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  margin-bottom:32px;
+}
+
+.contact-info-item{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+}
+
+.contact-info-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  flex-shrink:0;
+  border-radius:12px;
+  background:rgba(247,144,39,.15);
+  border:1px solid rgba(247,144,39,.3);
+}
+
+.contact-info-icon svg{
+  width:20px;
+  height:20px;
+  stroke:var(--orange-light);
+}
+
+.contact-info-item strong{
+  display:block;
+  margin-bottom:2px;
+  font-size:.8rem;
+  color:#999;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+.contact-info-item span,
+.contact-info-item a{
+  color:#eee;
+  font-size:.98rem;
+  text-decoration:none;
+}
+
+.contact-info-item a:hover{
+  color:var(--orange-light);
+}
+
+.contact-info-card .btn{
+  width:100%;
+  text-align:center;
+}
+
+/* TARJETA DEL FORMULARIO */
+.contact-form-card{
+  background:white;
+  border-radius:var(--radius);
+  padding:40px 36px;
+  box-shadow:var(--shadow-soft);
+}
+
+.contact-form-card h3{
+  margin:0 0 6px;
+  font-size:1.3rem;
+  font-weight:800;
+  color:var(--black);
+}
+
+.contact-form-card > p{
+  margin:0 0 28px;
+  color:#666;
+  font-size:.95rem;
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:8px;
+  font-size:.85rem;
+  font-weight:600;
+  color:var(--black);
+}
+
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:13px 16px;
+  border-radius:12px;
+  border:1.5px solid #e4e4e4;
+  background:#fafafa;
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:.95rem;
+  color:var(--black);
+  transition:var(--transition);
+}
+
+.form-group textarea{
+  resize:vertical;
+  min-height:120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:var(--orange);
+  background:white;
+  box-shadow:0 0 0 4px rgba(247,144,39,.12);
+}
+
+.contact-form-card button[type="submit"]{
+  border:none;
+  cursor:pointer;
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:1rem;
+  width:100%;
+  margin-top:6px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .contacto-page{
+    padding:120px 0 80px;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:520px){
+
+  .form-row{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .contact-info-card,
+  .contact-form-card{
+    padding:32px 24px;
+  }
+}
