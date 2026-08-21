@@ -2911,3 +2911,126 @@ footer p:first-child{
   }
 
 }
+/* =========================================================
+   🇦🇷 ALLPORK — BANDA COBERTURA NACIONAL
+   ========================================================= */
+
+.country-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--orange);
+  color: var(--black);
+  border-top: 1px solid rgba(255,255,255,.15);
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
+.country-banner-track {
+  width: max-content;
+  display: flex;
+}
+
+.country-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: max-content;
+  padding: 16px 28px;
+  white-space: nowrap;
+  animation: allpork-country-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+.country-banner-content span,
+.country-banner-content strong {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.country-banner-content > span:not(.banner-separator) {
+  font-size: .95rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.country-banner-content strong {
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.country-banner-content .banner-separator {
+  font-size: 1rem;
+  opacity: .55;
+}
+
+@keyframes allpork-country-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333333%);
+  }
+}
+
+@media (hover:hover) {
+
+  .country-banner:hover .country-banner-content {
+    animation-play-state: paused;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .country-banner-content {
+    animation: none;
+  }
+
+}
+
+@media (max-width:900px) {
+
+  .country-banner-content {
+    gap: 22px;
+    padding: 15px 24px;
+    animation-duration: 22s;
+  }
+
+  .country-banner-content strong {
+    font-size: .76rem;
+    letter-spacing: 1.2px;
+  }
+
+  .country-banner-content > span:not(.banner-separator) {
+    font-size: .82rem;
+  }
+
+}
+
+@media (max-width:600px) {
+
+  .country-banner-content {
+    gap: 18px;
+    padding: 14px 20px;
+    animation-duration: 19s;
+  }
+
+  .country-banner-content strong {
+    font-size: .68rem;
+    letter-spacing: 1px;
+  }
+
+  .country-banner-content > span:not(.banner-separator) {
+    font-size: .75rem;
+  }
+
+  .country-banner-content .banner-separator {
+    font-size: .8rem;
+  }
+
+}
