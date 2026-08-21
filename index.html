@@ -67,6 +67,62 @@ Atención personalizada en cada proyecto
 </div>
 </section>
 
+<!-- ===== CARRUSEL DE GRANJAS EQUIPADAS ===== -->
+<section class="granjas-carousel reveal">
+<div class="container">
+<h2>Granjas equipadas por AllPork</h2>
+<p class="section-intro">
+Instalaciones reales donde nuestro equipamiento ya está en producción.
+</p>
+</div>
+
+<div class="carousel-wrapper">
+<button class="carousel-btn carousel-prev" aria-label="Ver granja anterior">&#8249;</button>
+
+<div class="carousel-track" id="granjasTrack">
+
+<article class="carousel-card">
+<img src="assets/img/hero-granja.jpg" alt="Galpón porcino equipado por AllPork" loading="lazy" />
+<div class="carousel-overlay"></div>
+<div class="carousel-caption">
+<span>Porcicultura</span>
+<h3>Galpón de engorde equipado</h3>
+</div>
+</article>
+
+<article class="carousel-card">
+<img src="assets/img/quienes-somos.jpg" alt="Granja porcina en producción con equipamiento AllPork" loading="lazy" />
+<div class="carousel-overlay"></div>
+<div class="carousel-caption">
+<span>Porcicultura</span>
+<h3>Sistema de alimentación en funcionamiento</h3>
+</div>
+</article>
+
+<article class="carousel-card">
+<img src="assets/img/hero-ponedoras.jpg" alt="Granja de ponedoras equipada por AllPork" loading="lazy" />
+<div class="carousel-overlay"></div>
+<div class="carousel-caption">
+<span>Producción de huevos</span>
+<h3>Sistema de jaulas para ponedoras</h3>
+</div>
+</article>
+
+<article class="carousel-card">
+<img src="assets/img/pollo-parrillero.jpg" alt="Granja de pollos parrilleros equipada por AllPork" loading="lazy" />
+<div class="carousel-overlay"></div>
+<div class="carousel-caption">
+<span>Producción de carne de pollo</span>
+<h3>Galpón de crianza de pollos parrilleros</h3>
+</div>
+</article>
+
+</div>
+
+<button class="carousel-btn carousel-next" aria-label="Ver granja siguiente">&#8250;</button>
+</div>
+</section>
+
 <section class="servicios-resumen reveal">
 <div class="container">
 <h2>Soluciones para tu producción</h2>
@@ -216,6 +272,48 @@ document.querySelectorAll("#nav-menu a").forEach(link => {
     hamburger.setAttribute("aria-expanded", "false");
   });
 });
+</script>
+
+<script>
+// ===== CARRUSEL DE GRANJAS =====
+const granjasTrack = document.getElementById("granjasTrack");
+const carouselPrev = document.querySelector(".carousel-prev");
+const carouselNext = document.querySelector(".carousel-next");
+
+function scrollGranjas(direction) {
+  const card = granjasTrack.querySelector(".carousel-card");
+  if (!card) return;
+  const gap = 24;
+  const distance = card.offsetWidth + gap;
+  granjasTrack.scrollBy({ left: direction * distance, behavior: "smooth" });
+}
+
+if (carouselPrev && carouselNext && granjasTrack) {
+  carouselPrev.addEventListener("click", () => scrollGranjas(-1));
+  carouselNext.addEventListener("click", () => scrollGranjas(1));
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let granjasAutoplay;
+
+  function startGranjasAutoplay() {
+    granjasAutoplay = setInterval(() => {
+      const maxScroll = granjasTrack.scrollWidth - granjasTrack.clientWidth;
+      if (granjasTrack.scrollLeft >= maxScroll - 10) {
+        granjasTrack.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        scrollGranjas(1);
+      }
+    }, 4500);
+  }
+
+  if (!prefersReducedMotion) {
+    startGranjasAutoplay();
+    const carouselWrapper = document.querySelector(".carousel-wrapper");
+    carouselWrapper.addEventListener("mouseenter", () => clearInterval(granjasAutoplay));
+    carouselWrapper.addEventListener("mouseleave", startGranjasAutoplay);
+    carouselWrapper.addEventListener("touchstart", () => clearInterval(granjasAutoplay), { passive: true });
+  }
+}
 </script>
 
 <script>
