@@ -1218,6 +1218,172 @@ footer p{
 }
 
 /* =========================
+   CARRUSEL DE GRANJAS EQUIPADAS
+   ========================= */
+.granjas-carousel{
+  overflow:hidden;
+}
+
+.granjas-carousel.section-dark .section-intro{
+  color:#bbb;
+}
+
+.carousel-wrapper{
+  position:relative;
+  padding:0 clamp(0px,4vw,56px);
+}
+
+.carousel-track{
+  display:flex;
+  gap:24px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  padding:6px 24px 26px;
+  margin:0 -24px;
+
+  /* ocultar la scrollbar nativa, el scroll sigue funcionando */
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+
+.carousel-track::-webkit-scrollbar{
+  display:none;
+}
+
+.carousel-card{
+  position:relative;
+  flex:0 0 auto;
+  width:340px;
+  aspect-ratio:4/5;
+  border-radius:var(--radius);
+  overflow:hidden;
+  scroll-snap-align:start;
+  box-shadow:var(--shadow-medium);
+  transition:var(--transition);
+}
+
+.carousel-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-strong);
+}
+
+.carousel-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+
+.carousel-card:hover img{
+  transform:scale(1.06);
+}
+
+.carousel-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.85) 0%,
+    rgba(0,0,0,.35) 45%,
+    rgba(0,0,0,0) 70%
+  );
+  pointer-events:none;
+}
+
+.carousel-caption{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:26px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.carousel-caption span{
+  display:inline-block;
+  align-self:flex-start;
+  padding:5px 14px;
+  border-radius:50px;
+  background:rgba(247,144,39,.2);
+  border:1px solid rgba(247,144,39,.45);
+  color:var(--orange-light);
+  font-size:.78rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+.carousel-caption h3{
+  margin:0;
+  color:white;
+  font-size:1.2rem;
+  font-weight:700;
+  line-height:1.3;
+}
+
+.carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:5;
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:none;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--orange),var(--orange-light));
+  color:var(--black);
+  font-size:1.6rem;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:var(--shadow-medium);
+  transition:var(--transition);
+}
+
+.carousel-btn:hover{
+  transform:translateY(-50%) scale(1.1);
+  box-shadow:var(--shadow-strong);
+}
+
+.carousel-btn:focus-visible{
+  outline:3px solid white;
+  outline-offset:2px;
+}
+
+.carousel-prev{ left:0; }
+.carousel-next{ right:0; }
+
+@media(max-width:768px){
+  .carousel-wrapper{
+    padding:0;
+  }
+  .carousel-card{
+    width:78vw;
+    max-width:320px;
+  }
+  .carousel-btn{
+    width:42px;
+    height:42px;
+    font-size:1.3rem;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .carousel-track{
+    scroll-behavior:auto;
+  }
+  .carousel-card,
+  .carousel-card img{
+    transition:none;
+  }
+}
+
+/* =========================
    ANIMACIONES
    ========================= */
 @keyframes fadeUp{
