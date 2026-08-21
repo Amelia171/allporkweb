@@ -113,7 +113,7 @@
           <h3>Enviá tu consulta</h3>
           <p>Te contactamos por WhatsApp apenas recibamos tu mensaje.</p>
 
-          <form id="contactForm">
+         <form action="https://formspree.io/f/mrpzdezk" method="POST">
 
             <div class="form-row">
               <div class="form-group">
@@ -176,32 +176,6 @@
       hamburger.classList.remove("active");
       hamburger.setAttribute("aria-expanded", "false");
     });
-  });
-</script>
-
-<script>
-  // Arma el mensaje y abre WhatsApp con el texto ya cargado.
-  // (antes se perdía el mensaje porque el form con method="get"
-  // pisaba el "?text=" con sus propios campos al enviarse)
-  const contactForm = document.getElementById("contactForm");
-
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const nombre = contactForm.nombre.value;
-    const email = contactForm.email.value;
-    const telefono = contactForm.telefono.value;
-    const mensaje = contactForm.mensaje.value;
-
-    const texto =
-      "Hola, quiero hacer una consulta desde la web AllPork.\n\n" +
-      "Nombre: " + nombre + "\n" +
-      "Email: " + email + "\n" +
-      "Teléfono: " + telefono + "\n\n" +
-      "Mensaje:\n" + mensaje;
-
-    const url = "https://wa.me/5491166902000?text=" + encodeURIComponent(texto);
-    window.open(url, "_blank", "noopener");
   });
 </script>
 
