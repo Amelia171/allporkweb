@@ -47,6 +47,10 @@ html{
   html{ font-size:19px; }
 }
 
+@media(min-width:1920px){
+  html{ font-size:20.5px; }
+}
+
 /* =========================
    RESET
    ========================= */
@@ -136,7 +140,7 @@ nav a{
   color:var(--orange);
   text-decoration:none;
   font-weight:600;
-  font-size:1rem;
+  font-size:1.05rem;
   padding:10px 16px;
   border-radius:10px;
   transition:var(--transition);
@@ -199,6 +203,7 @@ nav a:focus-visible{
   min-height:95vh;
   background:url("assets/img/hero-granja.jpg") center/cover no-repeat;
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
@@ -368,10 +373,11 @@ section h2{
 
 .section-intro{
   text-align:center;
-  max-width:650px;
+  max-width:680px;
   margin:0 auto 50px;
   color:#555;
-  font-size:1.05rem;
+  font-size:1.15rem;
+  line-height:1.7;
 }
 
 /* =========================
@@ -441,7 +447,8 @@ section h2{
 
 .service-card p{
   color:#555;
-  font-size:1rem;
+  font-size:1.05rem;
+  line-height:1.6;
   margin:0;
 }
 
@@ -467,7 +474,8 @@ section h2{
 
 .why-card p{
   color:#555;
-  font-size:1rem;
+  font-size:1.05rem;
+  line-height:1.6;
   margin:0;
 }
 
@@ -1230,7 +1238,30 @@ footer p{
 
 .carousel-wrapper{
   position:relative;
-  padding:0 clamp(0px,4vw,56px);
+  max-width:1320px;
+  margin:0 auto;
+  padding:0 68px;
+}
+
+.carousel-wrapper::before,
+.carousel-wrapper::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:26px;
+  width:68px;
+  z-index:4;
+  pointer-events:none;
+}
+
+.carousel-wrapper::before{
+  left:0;
+  background:linear-gradient(to right, var(--dark), rgba(20,17,16,0));
+}
+
+.carousel-wrapper::after{
+  right:0;
+  background:linear-gradient(to left, var(--dark), rgba(20,17,16,0));
 }
 
 .carousel-track{
@@ -1239,8 +1270,7 @@ footer p{
   overflow-x:auto;
   scroll-snap-type:x mandatory;
   scroll-behavior:smooth;
-  padding:6px 24px 26px;
-  margin:0 -24px;
+  padding:6px 4px 26px;
 
   /* ocultar la scrollbar nativa, el scroll sigue funcionando */
   scrollbar-width:none;
@@ -1254,7 +1284,7 @@ footer p{
 .carousel-card{
   position:relative;
   flex:0 0 auto;
-  width:340px;
+  width:320px;
   aspect-ratio:4/5;
   border-radius:var(--radius);
   overflow:hidden;
@@ -1355,21 +1385,33 @@ footer p{
   outline-offset:2px;
 }
 
-.carousel-prev{ left:0; }
-.carousel-next{ right:0; }
+.carousel-prev{ left:6px; }
+.carousel-next{ right:6px; }
+
+@media(max-width:900px){
+  .carousel-wrapper{
+    padding:0 8px;
+  }
+  .carousel-wrapper::before,
+  .carousel-wrapper::after{
+    width:28px;
+  }
+}
 
 @media(max-width:768px){
   .carousel-wrapper{
     padding:0;
+  }
+  .carousel-wrapper::before,
+  .carousel-wrapper::after{
+    display:none;
   }
   .carousel-card{
     width:78vw;
     max-width:320px;
   }
   .carousel-btn{
-    width:42px;
-    height:42px;
-    font-size:1.3rem;
+    display:none;
   }
 }
 
