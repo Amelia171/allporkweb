@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- FORMULARIO -->
         <div class="contact-form-card">
           <h3>Enviá tu consulta</h3>
-          <p>Te contactamos por WhatsApp apenas recibamos tu mensaje.</p>
+          <p>Contanos sobre tu producción y qué necesitás. Nuestro equipo se pondrá en contacto con vos.</p>
 
          <form action="https://formspree.io/f/mrpzdezk" method="POST">
 
@@ -180,7 +180,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
 
             <div class="form-group">
-              <label for="mensaje">Mensaje</label>
+              <label for="produccion">Tipo de producción</label>
+              <select id="produccion" name="produccion" required>
+                <option value="" disabled selected>Seleccioná una opción</option>
+                <option value="Producción porcina">Producción porcina</option>
+                <option value="Producción de huevos">Producción de huevos</option>
+                <option value="Pollos parrilleros">Pollos parrilleros</option>
+                <option value="Proyecto nuevo / inversión">Proyecto nuevo / inversión</option>
+                <option value="Otra consulta">Otra consulta</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="ubicacion">Provincia o localidad <span class="optional-label">(opcional)</span></label>
+              <input type="text" id="ubicacion" name="ubicacion" autocomplete="address-level1" placeholder="¿Dónde está tu proyecto?">
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">¿Qué equipamiento o solución necesitás?</label>
               <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
             </div>
 
