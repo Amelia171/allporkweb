@@ -3165,3 +3165,8 @@ footer p:first-child{
 .catalog-home-promo p{margin:0;color:#514b47}
 .catalog-home-promo .btn{flex-shrink:0}
 @media(max-width:760px){.catalog-entry,.catalog-home-promo .container{flex-direction:column;align-items:flex-start}.catalog-entry .btn,.catalog-home-promo .btn{width:100%;text-align:center}}
+
+/* Información útil en fichas de catálogo */
+.catalog-card-description{font-size:.92rem;line-height:1.6;color:#514b47;margin:0 0 12px}
+.catalog-card-note{font-size:.78rem;line-height:1.45;color:#71665e;margin:0 0 18px}
+.catalog-card h2{margin-bottom:12px}
