@@ -3073,3 +3073,23 @@ footer p:first-child{
 .client-journey-cta:focus-visible{outline:3px solid #f79027;outline-offset:4px}
 @media(max-width:760px){.client-journeys-grid{grid-template-columns:1fr}.client-journey-card{min-height:0}.client-journey-cta{width:100%}}
 @media(prefers-reduced-motion:reduce){.client-journey-cta{transition:none}.client-journey-cta:hover{transform:none}}
+
+/* Alineación consistente de títulos y textos en secciones comerciales */
+.client-journeys .client-journeys-heading,
+.production-paths .production-paths-heading{
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+.client-journeys .client-journeys-heading h2,
+.production-paths .production-paths-heading h2{
+  text-align:left;
+  margin-left:0;
+  margin-right:0;
+}
+.client-journeys .client-journeys-heading p,
+.production-paths .production-paths-heading p{
+  text-align:left;
+  margin-left:0;
+  margin-right:0;
+}
