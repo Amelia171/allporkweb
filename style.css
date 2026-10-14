@@ -3153,3 +3153,15 @@ footer p:first-child{
 @media(max-width:1100px){.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:780px){.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){.catalog-grid{grid-template-columns:1fr}.catalog-card img{height:250px}.catalog-toolbar{padding:18px}}
+
+/* Accesos comerciales al catálogo */
+.catalog-entry{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 32px;background:#211b19;color:#fff;border-radius:18px;margin-bottom:36px}
+.catalog-entry strong{font-size:1.3rem}
+.catalog-entry p{margin:6px 0 0;color:#e4dad3}
+.catalog-entry .btn{flex-shrink:0}
+.catalog-home-promo{padding:60px 0;background:#f4efe6}
+.catalog-home-promo .container{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.catalog-home-promo h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.15;margin:12px 0}
+.catalog-home-promo p{margin:0;color:#514b47}
+.catalog-home-promo .btn{flex-shrink:0}
+@media(max-width:760px){.catalog-entry,.catalog-home-promo .container{flex-direction:column;align-items:flex-start}.catalog-entry .btn,.catalog-home-promo .btn{width:100%;text-align:center}}
