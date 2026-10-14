@@ -3054,3 +3054,22 @@ footer p:first-child{
 .form-group select{display:block;width:100%;padding:14px 16px;border:1px solid #d6d2cf;border-radius:10px;background:#fff;color:#1c1716;font:inherit;min-height:50px}
 .form-group select:focus{outline:2px solid #f79027;outline-offset:2px}
 .optional-label{font-weight:400;opacity:.75}
+
+/* Segmentación comercial: granjas existentes y nuevas inversiones */
+.client-journeys{padding:clamp(70px,8vw,116px) 0;background:#fff;color:#1c1716}
+.client-journeys-heading{max-width:850px;margin-bottom:36px}
+.client-journeys-heading h2{font-size:clamp(2.1rem,4vw,3.6rem);letter-spacing:-.04em;line-height:1.12;margin:12px 0 16px}
+.client-journeys-heading p{font-size:1.08rem;line-height:1.65;color:#514b47;margin:0}
+.client-journeys-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.client-journey-card{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(28px,4vw,52px);border-radius:24px;background:#f4efe6;border:1px solid #e6dace;min-height:340px}
+.client-journey-card--accent{background:#211b19;color:#fff;border-color:#211b19}
+.client-journey-step{font-size:.76rem;letter-spacing:.12em;font-weight:800;color:#99500d}
+.client-journey-card--accent .client-journey-step{color:#ffad5b}
+.client-journey-card h3{font-size:clamp(1.65rem,2.8vw,2.55rem);letter-spacing:-.035em;line-height:1.16;margin:26px 0 16px}
+.client-journey-card p{font-size:1.06rem;line-height:1.65;margin:0 0 30px;color:#4d4540}
+.client-journey-card--accent p{color:#e8dfd9}
+.client-journey-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;margin-top:auto;padding:15px 20px;border-radius:12px;background:#f79027;color:#201711;font-weight:800;text-decoration:none;transition:background .2s ease,transform .2s ease}
+.client-journey-cta:hover{background:#ffad5b;transform:translateY(-2px)}
+.client-journey-cta:focus-visible{outline:3px solid #f79027;outline-offset:4px}
+@media(max-width:760px){.client-journeys-grid{grid-template-columns:1fr}.client-journey-card{min-height:0}.client-journey-cta{width:100%}}
+@media(prefers-reduced-motion:reduce){.client-journey-cta{transition:none}.client-journey-cta:hover{transform:none}}
